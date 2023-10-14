@@ -1,154 +1,184 @@
-import React, { useState, useEffect } from "react";
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
+import {
+  Box,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  IconButton,
+  Input,
+  InputAdornment,
+  InputLabel,
+  Slider,
+  Typography,
+} from "@mui/material";
+import React, { useState } from "react";
 
-const ClothingBrand = () => {
-  const [products, setProducts] = useState([]); // Your clothing products data
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [filters, setFilters] = useState({
-    category: "all",
-    priceRange: { min: 0, max: 100 },
-    colors: [],
-    fabric: "all",
-  });
-
-  useEffect(() => {
-    // Fetch products from an API or set products in state
-    // Example: fetchProducts().then((data) => setProducts(data));
-  }, []);
-
-  useEffect(() => {
-    // Apply filters whenever filter criteria change
-    const filtered = products.filter((product) => {
-      const { category, price, color, fabric } = product;
-      const {
-        category: selectedCategory,
-        priceRange,
-        colors,
-        fabric: selectedFabric,
-      } = filters;
-
-      if (selectedCategory !== "all" && category !== selectedCategory) {
-        return false;
-      }
-
-      if (price < priceRange.min || price > priceRange.max) {
-        return false;
-      }
-
-      if (colors.length > 0 && !colors.includes(color)) {
-        return false;
-      }
-
-      if (selectedFabric !== "all" && fabric !== selectedFabric) {
-        return false;
-      }
-
-      return true;
-    });
-
-    setFilteredProducts(filtered);
-  }, [filters, products]);
-
-  // Function to update filters
-  const handleCategoryChange = (event) => {
-    setFilters({ ...filters, category: event.target.value });
-  };
-
-  const handlePriceRangeChange = (values) => {
-    setFilters({ ...filters, priceRange: { min: values[0], max: values[1] } });
-  };
-
-  const handleColorChange = (event) => {
-    const color = event.target.value;
-    const updatedColors = [...filters.colors];
-
-    if (updatedColors.includes(color)) {
-      updatedColors.splice(updatedColors.indexOf(color), 1);
-    } else {
-      updatedColors.push(color);
-    }
-
-    setFilters({ ...filters, colors: updatedColors });
-  };
-
-  const handleFabricChange = (event) => {
-    setFilters({ ...filters, fabric: event.target.value });
-  };
-
-  // Render the filter UI
+export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
+  const [open, setOpen] = useState(false);
   return (
-    <div>
-      <div>
-        <label>Category:</label>
-        <select value={filters.category} onChange={handleCategoryChange}>
-          <option value="all">All</option>
-          <option value="category1">Category 1</option>
-          <option value="category2">Category 2</option>
-          {/* Add more category options */}
-        </select>
-      </div>
+    <>
+      <FormControl component="fieldset" className="w-full">
+        <Box className="w-[80%]" sx={{ borderBottom: "1px solid black" }}>
+          <IconButton
+            onClick={() => setOpen(!open)}
+            className="w-full flex justify-between pl-5 border-b-2"
+          >
+            <Typography variant="h6" className="capitalize text-black">
+              {filterKey}
+            </Typography>
+            {!open ? <ExpandMore /> : <ExpandLess />}
+          </IconButton>
+        </Box>
 
-      <div>
-        <label>Price Range:</label>
-        <input
-          type="range"
-          min={0}
-          max={200} // Set your max price range value
-          value={filters.priceRange.min}
-          onChange={(e) =>
-            handlePriceRangeChange({
-              min: +e.target.value,
-              max: filters.priceRange.max,
-            })
-          }
-        />
-        <input
-          type="range"
-          min={0}
-          max={200} // Set your max price range value
-          value={filters.priceRange.max}
-          onChange={(e) =>
-            handlePriceRangeChange({
-              min: filters.priceRange.min,
-              max: +e.target.value,
-            })
-          }
-        />
-      </div>
-
-      <div>
-        <label>Colors:</label>
-        <label>
-          <input
-            type="checkbox"
-            value="color1"
-            checked={filters.colors.includes("color1")}
-            onChange={handleColorChange}
-          />
-          Color 1
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            value="color2"
-            checked={filters.colors.includes("color2")}
-            onChange={handleColorChange}
-          />
-          Color 2
-        </label>
-        {/* Add more color options */}
-      </div>
-
-      <div>
-        <label>Fabric:</label>
-        <select value={filters.fabric} onChange={handleFabricChange}>
-          <option value="all">All</option>
-          <option value="fabric1">Fabric 1</option>
-          <option value="fabric2">Fabric 2</option>
-          {/* Add more fabric options */}
-        </select>
-      </div>
-    </div>
+        <Box classname="flex w-[80%] pl-9">
+          {open && (
+            <FormGroup>
+              {data.map((item) => (
+                <>
+                  {filterKey === "colors" ? (
+                    <>
+                      <FormControlLabel
+                        key={item.title}
+                        control={
+                          <Checkbox
+                            checked={filters[filterKey].includes(item.title)}
+                            onChange={(e) => handleCheckboxChange(filterKey, e)}
+                            icon={
+                              <Box
+                                sx={{
+                                  width: 24,
+                                  height: 24,
+                                  backgroundColor: item.title,
+                                  borderRadius: "50%",
+                                }}
+                              />
+                            }
+                            checkedIcon={
+                              <Box
+                                sx={{
+                                  width: 24,
+                                  height: 24,
+                                  backgroundColor: item.title,
+                                  borderRadius: "50%",
+                                }}
+                              />
+                            }
+                            value={item.title}
+                          />
+                        }
+                        label={item.title}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <FormControlLabel
+                        className="pl-8"
+                        key={item.title}
+                        control={
+                          <Checkbox
+                            checked={filters[filterKey].includes(item.title)}
+                            onChange={(e) => handleCheckboxChange(filterKey, e)}
+                            value={item.title}
+                          />
+                        }
+                        label={item.title}
+                      />
+                    </>
+                  )}
+                </>
+              ))}
+            </FormGroup>
+          )}
+        </Box>
+      </FormControl>
+    </>
   );
 };
 
-export default ClothingBrand;
+export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <FormControl component="fieldset" className="w-full">
+        <Box className="w-[80%]" sx={{ borderBottom: "1px solid black" }}>
+          <IconButton
+            onClick={() => setOpen(!open)}
+            className="w-full flex justify-between pl-5 border-b-2"
+          >
+            <Typography variant="h6" className="capitalize text-black">
+              {filterKey}
+            </Typography>
+            {!open ? <ExpandMore /> : <ExpandLess />}
+          </IconButton>
+        </Box>
+
+        <Box sx={{ width: "70%", pl: 3 }}>
+          {open && (
+            <>
+              <Box className="flex ">
+                <FormControl fullWidth sx={{ m: 1 }} variant="standard">
+                  <InputLabel htmlFor="standard-adornment-amount">
+                    Min
+                  </InputLabel>
+                  <Input
+                    id="standard-adornment-amount"
+                    placeholder={filters.priceRange[0]}
+                    // onChange={handlePriceRangeChange}
+                    startAdornment={
+                      <InputAdornment position="start">$</InputAdornment>
+                    }
+                  />
+                </FormControl>
+                <FormControl fullWidth sx={{ m: 1 }} variant="standard">
+                  <InputLabel htmlFor="standard-adornment-amount">
+                    Max
+                  </InputLabel>
+                  <Input
+                    id="standard-adornment-amount"
+                    placeholder={filters.priceRange[1]}
+                    startAdornment={
+                      <InputAdornment position="start">$</InputAdornment>
+                    }
+                  />
+                </FormControl>
+              </Box>
+              <Slider
+                value={filters.priceRange}
+                onChange={handlePriceRangeChange}
+                valueLabelDisplay="auto"
+                min={0}
+                max={200}
+                sx={{
+                  color: "rgba(0,0,0,0.87)",
+                  "& .MuiSlider-track": {
+                    border: "none",
+                  },
+                  "& .MuiSlider-thumb": {
+                    width: 24,
+                    height: 24,
+                    backgroundColor: "#12edad",
+                    "&:before": {
+                      boxShadow: "0 4px 8px rgba(0,0,0,0.4)",
+                    },
+                    "&:hover, &.Mui-focusVisible, &.Mui-active": {
+                      boxShadow: "none",
+                    },
+                  },
+                }}
+              />
+            </>
+          )}
+        </Box>
+      </FormControl>
+      {/* <Box>
+          <FormControl className="w-[75%]">
+            <Typography variant="h6" sx={{ borderBottom: "1px solid black" }}>
+              Price Range
+            </Typography>
+            
+          </FormControl>
+        </Box> */}
+    </>
+  );
+};
