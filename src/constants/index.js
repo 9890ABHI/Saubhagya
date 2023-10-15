@@ -1,5 +1,6 @@
 export const Clothingproducts = [
   {
+    id: 1,
     image:
       "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Saree",
@@ -14,6 +15,7 @@ export const Clothingproducts = [
     timeToDispatch: "2-3 days",
   },
   {
+    id: 2,
     image:
       "https://img.freepik.com/free-photo/blonde-young-woman-elegant-green-dress_155003-2663.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Salwar Suit",
@@ -28,6 +30,7 @@ export const Clothingproducts = [
     timeToDispatch: "1-2 days",
   },
   {
+    id: 3,
     image:
       "https://img.freepik.com/free-photo/stylish-portrait-woman-with-sales-text-spanish-clothing-clearance_23-2150800844.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Lehenga Choli",
@@ -42,6 +45,7 @@ export const Clothingproducts = [
     timeToDispatch: "3-4 days",
   },
   {
+    id: 4,
     image:
       "https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2683.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Kurti",
@@ -56,6 +60,7 @@ export const Clothingproducts = [
     timeToDispatch: "1-2 days",
   },
   {
+    id: 5,
     image:
       "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261096.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Saree",
@@ -70,6 +75,7 @@ export const Clothingproducts = [
     timeToDispatch: "2-3 days",
   },
   {
+    id: 6,
     image:
       "https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2734.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Salwar Suit",
@@ -84,6 +90,7 @@ export const Clothingproducts = [
     timeToDispatch: "1-2 days",
   },
   {
+    id: 7,
     image:
       "https://img.freepik.com/free-photo/portrait-young-japanese-woman-with-jacket_23-2148870732.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Lehenga Choli",
@@ -98,6 +105,7 @@ export const Clothingproducts = [
     timeToDispatch: "3-4 days",
   },
   {
+    id: 8,
     image:
       "https://img.freepik.com/free-photo/curly-girl-beautiful-dress_144627-10112.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Kurti",
@@ -112,6 +120,7 @@ export const Clothingproducts = [
     timeToDispatch: "1-2 days",
   },
   {
+    id: 9,
     image:
       "https://img.freepik.com/free-photo/cheerful-happy-woman-enjoying-shopping-summer-sale-she-is-carrying-shopping-bags-walking_74952-3018.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Saree",
@@ -126,6 +135,7 @@ export const Clothingproducts = [
     timeToDispatch: "2-3 days",
   },
   {
+    id: 10,
     image:
       "https://img.freepik.com/free-photo/young-woman-by-shopping-mall_1303-28972.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Salwar Suit",

@@ -1,21 +1,6 @@
-import {
-  Box,
-  Checkbox,
-  Container,
-  FormControl,
-  FormControlLabel,
-  FormGroup,
-  Grid,
-  IconButton,
-  Input,
-  InputAdornment,
-  InputLabel,
-  Slider,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import ClothingBrand, { FilterDataPrice } from "./filtered";
+import { FilterDataPrice } from "./filtered";
 import {
   BottomStyles,
   Category,
@@ -29,6 +14,7 @@ import {
 } from "../constants";
 
 import { FilterData } from "./filtered";
+import Card from "./Card";
 
 const Shop = ({ title }) => {
   const [products, setProducts] = useState([]); // Your clothing products data
@@ -174,26 +160,7 @@ const Shop = ({ title }) => {
         <Box className="flex w-[80%] flex-wrap gap-5">
           {filteredProducts.map((item) => (
             <>
-              <Box className="w-[300px] h-[470px]  py-1 bg-slate-200 flex flex-col">
-                <div className="w-[300px] h-[370px] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt="products"
-                    width={"100%"}
-                    height={"100%"}
-                    className="object-cover"
-                  />
-                </div>
-                <div className="w-[100%] text-left px-2 pt-2">
-                  <p>{item.category}</p>
-                  <p>$ {item.price}</p>
-                </div>
-                <div className="w-[100%] text-left px-2 pt-2">
-                  <p className="px-2 py-1 text-lime-50 bg-black rounded-md w-fit">
-                    {item.size}
-                  </p>
-                </div>
-              </Box>
+              <Card item={item} />
             </>
           ))}
         </Box>
