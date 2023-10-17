@@ -1,73 +1,277 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Clothingproducts } from "../constants";
-import { Typography, Box, Container } from "@mui/material";
+import {
+  Typography,
+  Box,
+  Container,
+  Button,
+  Select,
+  FormControl,
+  MenuItem,
+  InputLabel,
+  Tab,
+} from "@mui/material";
+import {
+  EmailOutlined,
+  Info,
+  Instagram,
+  LocalShippingOutlined,
+  Policy,
+  ShoppingBagOutlined,
+  ShoppingCartOutlined,
+  Star,
+  WhatsApp,
+} from "@mui/icons-material";
+import { ShoppingButton } from "../components/Button";
+import { PrimaryText, SecondaryText } from "../components/TextComponent";
+import { TabContext, TabList, TabPanel } from "@mui/lab";
+import {
+  InformationDetails,
+  ReturnsPolicyDetails,
+  ReviewDetails,
+} from "../components/Informations";
+import { connect } from "react-redux";
 
 const Details = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const [product, setProduct] = useState([]);
+  const [imge, setImge] = useState("");
+  const [Size, setSize] = useState("");
+  const [value, setValue] = React.useState("1");
 
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   useEffect(() => {
     const productId = parseInt(id, 10);
-    console.log(Clothingproducts);
+    // console.log(Clothingproducts);
     const filteredProducts = Clothingproducts.filter(
       (prod) => prod.id === productId
     );
-    console.log(filteredProducts);
+    // console.log(filteredProducts);
     filteredProducts.length > 0
       ? setProduct(filteredProducts[0])
       : setProduct(null);
+    setImge(filteredProducts[0]?.images[0]?.img);
   }, [id]);
 
-  // if (!product) {
-  //   return <div>Loading...</div>;
-  // }
+  const handleSizeChange = (e) => {
+    setSize(e.target.value);
+  };
+
+  if (!product) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
-      <Container className="flex justify-between items-center pt-5">
+      <Container className="flex justify-between pt-5 max-sm:flex-col">
         <Box
           sx={{
-            width: "40%",
-            height: 500,
+            width: "45%",
             display: "flex",
+            height: "600px",
+            gap: 2,
           }}
         >
-          <Box
-            sx={{
-              width: "40%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              gap: 2,
-            }}
-          >
-            <img
-              src={product.image}
-              width={100}
-              height={150}
-              className="object-contain"
-            />
-            <img
-              src={product.image}
-              width={"100%"}
-              height={150}
-              className="object-contain"
-            />
+          <Box className="flex flex-col h-full overflow-scroll gap-3">
+            {product?.images?.map((item) => (
+              <>
+                <img
+                  src={item.img}
+                  onMouseEnter={() => setImge(item.img)}
+                  key={item.id}
+                  alt=""
+                  className="object-contain"
+                />
+              </>
+            ))}
           </Box>
           <img
-            src={product.image}
-            width={400}
+            src={imge}
+            alt=""
+            width={550}
             height={"100%"}
-            className="object-contain"
+            className="object-contain border-none"
           />
         </Box>
-        <Box sx={{ width: "50%" }}>
-          <p> {product.category} </p>
+        <Box sx={{ width: "50%", pt: 1 }}>
+          <Box className="w-full text-left ">
+            <Typography variant="body1" className="text-xl">
+              {product.title}
+            </Typography>
+            <Typography variant="body2" className="text-xl mt-2">
+              ₹ {product.price} /-
+            </Typography>
+            <Typography variant="caption" className="text-gray-400 mt-2">
+              Inclusive of all taxes
+            </Typography>
+            <hr className="border-blue-300 mt-2" />
+            <Box className="flex justify-between">
+              <Box className="flex mt-4">
+                <Typography className="" variant="body2">
+                  Products Code :
+                </Typography>
+                <Typography className="ml-2 " variant="body2">
+                  #{product?.code}
+                </Typography>
+              </Box>
+              <Box className="flex mt-2">
+                <Button variant="text" className="text-gray-600">
+                  <Typography className="underline ">Size Chart</Typography>
+                </Button>
+              </Box>
+            </Box>
+            <Typography variant="caption" className="text-gray-400 mt-3 mb-3">
+              Be the first to review this product
+            </Typography>
+            <hr className="border-blue-300 mt-2" />
+            <Box className="flex justify-between mt-5 items-center">
+              <Typography className="" variant="body2">
+                Standard Size (Bust Size)
+              </Typography>
+              <FormControl sx={{ minWidth: 120 }}>
+                <InputLabel id="demo-simple-select-autowidth-label">
+                  Size
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-autowidth-label"
+                  id="demo-simple-select-autowidth"
+                  value={Size}
+                  onChange={handleSizeChange}
+                  autoWidth
+                  label="Size"
+                >
+                  <MenuItem value={32}>32</MenuItem>
+                  <MenuItem value={34}>34</MenuItem>
+                  <MenuItem value={36}>36</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+
+            <hr className="border-blue-300 mt-2" />
+
+            <Box className="mt-4">
+              <Typography className="font-light flex items-center">
+                <LocalShippingOutlined className="mr-2" />
+                Est Dispatch Date:{" "}
+                <Typography className="font-semibold ml-2">
+                  {" "}
+                  Wednesday, 01 November 2023
+                </Typography>
+              </Typography>
+              <Typography className="font-light flex items-center">
+                For early dispatch, contact us at :
+                <Typography className="font-semibold ml-2">
+                  {" "}
+                  +918866799113
+                </Typography>
+              </Typography>
+            </Box>
+
+            <hr className="border-blue-300 mt-2" />
+
+            <Box className="mt-3 flex justify-around">
+              <ShoppingButton
+                title={"Buy Now"}
+                icon={<ShoppingBagOutlined />}
+              />
+              <ShoppingButton
+                title={"Add To Cart"}
+                icon={<ShoppingCartOutlined />}
+              />
+            </Box>
+
+            <Box className="mt-9">
+              <PrimaryText text={"Available Offers"} />
+              <SecondaryText
+                text={
+                  "Free Shipping on Cart Value of US $150+/7500INR on Prepaid Orders."
+                }
+              />
+            </Box>
+            <hr className="border-blue-300 mt-2" />
+            <Box className="mt-5">
+              <PrimaryText text={"Have a question? We can help."} />
+              <SecondaryText text={"Mon - Sat - 10:00 am to 6:00 pm (IST)"} />
+            </Box>
+            <Box className="mt-2">
+              <Box className="flex">
+                <WhatsApp className="mr-2" />{" "}
+                <PrimaryText text={"Call or WhatsApp us"} />
+              </Box>
+              <SecondaryText text={"+911234567890 | +911234567890 "} />
+            </Box>
+            <Box className="mt-2">
+              <Box className="flex">
+                <EmailOutlined className="mr-2" />{" "}
+                <PrimaryText
+                  text={"Email us PBshop@mail.com or chat/DM us on our "}
+                />
+              </Box>
+              <Box className="flex">
+                <Instagram className="mr-2" />{" "}
+                <PrimaryText
+                  text={"Follow us on Instagram and Facebook page. "}
+                />
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Container>
+      <Container className="flex justify-between pt-5 max-sm:flex-col">
+        <Box>
+          <Box sx={{ width: "100%", typography: "body1" }}>
+            <TabContext value={value}>
+              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+                <TabList
+                  onChange={handleChange}
+                  aria-label="lab API tabs example"
+                  textColor="secondary"
+                >
+                  <Tab
+                    label="INFORMATION"
+                    value="1"
+                    icon={<Info className="mr-2 " />}
+                    className="flex flex-row"
+                  />
+                  <Tab
+                    label="REVIEW"
+                    value="2"
+                    icon={<Star className="mr-2 " />}
+                    className="flex flex-row"
+                  />
+                  <Tab
+                    label="RETURN POLICY"
+                    value="3"
+                    icon={<Policy className="mr-2 " />}
+                    className="flex flex-row"
+                  />
+                </TabList>
+              </Box>
+              <TabPanel value="1">
+                <InformationDetails infoDetails={product?.info} />
+              </TabPanel>
+              <TabPanel value="2">
+                <ReviewDetails reviewDetails={product?.review} />
+              </TabPanel>
+              <TabPanel value="3">
+                <ReturnsPolicyDetails />
+              </TabPanel>
+            </TabContext>
+          </Box>
         </Box>
       </Container>
     </>
   );
 };
 
-export default Details;
+const mapStateToProps = (state, ownProps) => {
+  const productId = ownProps.match.params.productId; // Assuming you're using React Router
+  return {
+    product: state.products[productId], // Assuming you store products in the state
+  };
+};
+
+export default connect(mapStateToProps)(Details);

@@ -15,8 +15,15 @@ import {
 
 import { FilterData } from "./filtered";
 import Card from "./Card";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { setProducts as setProductAction } from "../redux/actions/productActions";
 
 const Shop = ({ title }) => {
+  const Secondaryproducts = useSelector((state) => state);
+  console.log("all products", Secondaryproducts);
+  const dispatch = useDispatch();
+
   const [products, setProducts] = useState([]); // Your clothing products data
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filters, setFilters] = useState({
@@ -28,7 +35,7 @@ const Shop = ({ title }) => {
     bottomStyles: [],
     occasions: [],
     looks: [],
-    priceRange: [0, 200],
+    priceRange: [0, 400],
   });
 
   useEffect(() => {

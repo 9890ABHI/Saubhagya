@@ -1,6 +1,8 @@
 export const Clothingproducts = [
   {
     id: 1,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
     image:
       "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Saree",
@@ -13,9 +15,26 @@ export const Clothingproducts = [
     occasion: "Wedding",
     look: "Elegant",
     timeToDispatch: "2-3 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 2,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/blonde-young-woman-elegant-green-dress_155003-2663.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Salwar Suit",
@@ -28,9 +47,26 @@ export const Clothingproducts = [
     occasion: "Daily Wear",
     look: "Comfortable",
     timeToDispatch: "1-2 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 3,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/stylish-portrait-woman-with-sales-text-spanish-clothing-clearance_23-2150800844.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Lehenga Choli",
@@ -43,9 +79,26 @@ export const Clothingproducts = [
     occasion: "Festivals",
     look: "Traditional",
     timeToDispatch: "3-4 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 4,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2683.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Kurti",
@@ -58,9 +111,26 @@ export const Clothingproducts = [
     occasion: "Office Wear",
     look: "Stylish",
     timeToDispatch: "1-2 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 5,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261096.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Saree",
@@ -73,9 +143,26 @@ export const Clothingproducts = [
     occasion: "Evening Parties",
     look: "Glamorous",
     timeToDispatch: "2-3 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 6,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2734.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Salwar Suit",
@@ -88,9 +175,26 @@ export const Clothingproducts = [
     occasion: "Special Occasions",
     look: "Trendy",
     timeToDispatch: "1-2 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 7,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/portrait-young-japanese-woman-with-jacket_23-2148870732.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Lehenga Choli",
@@ -103,9 +207,26 @@ export const Clothingproducts = [
     occasion: "Weddings",
     look: "Opulent",
     timeToDispatch: "3-4 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 8,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/curly-girl-beautiful-dress_144627-10112.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Kurti",
@@ -118,9 +239,26 @@ export const Clothingproducts = [
     occasion: "Daily Wear",
     look: "Comfortable",
     timeToDispatch: "1-2 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 9,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/cheerful-happy-woman-enjoying-shopping-summer-sale-she-is-carrying-shopping-bags-walking_74952-3018.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Saree",
@@ -133,9 +271,26 @@ export const Clothingproducts = [
     occasion: "Cocktail Parties",
     look: "Sophisticated",
     timeToDispatch: "2-3 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
   {
     id: 10,
+    title:
+      "Yellow Draped Saree in Georgette with Gota Patti Work Blouse and Multi Colored Cape",
+
     image:
       "https://img.freepik.com/free-photo/young-woman-by-shopping-mall_1303-28972.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
     category: "Salwar Suit",
@@ -148,6 +303,20 @@ export const Clothingproducts = [
     occasion: "Festivals",
     look: "Traditional",
     timeToDispatch: "1-2 days",
+    images: [
+      {
+        img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261094.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/fashionable-model-posing-studio-stylish-outfit-rock-american-flag-style_285396-9689.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+      {
+        img: "https://img.freepik.com/free-photo/handsome-man-wearing-fashion-glasses-scarf_329181-3720.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
+      },
+    ],
   },
 ];
 

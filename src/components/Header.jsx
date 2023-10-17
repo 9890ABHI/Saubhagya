@@ -6,11 +6,13 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import { useMediaQuery } from "@mui/material";
 
 const Header = () => {
+  const Mobile = useMediaQuery("(max-width: 640px)");
   return (
     <>
-      <div className="w-[100%] h-[75px] flex justify-between items-center border-b-[1px] border-black px-10">
+      <div className="w-[100%] h-[75px] flex justify-between items-center border-b-[1px] border-black px-10 max-sm:hidden">
         <div className="pl-2">
           {/* Logo */}
           <img
@@ -36,6 +38,11 @@ const Header = () => {
           </Link>
         </div>
       </div>
+      {Mobile ? (
+        <>
+          <div>hiii</div>
+        </>
+      ) : null}
     </>
   );
 };
