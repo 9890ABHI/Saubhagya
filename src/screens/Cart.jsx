@@ -37,11 +37,7 @@ const Cart = () => {
         </Box>
         <Box>
           <Box>
-            <Typography className="text-xl ">
-              {products.slice(0, 4).map((item) => {
-                item.price;
-              })}
-            </Typography>
+            <Typography className="text-xl "></Typography>
           </Box>
         </Box>
       </Box>
