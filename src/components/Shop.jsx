@@ -42,7 +42,8 @@ const Shop = ({ title }) => {
     // Fetch products from an API or set products in state
     // Example: fetchProducts().then((data) => setProducts(data));
     setProducts(Clothingproducts);
-  }, []);
+    dispatch(setProductAction(filteredProducts));
+  }, [dispatch]);
 
   useEffect(() => {
     // Apply filters whenever filter criteria change

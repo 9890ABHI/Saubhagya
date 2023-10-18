@@ -388,3 +388,64 @@ export const Looks = [
   { title: "Glamorous" },
   { title: "Stylish" },
 ];
+
+export const FooterData = [
+  {
+    title: "My Account",
+    link: "/",
+    info: [
+      { title: "Account", link: "" },
+      { title: "Order Status", link: "" },
+      { title: "Testimonials", link: "" },
+      { title: "Blog", link: "" },
+      { title: "Book Videocall", link: "" },
+    ],
+  },
+  {
+    title: "Help",
+    link: "/",
+    info: [
+      { title: "Privacy Policy", link: "" },
+      { title: "Shipping Policy", link: "" },
+      { title: "Cancellation & Returns", link: "" },
+      { title: "Knowledge Base", link: "" },
+    ],
+  },
+  {
+    title: "Company",
+    link: "/",
+    info: [
+      { title: "About Us", link: "" },
+      { title: "Promotions & Offer", link: "" },
+      { title: "Our Stores", link: "" },
+      { title: "Terms and Conditions", link: "" },
+      { title: "Contact Us", link: "" },
+      { title: "Careers", link: "" },
+    ],
+  },
+  {
+    title: "Contact us",
+    link: "/",
+    info: [
+      {
+        title:
+          "4th floor | Asopalav Silk India Opp, ITC Narmada Hotel Satellite, Ahmedabad India - 380015 ",
+        link: "",
+        logo: true,
+        logoinfo: "Location",
+      },
+      {
+        title: "+91 1234567890 (11:00 AM to 7 PM, IST) ",
+        link: "",
+        logo: true,
+        logoinfo: "Call",
+      },
+      {
+        title: " +91 1234567890 (7:30 PM to 7:30 AM, PST) Whatsapp Call",
+        link: "",
+        logo: true,
+        logoinfo: "Call",
+      },
+    ],
+  },
+];

@@ -98,10 +98,16 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
 
 export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
   const [open, setOpen] = useState(false);
+  const [minPrice, setMinPrice] = useState(filters.priceRange[0]);
+  const [maxPrice, setMaxPrice] = useState(filters.priceRange[1]);
+  const maximum = useState(filters.priceRange[1]);
   return (
     <>
       <FormControl component="fieldset" className="w-full">
-        <Box className="w-[80%]" sx={{ borderBottom: "1px solid black" }}>
+        <Box
+          className="w-[80%] justify-between"
+          sx={{ borderBottom: "1px solid black" }}
+        >
           <IconButton
             onClick={() => setOpen(!open)}
             className="w-full flex justify-between pl-5 border-b-2"
@@ -136,10 +142,12 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
                   </InputLabel>
                   <Input
                     id="standard-adornment-amount"
-                    placeholder={filters.priceRange[1]}
+                    placeholder={maxPrice}
+                    value={maxPrice}
                     startAdornment={
-                      <InputAdornment position="start">$</InputAdornment>
+                      <InputAdornment position="start">₹</InputAdornment>
                     }
+                    onChange={(e) => setMaxPrice(e)}
                   />
                 </FormControl>
               </Box>
@@ -147,8 +155,8 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
                 value={filters.priceRange}
                 onChange={handlePriceRangeChange}
                 valueLabelDisplay="auto"
-                min={0}
-                max={200}
+                min={minPrice}
+                max={maxPrice}
                 sx={{
                   color: "rgba(0,0,0,0.87)",
                   "& .MuiSlider-track": {

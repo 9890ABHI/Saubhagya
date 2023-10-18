@@ -13,7 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Label } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const intitalState = {
@@ -21,12 +21,17 @@ const Login = () => {
     password: "",
   };
   const [values, setValues] = useState(intitalState);
+  const navigation = useNavigate();
   const onChange = (e) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   };
 
   const dispatch = useDispatch();
+  const handleChanges = () => {
+    dispatch(login(values));
+    navigation("/");
+  };
 
   return (
     <div className="flex items-center justify-center h-screen">
@@ -56,11 +61,7 @@ const Login = () => {
           />
         </Box>
         <Box className="pt-0">
-          <Button
-            variant="gradient"
-            fullWidth
-            onClick={() => dispatch(login(values))}
-          >
+          <Button variant="text" fullWidth onClick={handleChanges}>
             Sign In
           </Button>
 

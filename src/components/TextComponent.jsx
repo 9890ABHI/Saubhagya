@@ -1,18 +1,21 @@
 import { Typography } from "@mui/material";
 import React from "react";
 
-export const PrimaryText = ({ text }) => {
+export const PrimaryText = ({ text, isInfo }) => {
   return (
     <>
-      <Typography variant="body1" className="font-semibold">
+      <Typography
+        variant={isInfo ? "subtitle1" : "body1"}
+        className="font-semibold"
+      >
         {text}
       </Typography>
     </>
   );
 };
 
-export const SecondaryText = ({ text }) => (
+export const SecondaryText = ({ text, isInfo }) => (
   <>
-    <Typography variant="body2">{text}</Typography>
+    <Typography variant={isInfo ? "body1" : "body2"}>{text}</Typography>
   </>
 );

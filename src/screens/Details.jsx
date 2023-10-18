@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Clothingproducts } from "../constants";
 import {
   Typography,
@@ -177,10 +177,12 @@ const Details = () => {
                 title={"Buy Now"}
                 icon={<ShoppingBagOutlined />}
               />
-              <ShoppingButton
-                title={"Add To Cart"}
-                icon={<ShoppingCartOutlined />}
-              />
+              <Link to={`/cart/${id}`}>
+                <ShoppingButton
+                  title={"Add To Cart"}
+                  icon={<ShoppingCartOutlined />}
+                />
+              </Link>
             </Box>
 
             <Box className="mt-9">
@@ -220,58 +222,65 @@ const Details = () => {
           </Box>
         </Box>
       </Container>
-      <Container className="flex justify-between pt-5 max-sm:flex-col">
-        <Box>
-          <Box sx={{ width: "100%", typography: "body1" }}>
-            <TabContext value={value}>
-              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-                <TabList
-                  onChange={handleChange}
-                  aria-label="lab API tabs example"
-                  textColor="secondary"
-                >
-                  <Tab
-                    label="INFORMATION"
-                    value="1"
-                    icon={<Info className="mr-2 " />}
-                    className="flex flex-row"
-                  />
-                  <Tab
-                    label="REVIEW"
-                    value="2"
-                    icon={<Star className="mr-2 " />}
-                    className="flex flex-row"
-                  />
-                  <Tab
-                    label="RETURN POLICY"
-                    value="3"
-                    icon={<Policy className="mr-2 " />}
-                    className="flex flex-row"
-                  />
-                </TabList>
-              </Box>
-              <TabPanel value="1">
-                <InformationDetails infoDetails={product?.info} />
-              </TabPanel>
-              <TabPanel value="2">
-                <ReviewDetails reviewDetails={product?.review} />
-              </TabPanel>
-              <TabPanel value="3">
-                <ReturnsPolicyDetails />
-              </TabPanel>
-            </TabContext>
-          </Box>
+      <Container className="flex pt-5 ">
+        <Box
+          sx={{
+            width: "100%",
+            typography: "body1",
+            "& .MuiBox-root": { width: "100%" },
+          }}
+        >
+          <TabContext value={value} className="w-full">
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <TabList
+                onChange={handleChange}
+                aria-label="lab API tabs example"
+                textColor="secondary"
+              >
+                <Tab
+                  label="INFORMATION"
+                  value="1"
+                  icon={<Info className="mr-2 " />}
+                  className="flex flex-row"
+                />
+                <Tab
+                  label="REVIEW"
+                  value="2"
+                  icon={<Star className="mr-2 " />}
+                  className="flex flex-row"
+                />
+                <Tab
+                  label="RETURN POLICY"
+                  value="3"
+                  icon={<Policy className="mr-2 " />}
+                  className="flex flex-row"
+                />
+              </TabList>
+            </Box>
+            <TabPanel value="1" className="w-full">
+              <InformationDetails infoDetails={product?.info} />
+            </TabPanel>
+            <TabPanel
+              value="2"
+              className="flex items-center justify-center w-full"
+            >
+              <ReviewDetails reviewDetails={product?.review} />
+            </TabPanel>
+            <TabPanel value="3">
+              <ReturnsPolicyDetails />
+            </TabPanel>
+          </TabContext>
         </Box>
       </Container>
     </>
   );
 };
 
-const mapStateToProps = (state, ownProps) => {
-  const productId = ownProps.match.params.productId; // Assuming you're using React Router
-  return {
-    product: state.products[productId], // Assuming you store products in the state
-  };
-};
+// const mapStateToProps = (state, ownProps) => {
+//   const productId = ownProps.match.params.id; // Assuming you're using React Router
+//   return {
+//     product: state.products[productId], // Assuming you store products in the state
+//   };
+// };
 
-export default connect(mapStateToProps)(Details);
+export default Details;
