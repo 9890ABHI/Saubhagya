@@ -13,15 +13,15 @@ import React from "react";
 import Cart from "./screens/Cart";
 
 function App() {
-  const user = useSelector((state) => state.user.user);
-  const { authUser } = user;
+  // const user = useSelector((state) => state.user.user);
+  // const { authUser } = user;
   return (
     <>
       <div style={{ width: "100vw" }} className="App">
         <Header />
         <StyledEngineProvider injectFirst>
           <Routes>
-            {!authUser ? (
+            {/* {!authUser ? (
               <>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signUp" element={<SignUp />} />
@@ -33,7 +33,11 @@ function App() {
                 <Route path="/shop/:id" element={<Details />} />
                 <Route path="/cart/:id" element={<Cart />} />
               </>
-            )}
+            )} */}
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/shop/:id" element={<Details />} />
+            <Route path="/cart/:id" element={<Cart />} />
           </Routes>
         </StyledEngineProvider>
         <Footer />

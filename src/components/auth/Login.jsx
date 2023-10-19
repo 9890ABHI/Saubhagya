@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { login } from "../../redux/reducers/authReducer";
+// import { login } from "../../redux/reducers/authReducer";
 import {
   Box,
   Button,
@@ -29,7 +29,7 @@ const Login = () => {
 
   const dispatch = useDispatch();
   const handleChanges = () => {
-    dispatch(login(values));
+    // dispatch(login(values));
     navigation("/");
   };
 

@@ -1,27 +1,31 @@
 import {
+  Close,
   FavoriteBorder,
   Logout,
+  Person,
   PersonOutline,
+  Search,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate, useNavigation, useParams } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import { IconButton, useMediaQuery } from "@mui/material";
+import { Box, IconButton, useMediaQuery } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { logout } from "../redux/reducers/authReducer";
+// import { logout } from "../redux/reducers/authReducer";
 
 const Header = () => {
-  const dispatch = useDispatch();
-  const navigation = useNavigate();
+  // const dispatch = useDispatch();
   const Mobile = useMediaQuery("(max-width: 640px)");
-  const handleLogout = () => {
-    dispatch(logout());
-    navigation("#/login");
-  };
+  const [openSearch, setOpenSearch] = useState(false);
   return (
     <>
-      <div className="w-[100%] h-[75px] flex justify-between items-center border-b-[1px] border-black px-10 max-sm:hidden">
+      <div
+        className={`w-[100%] h-[75px] flex justify-between items-center px-10 max-sm:hidden ${
+          openSearch && "relative"
+        }`}
+        style={{ borderBottom: "1px solid rgba(0,0,0,0.2)" }}
+      >
         <div className="pl-2">
           {/* Logo */}
           <Link to={"/"}>
@@ -34,23 +38,64 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div>
-          <SearchBar />
-        </div>
-        <div className="flex gap-4 pr-2 items-center">
+
+        <Box
+          className="flex gap-4 pr-2 items-center justify-end "
+          sx={{ width: openSearch ? "80%" : undefined }}
+        >
+          {openSearch && (
+            <>
+              <Box className="" sx={{ width: "70%" }}>
+                <SearchBar />
+              </Box>
+            </>
+          )}
+          <Box className="flex ">
+            <IconButton onClick={() => setOpenSearch(!openSearch)}>
+              {!openSearch ? (
+                <Search
+                  sx={{
+                    color: "#f88b69",
+                    scale: "1.2",
+                    transition: openSearch ? "2s" : "0s",
+                  }}
+                />
+              ) : (
+                <Close
+                  sx={{
+                    color: "black",
+                    scale: "1.2",
+                    transition: openSearch ? "2s" : "0s",
+                  }}
+                />
+              )}
+            </IconButton>
+          </Box>
           <Link>
-            <FavoriteBorder sx={{ color: "black" }} />
+            <IconButton>
+              <FavoriteBorder sx={{ color: "#f88b69", scale: "1.2" }} />
+            </IconButton>
           </Link>
           <Link>
-            <ShoppingCartOutlined sx={{ color: "black" }} />
+            <IconButton>
+              <Box className="absolute right-2 top-[-7px] text-xs font-medium bg-[#000000a1] text-[#f88b69] w-5 h-5 justify-items-center rounded-2xl">
+                2
+              </Box>
+              <ShoppingCartOutlined sx={{ color: "#f88b69", scale: "1.2" }} />
+            </IconButton>
           </Link>
-          <Link to={"/login"}>
-            <PersonOutline sx={{ color: "black" }} />
-          </Link>
-          <IconButton onClick={() => handleLogout}>
-            <Logout sx={{ color: "black" }} />
+
+          <IconButton>
+            <PersonOutline
+              sx={{
+                color: "#f88b69",
+                scale: "1.4",
+                transition: "0.5s",
+                ":hover": { color: "#f88b69" },
+              }}
+            />
           </IconButton>
-        </div>
+        </Box>
       </div>
       {Mobile ? (
         <>

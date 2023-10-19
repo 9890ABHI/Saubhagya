@@ -18,17 +18,20 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <FormControl component="fieldset" className="w-full">
-        <Box className="w-[80%]" sx={{ borderBottom: "1px solid black" }}>
-          <IconButton
-            onClick={() => setOpen(!open)}
-            className="w-full flex justify-between pl-5 border-b-2"
-          >
-            <Typography variant="h6" className="capitalize text-black">
-              {filterKey}
-            </Typography>
-            {!open ? <ExpandMore /> : <ExpandLess />}
-          </IconButton>
+      <FormControl component="fieldset" className="w-full flex justify-between">
+        <Box
+          className="w-[80%] flex justify-between px-5 py-2 cursor-pointer"
+          onClick={() => setOpen(!open)}
+          sx={{
+            borderBottom: "1px solid rgba(0,0,0,0.2)",
+            fontFamily: "SemiBold",
+            color: "GrayText",
+          }}
+        >
+          <Typography variant="h6" className="capitalize" color={"GrayText"}>
+            {filterKey}
+          </Typography>
+          {!open ? <ExpandMore /> : <ExpandLess />}
         </Box>
 
         <Box classname="flex w-[80%] pl-9">
@@ -38,37 +41,46 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
                 <>
                   {filterKey === "colors" ? (
                     <>
-                      <FormControlLabel
-                        key={item.title}
-                        control={
-                          <Checkbox
-                            checked={filters[filterKey].includes(item.title)}
-                            onChange={(e) => handleCheckboxChange(filterKey, e)}
-                            icon={
-                              <Box
-                                sx={{
-                                  width: 24,
-                                  height: 24,
-                                  backgroundColor: item.title,
-                                  borderRadius: "50%",
-                                }}
-                              />
-                            }
-                            checkedIcon={
-                              <Box
-                                sx={{
-                                  width: 24,
-                                  height: 24,
-                                  backgroundColor: item.title,
-                                  borderRadius: "50%",
-                                }}
-                              />
-                            }
-                            value={item.title}
-                          />
-                        }
-                        label={item.title}
-                      />
+                      <Box sx={{ pl: 9 }}>
+                        <FormControlLabel
+                          key={item.title}
+                          control={
+                            <Checkbox
+                              checked={filters[filterKey].includes(item.title)}
+                              onChange={(e) =>
+                                handleCheckboxChange(filterKey, e)
+                              }
+                              icon={
+                                <Box
+                                  sx={{
+                                    width: 24,
+                                    height: 24,
+                                    backgroundColor: item.title,
+                                    borderRadius: "100%",
+                                    filter: "blur(1px)",
+
+                                    overflow: "hidden",
+                                  }}
+                                />
+                              }
+                              checkedIcon={
+                                <Box
+                                  sx={{
+                                    width: 24,
+                                    height: 24,
+                                    backgroundColor: item.title,
+                                    filter: "blur(2px)",
+                                    borderRadius: "100%",
+                                    overflow: "hidden",
+                                  }}
+                                />
+                              }
+                              value={item.title}
+                            />
+                          }
+                          label={item.title}
+                        />
+                      </Box>
                     </>
                   ) : (
                     <>
@@ -80,6 +92,7 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
                             checked={filters[filterKey].includes(item.title)}
                             onChange={(e) => handleCheckboxChange(filterKey, e)}
                             value={item.title}
+                            color="info"
                           />
                         }
                         label={item.title}
@@ -103,20 +116,20 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
   const maximum = useState(filters.priceRange[1]);
   return (
     <>
-      <FormControl component="fieldset" className="w-full">
+      <FormControl component="fieldset" className="w-full justify-start">
         <Box
-          className="w-[80%] justify-between"
-          sx={{ borderBottom: "1px solid black" }}
+          className="w-[80%] flex justify-between px-5 py-2 cursor-pointer"
+          onClick={() => setOpen(!open)}
+          sx={{
+            borderBottom: "1px solid rgba(0,0,0,0.2)",
+            fontFamily: "SemiBold",
+            color: "GrayText",
+          }}
         >
-          <IconButton
-            onClick={() => setOpen(!open)}
-            className="w-full flex justify-between pl-5 border-b-2"
-          >
-            <Typography variant="h6" className="capitalize text-black">
-              {filterKey}
-            </Typography>
-            {!open ? <ExpandMore /> : <ExpandLess />}
-          </IconButton>
+          <Typography variant="h6" className="capitalize">
+            {filterKey}
+          </Typography>
+          {!open ? <ExpandMore /> : <ExpandLess />}
         </Box>
 
         <Box sx={{ width: "70%", pl: 3 }}>
@@ -132,7 +145,7 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
                     placeholder={filters.priceRange[0]}
                     // onChange={handlePriceRangeChange}
                     startAdornment={
-                      <InputAdornment position="start">$</InputAdornment>
+                      <InputAdornment position="start">₹</InputAdornment>
                     }
                   />
                 </FormControl>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { signup } from "../../redux/reducers/authReducer";
+// import { signup } from "../../redux/reducers/authReducer";
 import {
   Alert,
   Box,
@@ -48,7 +48,7 @@ const SignUp = () => {
     e.preventDefault();
 
     if (values.password === values.confirmPassword) {
-      dispatch(signup(values));
+      // dispatch(signup(values));
       navigation("/login");
     } else {
       setPasswordMatch(false);

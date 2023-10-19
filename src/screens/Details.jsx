@@ -11,6 +11,7 @@ import {
   MenuItem,
   InputLabel,
   Tab,
+  Rating,
 } from "@mui/material";
 import {
   EmailOutlined,
@@ -40,6 +41,10 @@ const Details = () => {
   const [imge, setImge] = useState("");
   const [Size, setSize] = useState("");
   const [value, setValue] = React.useState("1");
+
+  const offerOfProduct = Math.round(
+    ((product.oldPrice - product.price) / product.oldPrice) * 100
+  );
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -83,7 +88,7 @@ const Details = () => {
                   onMouseEnter={() => setImge(item.img)}
                   key={item.id}
                   alt=""
-                  className="object-contain"
+                  className="object-cover rounded-sm"
                 />
               </>
             ))}
@@ -93,21 +98,66 @@ const Details = () => {
             alt=""
             width={550}
             height={"100%"}
-            className="object-contain border-none"
+            className="object-cover border-none rounded-lg"
           />
         </Box>
         <Box sx={{ width: "50%", pt: 1 }}>
           <Box className="w-full text-left ">
-            <Typography variant="body1" className="text-xl">
+            <Typography
+              variant="body1"
+              className="text-xl pb-4"
+              sx={{ fontFamily: "Regular" }}
+            >
               {product.title}
             </Typography>
-            <Typography variant="body2" className="text-xl mt-2">
-              ₹ {product.price} /-
-            </Typography>
+            <Box className="flex items-center gap-3">
+              <Typography className="text-base ">{product.rating}</Typography>
+              <Rating
+                readOnly
+                value={product.rating}
+                size="small"
+                precision={0.1}
+              />
+              <Typography>31 rating</Typography>
+            </Box>
+            <Box>
+              <Box className="flex">
+                <Typography
+                  variant="body2"
+                  className="text-xl mt-2 pb-1 pr-3 "
+                  sx={{ fontFamily: "Light", color: "red" }}
+                >
+                  -{offerOfProduct}%
+                </Typography>
+                <Typography
+                  variant="body2"
+                  className="text-xl mt-2 pb-1"
+                  sx={{ fontFamily: "Regular" }}
+                >
+                  ₹ {product.price} /-
+                </Typography>
+              </Box>
+              <Box className="flex items-center">
+                <Typography
+                  variant="body2"
+                  className="text-base"
+                  sx={{ fontFamily: "Light" }}
+                >
+                  M.R.P : ₹
+                </Typography>
+                <Typography
+                  variant="body2"
+                  className="text-lg ml-2 line-through"
+                  sx={{ fontFamily: "Regular" }}
+                >
+                  {product.oldPrice}
+                </Typography>
+              </Box>
+            </Box>
             <Typography variant="caption" className="text-gray-400 mt-2">
               Inclusive of all taxes
             </Typography>
-            <hr className="border-blue-300 mt-2" />
+            <hr className="border-t-gray-300 mt-2" />
             <Box className="flex justify-between">
               <Box className="flex mt-4">
                 <Typography className="" variant="body2">
@@ -117,17 +167,17 @@ const Details = () => {
                   #{product?.code}
                 </Typography>
               </Box>
-              <Box className="flex mt-2">
+              {/* <Box className="flex mt-2">
                 <Button variant="text" className="text-gray-600">
                   <Typography className="underline ">Size Chart</Typography>
                 </Button>
-              </Box>
+              </Box> */}
             </Box>
             <Typography variant="caption" className="text-gray-400 mt-3 mb-3">
               Be the first to review this product
             </Typography>
-            <hr className="border-blue-300 mt-2" />
-            <Box className="flex justify-between mt-5 items-center">
+            <hr className="border-t-gray-300 mt-2" />
+            {/* <Box className="flex justify-between mt-5 items-center">
               <Typography className="" variant="body2">
                 Standard Size (Bust Size)
               </Typography>
@@ -150,7 +200,7 @@ const Details = () => {
               </FormControl>
             </Box>
 
-            <hr className="border-blue-300 mt-2" />
+            <hr className="border-blue-300 mt-2" /> */}
 
             <Box className="mt-4">
               <Typography className="font-light flex items-center">
@@ -170,9 +220,18 @@ const Details = () => {
               </Typography>
             </Box>
 
-            <hr className="border-blue-300 mt-2" />
+            <hr className="border-t-gray-300 mt-2" />
 
-            <Box className="mt-3 flex justify-around">
+            <Box className="mt-5">
+              <PrimaryText text={"Available Offers"} />
+              <SecondaryText
+                text={
+                  "Free Shipping on Cart Value of US $150+/7500INR on Prepaid Orders."
+                }
+              />
+            </Box>
+            <hr className="border-t-gray-300 mt-2" />
+            <Box className="mt-12 pb-7 flex justify-around">
               <ShoppingButton
                 title={"Buy Now"}
                 icon={<ShoppingBagOutlined />}
@@ -185,15 +244,6 @@ const Details = () => {
               </Link>
             </Box>
 
-            <Box className="mt-9">
-              <PrimaryText text={"Available Offers"} />
-              <SecondaryText
-                text={
-                  "Free Shipping on Cart Value of US $150+/7500INR on Prepaid Orders."
-                }
-              />
-            </Box>
-            <hr className="border-blue-300 mt-2" />
             <Box className="mt-5">
               <PrimaryText text={"Have a question? We can help."} />
               <SecondaryText text={"Mon - Sat - 10:00 am to 6:00 pm (IST)"} />

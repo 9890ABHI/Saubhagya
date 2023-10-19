@@ -7,11 +7,20 @@ import { Delete } from "@mui/icons-material";
 
 const Cart = () => {
   const [products, setProducts] = useState(Clothingproducts);
+
+  const prods = products.slice(0, 4);
+
+  const totalprice = 0;
+  for (i = 0; i < prods.lenth; i++) {
+    totalprice += prods[i].price;
+  }
+
   return (
     <>
       <Box>
         <Box className="flex flex-col justify-center items-center">
-          {products.slice(0, 4).map((item) => (
+          {totalprice}
+          {prods.map((item) => (
             <>
               <Box className="px-4 py-2">
                 <Box className="flex items-center overflow-hidden">
@@ -20,9 +29,11 @@ const Cart = () => {
                     alt=""
                     className="w-[100px] h-[100px] object-cover overflow-hidden rounded-md"
                   />
-                  <Box>
+                  <Box className="w-[50%] text-left pl-5">
                     <Typography>{item.title}</Typography>
-                    <Typography>{item.price}</Typography>
+                    <Typography className="font-semibold">
+                      {item.price}
+                    </Typography>
                   </Box>
                   <Box>
                     <Button>
@@ -37,7 +48,7 @@ const Cart = () => {
         </Box>
         <Box>
           <Box>
-            <Typography className="text-xl "></Typography>
+            <Typography className="text-xl"></Typography>
           </Box>
         </Box>
       </Box>

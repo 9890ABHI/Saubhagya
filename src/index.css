@@ -12,7 +12,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@font-face {
+  font-family: "SemiBold";
+  src: local("SemiBold"),
+    url(../src/assets/Poppins/Poppins-SemiBold.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Regular";
+  src: local("Regular"),
+    url(../src/assets/Poppins/Poppins-Light.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Light";
+  src: local("Light"),
+    url(../src/assets/Poppins/Poppins-Light.ttf) format("opentype");
 }

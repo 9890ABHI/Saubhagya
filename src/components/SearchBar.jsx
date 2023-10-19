@@ -10,13 +10,14 @@ const SearchBar = () => {
           borderBottom: "1px solid black",
           display: "flex",
         }}
+        className="w-full"
         visibility={"IconButton"}
       >
         <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
           <SearchIcon />
         </IconButton>
         <InputBase
-          sx={{ pt: 1 }}
+          sx={{ pt: 1, width: "100%" }}
           placeholder="Search "
           inputProps={{ "aria-label": "search" }}
         />

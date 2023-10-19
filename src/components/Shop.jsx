@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { FilterDataPrice } from "./filtered";
 import {
@@ -17,7 +17,8 @@ import { FilterData } from "./filtered";
 import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { setProducts as setProductAction } from "../redux/actions/productActions";
+import { Close, Filter } from "@mui/icons-material";
+// import { setProducts as setProductAction } from "../redux/actions/productActions";
 
 const Shop = ({ title }) => {
   const Secondaryproducts = useSelector((state) => state);
@@ -42,8 +43,8 @@ const Shop = ({ title }) => {
     // Fetch products from an API or set products in state
     // Example: fetchProducts().then((data) => setProducts(data));
     setProducts(Clothingproducts);
-    dispatch(setProductAction(filteredProducts));
-  }, [dispatch]);
+    // dispatch(setProductAction(filteredProducts));
+  }, []);
 
   useEffect(() => {
     // Apply filters whenever filter criteria change
@@ -133,12 +134,24 @@ const Shop = ({ title }) => {
     <>
       <div className="flex w-[100%]">
         {/* Filters */}
-        <Box className=" w-[30%] flex flex-col pl-10 text-left">
-          <div className="w-[80%] text-center mb-3">
-            <Typography variant="h4" className="font-sans">
+
+        <Box className=" w-[30%] flex flex-col pl-10 pt-3 text-left">
+          <div className="w-[80%]  text-center mb-3 pr-3">
+            <Typography
+              variant="h4"
+              sx={{
+                fontFamily: "SemiBold",
+                color: "GrayText",
+                mx: 2,
+              }}
+            >
               Filters
             </Typography>
           </div>
+          <hr
+            style={{ borderTop: "1px solid rgba(248, 139, 105,0.5 )" }}
+            className="w-[80%]"
+          />
           <Box className="flex flex-col">
             {FilterData(Category, "category", filters, handleCheckboxChange)}
             {FilterDataPrice("Price", filters, handlePriceRangeChange)}
@@ -161,17 +174,19 @@ const Shop = ({ title }) => {
 
           <div></div>
         </Box>
+
         {/*  */}
 
         {/* filter products */}
 
-        <Box className="flex w-[80%] flex-wrap gap-5">
+        <Box className="flex w-[85%] max-h-screen flex-wrap gap-5 pt-4 pb-20 overflow-scroll">
           {filteredProducts.map((item) => (
             <>
               <Card item={item} />
             </>
           ))}
         </Box>
+        <Box></Box>
       </div>
     </>
   );

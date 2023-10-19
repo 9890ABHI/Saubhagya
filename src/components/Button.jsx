@@ -6,17 +6,18 @@ export const ShoppingButton = ({ title, icon }) => {
     <>
       <Button
         sx={{
-          backgroundColor: "#eee",
           color: "#000",
           fontSize: "15px",
-          "&:hover": {
-            backgroundColor: "#000",
+          ":hover": {
             color: "#eee",
           },
           px: 7,
           py: 2,
           borderRadius: 2,
           gap: 2,
+          "&.MuiButton-root": {
+            background: "linear-gradient(to left,  #f88b69, #f7797d)",
+          },
         }}
         variant="contained"
         startIcon={icon}
