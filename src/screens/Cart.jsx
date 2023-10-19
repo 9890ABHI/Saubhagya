@@ -11,7 +11,7 @@ const Cart = () => {
   const prods = products.slice(0, 4);
 
   const totalprice = 0;
-  for (i = 0; i < prods.lenth; i++) {
+  for (let i = 0; i < prods.lenth; i++) {
     totalprice += prods[i].price;
   }
 
