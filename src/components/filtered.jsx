@@ -20,7 +20,7 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
     <>
       <FormControl component="fieldset" className="w-full flex justify-between">
         <Box
-          className="w-[80%] flex justify-between px-5 py-2 cursor-pointer"
+          className="w-[100%] flex justify-between px-5 py-2 cursor-pointer"
           onClick={() => setOpen(!open)}
           sx={{
             borderBottom: "1px solid rgba(0,0,0,0.2)",
@@ -34,7 +34,7 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
           {!open ? <ExpandMore /> : <ExpandLess />}
         </Box>
 
-        <Box classname="flex w-[80%] pl-9">
+        <Box classname="flex w-[100%] pl-9">
           {open && (
             <FormGroup>
               {data.map((item) => (
@@ -118,7 +118,7 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
     <>
       <FormControl component="fieldset" className="w-full justify-start">
         <Box
-          className="w-[80%] flex justify-between px-5 py-2 cursor-pointer"
+          className="w-[100%] flex justify-between px-5 py-2 cursor-pointer"
           onClick={() => setOpen(!open)}
           sx={{
             borderBottom: "1px solid rgba(0,0,0,0.2)",

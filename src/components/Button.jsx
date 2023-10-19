@@ -1,23 +1,26 @@
 import { Button } from "@mui/material";
 import React from "react";
 
-export const ShoppingButton = ({ title, icon }) => {
+export const ShoppingButton = ({ title, icon, sizes }) => {
   return (
     <>
       <Button
         sx={{
           color: "#000",
-          fontSize: "15px",
+          fontSize: sizes ? "13px" : "15px",
           ":hover": {
             color: "#eee",
           },
-          px: 7,
-          py: 2,
-          borderRadius: 2,
+          width: sizes ? "100%" : undefined,
+          px: sizes ? null : 8,
+          py: sizes ? "5px" : 2,
+          borderRadius: sizes ? 0 : 2,
           gap: 2,
           "&.MuiButton-root": {
             background: "linear-gradient(to left,  #f88b69, #f7797d)",
           },
+          display: "flex",
+          alignItems: "center",
         }}
         variant="contained"
         startIcon={icon}

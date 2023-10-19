@@ -132,47 +132,54 @@ const Shop = ({ title }) => {
 
   return (
     <>
-      <div className="flex w-[100%]">
+      <div className="flex w-[100%] bg-[#f2f2f2]">
         {/* Filters */}
 
-        <Box className=" w-[30%] flex flex-col pl-10 pt-3 text-left">
-          <div className="w-[80%]  text-center mb-3 pr-3">
-            <Typography
-              variant="h4"
-              sx={{
-                fontFamily: "SemiBold",
-                color: "GrayText",
-                mx: 2,
-              }}
-            >
-              Filters
-            </Typography>
-          </div>
-          <hr
-            style={{ borderTop: "1px solid rgba(248, 139, 105,0.5 )" }}
-            className="w-[80%]"
-          />
-          <Box className="flex flex-col">
-            {FilterData(Category, "category", filters, handleCheckboxChange)}
-            {FilterDataPrice("Price", filters, handlePriceRangeChange)}
-            {FilterData(Colors, "colors", filters, handleCheckboxChange)}
-            {FilterData(Fabrics, "fabrics", filters, handleCheckboxChange)}
-            {FilterData(Sizes, "sizes", filters, handleCheckboxChange)}
-          </Box>
+        <Box className=" w-[30%] h-screen  flex flex-col pl-10 pt-3 text-left">
+          <Box className="bg-white w-[90%] px-2 py-3 rounded-sm">
+            <div className="text-center mb-7">
+              <Typography
+                variant="h4"
+                sx={{
+                  fontFamily: "SemiBold",
+                  color: "GrayText",
+                  mx: 2,
+                }}
+              >
+                Filters
+              </Typography>
+            </div>
+            <hr
+              style={{ borderTop: "1px solid rgba(248, 139, 105,0.5 )" }}
+              className="w-[100%]"
+            />
+            <Box className="flex flex-col">
+              {FilterData(Category, "category", filters, handleCheckboxChange)}
+              {FilterDataPrice("Price", filters, handlePriceRangeChange)}
+              {FilterData(Colors, "colors", filters, handleCheckboxChange)}
+              {FilterData(Fabrics, "fabrics", filters, handleCheckboxChange)}
+              {FilterData(Sizes, "sizes", filters, handleCheckboxChange)}
+            </Box>
 
-          <Box>
-            {FilterData(Styles, "styles", filters, handleCheckboxChange)}
-            {FilterData(
-              BottomStyles,
-              "bottomStyles",
-              filters,
-              handleCheckboxChange
-            )}
-            {FilterData(Occasions, "occasions", filters, handleCheckboxChange)}
-            {FilterData(Looks, "looks", filters, handleCheckboxChange)}
-          </Box>
+            <Box>
+              {FilterData(Styles, "styles", filters, handleCheckboxChange)}
+              {FilterData(
+                BottomStyles,
+                "bottomStyles",
+                filters,
+                handleCheckboxChange
+              )}
+              {FilterData(
+                Occasions,
+                "occasions",
+                filters,
+                handleCheckboxChange
+              )}
+              {FilterData(Looks, "looks", filters, handleCheckboxChange)}
+            </Box>
 
-          <div></div>
+            <div></div>
+          </Box>
         </Box>
 
         {/*  */}
