@@ -17,6 +17,7 @@ export const Clothingproducts = [
     look: "Elegant",
     rating: 4.5,
     timeToDispatch: "2-3 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -51,6 +52,7 @@ export const Clothingproducts = [
     look: "Comfortable",
     rating: 4.5,
     timeToDispatch: "1-2 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -85,6 +87,7 @@ export const Clothingproducts = [
     look: "Traditional",
     rating: 4.5,
     timeToDispatch: "3-4 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -119,6 +122,7 @@ export const Clothingproducts = [
     look: "Stylish",
     rating: 4.5,
     timeToDispatch: "1-2 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -153,6 +157,7 @@ export const Clothingproducts = [
     look: "Glamorous",
     rating: 4.5,
     timeToDispatch: "2-3 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -187,6 +192,7 @@ export const Clothingproducts = [
     look: "Trendy",
     rating: 4.5,
     timeToDispatch: "1-2 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -221,6 +227,7 @@ export const Clothingproducts = [
     look: "Opulent",
     rating: 4.5,
     timeToDispatch: "3-4 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -255,6 +262,7 @@ export const Clothingproducts = [
     look: "Comfortable",
     rating: 4.5,
     timeToDispatch: "1-2 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -289,6 +297,7 @@ export const Clothingproducts = [
     look: "Sophisticated",
     rating: 4.5,
     timeToDispatch: "2-3 days",
+    availableProducts: 10,
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -323,6 +332,8 @@ export const Clothingproducts = [
     look: "Traditional",
     rating: 4.5,
     timeToDispatch: "1-2 days",
+    availableProducts: 10,
+
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",

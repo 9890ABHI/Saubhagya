@@ -1,54 +1,59 @@
 import { Box, Button, IconButton, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Clothingproducts } from "../constants";
-import { Delete } from "@mui/icons-material";
+import { Add, Delete, Remove } from "@mui/icons-material";
+import { ProductPricing } from "../components/Informations";
+import { CartCard } from "../components/Card";
 
 const Cart = () => {
   const [products, setProducts] = useState(Clothingproducts);
+  const [quantity, setQuantity] = useState(1);
 
   const prods = products.slice(0, 4);
-
-  const totalprice = 0;
-  for (let i = 0; i < prods.lenth; i++) {
-    totalprice += prods[i].price;
+  const [filterProds, setFilterProds] = useState(prods);
+  let sum = 0;
+  let ogprice = 0;
+  // iterate over each item in the array
+  for (let i = 0; i < filterProds.length; i++) {
+    // if (quantity > 0) {
+    sum += filterProds[i].price;
+    ogprice += filterProds[i].oldPrice;
+    // }
   }
+  const disccount = ogprice - sum;
+
+  // useEffect(() => {
+  //   const responce = prods.filter(removeItem);
+  //   setFilterProds(responce);
+  //   console.log("element remove useEffect");
+  // }, []);
 
   return (
     <>
-      <Box>
-        <Box className="flex flex-col justify-center items-center">
-          {totalprice}
-          {prods.map((item) => (
+      <Box className="flex justify-around items-start bg-[#f2f2f2]">
+        <Box className="w-[70%] flex flex-col justify-center items-center gap-2">
+          {filterProds.map((item) => (
             <>
-              <Box className="px-4 py-2">
-                <Box className="flex items-center overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="w-[100px] h-[100px] object-cover overflow-hidden rounded-md"
-                  />
-                  <Box className="w-[50%] text-left pl-5">
-                    <Typography>{item.title}</Typography>
-                    <Typography className="font-semibold">
-                      {item.price}
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <Button>
-                      Delete Item
-                      <Delete color="error" />
-                    </Button>
-                  </Box>
-                </Box>
-              </Box>
+              <CartCard
+                item={item}
+                prods={prods}
+                setFilterProds={setFilterProds}
+                filterProds={filterProds}
+              />
             </>
           ))}
         </Box>
-        <Box>
+        <Box
+          className="w-[400px] h-[450px] "
+          sx={{ border: "1px solid black" }}
+        >
           <Box>
-            <Typography className="text-xl"></Typography>
+            <Typography className="text-xl">
+              Total Purches {filterProds.length}
+            </Typography>
+            {sum} {ogprice} {disccount}
           </Box>
         </Box>
       </Box>

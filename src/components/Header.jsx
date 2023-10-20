@@ -21,80 +21,62 @@ const Header = () => {
   return (
     <>
       <div
-        className={`w-[100%] h-[75px] flex justify-between items-center px-10 max-sm:hidden ${
+        className={`w-[100%] h-[95px] flex flex-col  max-sm:hidden ${
           openSearch && "relative"
         }`}
         style={{ borderBottom: "1px solid rgba(0,0,0,0.2)" }}
       >
-        <div className="pl-2">
-          {/* Logo */}
-          <Link to={"/"}>
-            <img
-              src={require("../assets/logo.png")}
-              alt="Company logo"
-              width={150}
-              height={30}
-              className="object-contain rounded-sm px-2"
-            />
-          </Link>
-        </div>
+        <img
+          src={require("../assets/Shaubhgya.png")}
+          className="w-screen h-8 object-fill"
+        />
+        <Box className="flex justify-between items-center px-10">
+          <div className="pl-2 ">
+            {/* Logo */}
+            <Link to={"/"}>
+              <img
+                src={require("../assets/logo.png")}
+                alt="Company logo"
+                width={150}
+                height={30}
+                className="object-contain rounded-sm px-2"
+              />
+            </Link>
+          </div>
 
-        <Box
-          className="flex gap-4 pr-2 items-center justify-end "
-          sx={{ width: openSearch ? "80%" : undefined }}
-        >
-          {openSearch && (
-            <>
-              <Box className="" sx={{ width: "70%" }}>
-                <SearchBar />
-              </Box>
-            </>
-          )}
-          <Box className="flex ">
-            <IconButton onClick={() => setOpenSearch(!openSearch)}>
-              {!openSearch ? (
-                <Search
-                  sx={{
-                    color: "#f88b69",
-                    scale: "1.2",
-                    transition: openSearch ? "2s" : "0s",
-                  }}
-                />
-              ) : (
-                <Close
-                  sx={{
-                    color: "black",
-                    scale: "1.2",
-                    transition: openSearch ? "2s" : "0s",
-                  }}
-                />
-              )}
+          <Box
+            className="flex gap-4 pr-2 items-center justify-end "
+            sx={{ width: openSearch ? "80%" : undefined }}
+          >
+            <Box className="" sx={{ width: "70%" }}>
+              <SearchBar />
+            </Box>
+
+            <Link>
+              <IconButton>
+                <FavoriteBorder sx={{ color: "#f88b69", scale: "1.2" }} />
+              </IconButton>
+            </Link>
+            <Link>
+              <IconButton>
+                <Box className="absolute right-2 top-[-7px] text-xs font-medium bg-[#000000a1] text-[#f88b69] w-5 h-5 justify-items-center rounded-2xl">
+                  2
+                </Box>
+                <ShoppingCartOutlined sx={{ color: "#f88b69", scale: "1.2" }} />
+              </IconButton>
+            </Link>
+
+            <IconButton>
+              <PersonOutline
+                sx={{
+                  color: "#f88b69",
+                  scale: "1.4",
+                  transition: "0.5s",
+                  ":hover": { color: "#f88b69" },
+                }}
+              />
             </IconButton>
           </Box>
-          <Link>
-            <IconButton>
-              <FavoriteBorder sx={{ color: "#f88b69", scale: "1.2" }} />
-            </IconButton>
-          </Link>
-          <Link>
-            <IconButton>
-              <Box className="absolute right-2 top-[-7px] text-xs font-medium bg-[#000000a1] text-[#f88b69] w-5 h-5 justify-items-center rounded-2xl">
-                2
-              </Box>
-              <ShoppingCartOutlined sx={{ color: "#f88b69", scale: "1.2" }} />
-            </IconButton>
-          </Link>
-
-          <IconButton>
-            <PersonOutline
-              sx={{
-                color: "#f88b69",
-                scale: "1.4",
-                transition: "0.5s",
-                ":hover": { color: "#f88b69" },
-              }}
-            />
-          </IconButton>
         </Box>
       </div>
       {Mobile ? (

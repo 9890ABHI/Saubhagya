@@ -17,7 +17,15 @@ function App() {
   // const { authUser } = user;
   return (
     <>
-      <div style={{ width: "100vw" }} className="App">
+      <div
+        style={{
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+        className="App"
+      >
         <Header />
         <StyledEngineProvider injectFirst>
           <Routes>
@@ -37,7 +45,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/:id" element={<Details />} />
-            <Route path="/cart/:id" element={<Cart />} />
+            <Route path="/cart/:userid" element={<Cart />} />
           </Routes>
         </StyledEngineProvider>
         <Footer />

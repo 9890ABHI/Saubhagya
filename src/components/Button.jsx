@@ -1,4 +1,5 @@
-import { Button } from "@mui/material";
+import { Add, Remove } from "@mui/icons-material";
+import { Box, Button } from "@mui/material";
 import React from "react";
 
 export const ShoppingButton = ({ title, icon, sizes }) => {
@@ -27,6 +28,22 @@ export const ShoppingButton = ({ title, icon, sizes }) => {
       >
         {title}
       </Button>
+    </>
+  );
+};
+
+export const QuantityButtton = (id) => {
+  return (
+    <>
+      <Box>
+        <Button onClick={() => AddItem(item.id)}>
+          <Remove />
+        </Button>
+        {quantity}
+        <Button onClick={() => setQuantity(quantity + 1)}>
+          <Add />
+        </Button>
+      </Box>
     </>
   );
 };

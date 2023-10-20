@@ -115,27 +115,6 @@ const SignUp = () => {
               onChange={handleConfirmPasswordChange}
             />
 
-            {/* <FormLabel>Password</FormLabel>
-            <Input
-              label="Password"
-              size="lg"
-              type="password"
-              name="password"
-              value={password}
-              onChange={handlePasswordChange}
-              color="primary"
-            />
-
-            <FormLabel>Confirm Password</FormLabel>
-            <Input
-              label="Confirm Password"
-              size="lg"
-              type="password"
-              name="confirmPassword"
-              value={confirmPassword}
-              onChange={handleConfirmPasswordChange}
-              color="primary"
-            /> */}
             {passwordMatch ? null : (
               <p style={{ color: "red" }}>Passwords do not match.</p>
             )}

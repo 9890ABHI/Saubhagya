@@ -14,10 +14,10 @@ import {
 } from "../constants";
 
 import { FilterData } from "./filtered";
-import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { Close, Filter } from "@mui/icons-material";
+import { Card } from "./Card";
 // import { setProducts as setProductAction } from "../redux/actions/productActions";
 
 const Shop = ({ title }) => {
@@ -132,12 +132,12 @@ const Shop = ({ title }) => {
 
   return (
     <>
-      <div className="flex w-[100%] bg-[#f2f2f2]">
+      <div className="flex w-[100%]  bg-[#f2f2f2] justify-around pt-5 gap-5 px-20">
         {/* Filters */}
 
-        <Box className=" w-[30%] h-screen  flex flex-col pl-10 pt-3 text-left">
-          <Box className="bg-white w-[90%] px-2 py-3 rounded-sm">
-            <div className="text-center mb-7">
+        <Box className="w-[250px] h-screen  flex flex-col pl-0 text-left">
+          <Box className="bg-white w-[100%] px-2 py-5 rounded-md">
+            {/* <div className="text-center mb-7">
               <Typography
                 variant="h4"
                 sx={{
@@ -152,7 +152,7 @@ const Shop = ({ title }) => {
             <hr
               style={{ borderTop: "1px solid rgba(248, 139, 105,0.5 )" }}
               className="w-[100%]"
-            />
+            /> */}
             <Box className="flex flex-col">
               {FilterData(Category, "category", filters, handleCheckboxChange)}
               {FilterDataPrice("Price", filters, handlePriceRangeChange)}
@@ -177,8 +177,6 @@ const Shop = ({ title }) => {
               )}
               {FilterData(Looks, "looks", filters, handleCheckboxChange)}
             </Box>
-
-            <div></div>
           </Box>
         </Box>
 
@@ -186,14 +184,15 @@ const Shop = ({ title }) => {
 
         {/* filter products */}
 
-        <Box className="flex w-[85%] max-h-screen flex-wrap gap-5 pt-4 pb-20 overflow-scroll">
-          {filteredProducts.map((item) => (
-            <>
-              <Card item={item} />
-            </>
-          ))}
+        <Box className="w-[75%] flex justify-end pb-10 h-screen">
+          <Box className="w-[100%] h-[100%] flex flex-wrap gap-5 justify-between overflow-scroll">
+            {filteredProducts.map((item) => (
+              <>
+                <Card item={item} />
+              </>
+            ))}
+          </Box>
         </Box>
-        <Box></Box>
       </div>
     </>
   );

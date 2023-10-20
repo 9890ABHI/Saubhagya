@@ -174,3 +174,47 @@ export function ReturnsPolicyDetails() {
     </>
   );
 }
+
+export const ProductPricing = ({ product, cart }) => {
+  const offerOfProduct = Math.round(
+    ((product.oldPrice - product.price) / product.oldPrice) * 100
+  );
+  return (
+    <>
+      <Box>
+        <Box className="flex">
+          <Typography
+            variant="body2"
+            className="text-xl mt-2 pb-1 pr-3 "
+            sx={{ fontFamily: "Light", color: "red" }}
+          >
+            -{offerOfProduct}%
+          </Typography>
+          <Typography
+            variant="body2"
+            className="text-xl mt-2 pb-1"
+            sx={{ fontFamily: "Regular" }}
+          >
+            ₹ {product.price} /-
+          </Typography>
+        </Box>
+        <Box className="flex items-center">
+          <Typography
+            variant="body2"
+            className="text-base"
+            sx={{ fontFamily: "Light" }}
+          >
+            M.R.P : ₹
+          </Typography>
+          <Typography
+            variant="body2"
+            className="text-lg ml-2 line-through"
+            sx={{ fontFamily: "Regular" }}
+          >
+            {product.oldPrice}
+          </Typography>
+        </Box>
+      </Box>
+    </>
+  );
+};

@@ -5,22 +5,32 @@ import React from "react";
 const SearchBar = () => {
   return (
     <>
-      <Box
-        sx={{
-          borderBottom: "1px solid black",
-          display: "flex",
-        }}
-        className="w-full"
-        visibility={"IconButton"}
-      >
-        <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-          <SearchIcon />
-        </IconButton>
-        <InputBase
-          sx={{ pt: 1, width: "100%" }}
-          placeholder="Search "
-          inputProps={{ "aria-label": "search" }}
-        />
+      <Box>
+        <Box
+          sx={{
+            borderBottom: "1px solid black",
+            display: "flex",
+            ":-moz-read-write": {
+              width: "150%",
+            },
+          }}
+          className="w-full"
+          visibility={"IconButton"}
+        >
+          <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+            <SearchIcon />
+          </IconButton>
+          <InputBase
+            sx={{ pt: 1, width: "100%" }}
+            placeholder="Search "
+            inputProps={{ "aria-label": "search" }}
+          />
+        </Box>
+        {
+          <>
+            <Box></Box>
+          </>
+        }
       </Box>
     </>
   );

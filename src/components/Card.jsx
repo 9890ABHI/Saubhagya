@@ -1,11 +1,17 @@
-import { Box } from "@mui/material";
-import React, { useState } from "react";
+import { Box, Button, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Ratings } from "./Rating";
-import { FavoriteBorder, ShoppingCartOutlined } from "@mui/icons-material";
-import { ShoppingButton } from "./Button";
+import {
+  Add,
+  Delete,
+  FavoriteBorder,
+  Remove,
+  ShoppingCartOutlined,
+} from "@mui/icons-material";
+import { QuantityButtton, ShoppingButton } from "./Button";
 
-const Card = ({ item }) => {
+export const Card = ({ item }) => {
   const [show, setShow] = useState(false);
   return (
     <>
@@ -15,8 +21,9 @@ const Card = ({ item }) => {
         onMouseLeave={() => setShow(!show)}
       >
         <Box
-          className="w-[300px] h-[470px]  flex flex-col rounded-lg overflow-hidden bg-white"
+          className="h-[430px] flex flex-col rounded-md overflow-hidden bg-white"
           sx={{
+            width: 300,
             boxShadow: "1px 2px 5px rgba(0, 0, 0,0.5 )",
           }}
         >
@@ -24,7 +31,7 @@ const Card = ({ item }) => {
             <img
               src={item.image}
               alt="products"
-              className="w-[300px] h-[370px] object-cover"
+              className="w-[100%] h-[370px] object-cover"
               style={
                 {
                   // filter: "grayScale(50%)",
@@ -53,9 +60,18 @@ const Card = ({ item }) => {
             </div>
             {show && (
               <>
-                <div className="w-full flex justify-between items-center">
-                  <div className="w-[20%] flex justify-center items-center">
-                    <FavoriteBorder />
+                <div
+                  className="w-full flex justify-between items-center  "
+                  style={{ borderTop: "1px solid rgba(0,0,0,0.2)" }}
+                >
+                  <div className="w-[20%] flex justify-center items-center ">
+                    <FavoriteBorder
+                      sx={{
+                        ":hover": {
+                          color: "#f88b69",
+                        },
+                      }}
+                    />
                   </div>
                   <div className="w-[80%]">
                     <ShoppingButton
@@ -74,4 +90,68 @@ const Card = ({ item }) => {
   );
 };
 
-export default Card;
+export const CartCard = ({ item, setFilterProds, filterProds }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const removeItem = (id) => {
+    const responce = filterProds.filter((prod) => prod.id != id);
+    console.log(responce);
+    setFilterProds(responce);
+  };
+
+  return (
+    <>
+      <Box
+        className="px-4 py-2 w-[700px] rounded-md"
+        sx={{ boxShadow: "0px 0px 7px rgba(0,0,0,0.2)" }}
+      >
+        <Box className="flex items-center overflow-hidden justify-between ">
+          <Box className="w-[20%]">
+            <img
+              src={item.image}
+              alt=""
+              className="w-[100px] h-[100px] object-cover overflow-hidden rounded-md"
+            />
+          </Box>
+          <Box className="w-[60%] text-left pl-5 ">
+            <Typography sx={{ fontFamily: "Regular" }}>
+              {item.title.length >= 70
+                ? item.title.slice(0, 70) + "..."
+                : item.title}
+            </Typography>
+            <Box className="flex justify-between">
+              <Box className="flex gap-2 items-center">
+                {/* <Button
+                  variant="outlined"
+                  onClick={() => setQuantity(quantity - 1)}
+                > */}
+                <Remove onClick={() => setQuantity(quantity - 1)} />
+                {/* </Button> */}
+                {quantity}
+                <Button
+                  variant="outlined"
+                  onClick={() => setQuantity(quantity + 1)}
+                >
+                  <Add />
+                </Button>
+              </Box>
+              <Button onClick={() => removeItem(item.id)}>
+                Delete Item
+                <Delete color="error" />
+              </Button>
+            </Box>
+          </Box>
+          <Box className="w-[20%]">
+            <Typography
+              variant="body2"
+              className="text-sm mt-2 pb-1"
+              sx={{ fontFamily: "Light" }}
+            >
+              ₹ {item.price * quantity} /-
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+    </>
+  );
+};
