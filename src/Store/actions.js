@@ -1,284 +1,89 @@
-import axios from "axios";
-import axiosIns, { baseURL } from "../Component/helper";
+import { Clothingproducts } from "../constants";
 
-export const Init = () => {
-  return async dispatch => {
-    const token = localStorage.getItem("Xtoken");
-    dispatch({
-      type: 'LOGIN',
-      payload: token,
-    })
-    // }
-  }
-}
-export const LoginAction = (access) => {
-  return async dispatch => {
-    localStorage.setItem("Xtoken", access);
-    dispatch({
-      type: 'LOGIN',
-      payload: access,
-    })
-    // }
-  }
-}
-export const LogoutAction = () => {
-  return async dispatch => {
-    localStorage.clear()
-    dispatch({
-      type: 'LOGOUT',
-      payload: null,
-    })
-    // }
-  }
-}
-export const PostCustomer = (data,setLoading) => {
-  return async dispatch => {
-    setLoading(true)
-    var msg = ''
-    const token = localStorage.getItem("Xtoken");
-    fetch(`${baseURL}/customers/`, {
-      method: 'POST',
-      redirect: 'follow',
-      headers: {
-        'Authorization': `Token ${token}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        setLoading(false)
-        msg = result
-      })
-      .catch(error => {
-        console.log('error', error)
-        setLoading(false)
-        msg = error
-      });
+// Action Types
+export const LOGIN_REQUEST = "LOGIN_REQUEST";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAILURE = "LOGIN_FAILURE";
 
-    dispatch({
-      type: 'MSG',
-      payload: msg,
-    })
-    // }
-  }
-}
+export const SIGNUP_REQUEST = "SIGNUP_REQUEST";
+export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
+export const SIGNUP_FAILURE = "SIGNUP_FAILURE";
 
-export const GetCustomer = () => {
-  const token = localStorage.getItem("Xtoken");
-  console.log(token)
-  return async dispatch => {
-    fetch(`${baseURL}/customers/`, {
-      method: 'GET',
-      redirect: 'follow',
-      headers: {
-        'Authorization': `Token ${token}`
-      },
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        dispatch({
-          type: 'CUSTOMER',
-          payload: result,
-        })
-      })
-      .catch(error => {
-        console.log('error', error)
-        var data = []
-        dispatch({
-          type: 'CUSTOMER',
-          payload: data,
-        })
-      });
-  }
-}
+// Action Creators
+export const loginRequest = () => ({ type: LOGIN_REQUEST });
+export const loginSuccess = (user) => ({ type: LOGIN_SUCCESS, user });
+export const loginFailure = (error) => ({ type: LOGIN_FAILURE, error });
 
-export const GetProduct = () => {
-  return async dispatch => {
-    const token = localStorage.getItem("Xtoken");
-    fetch(`${baseURL}/products/`, {
-      method: 'GET',
-      redirect: 'follow',
-      headers: {
-        'Authorization': `Token ${token}`
-      },
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        dispatch({
-          type: 'PRODUCT',
-          payload: result,
-        })
-      })
-      .catch(error => {
-        console.log('error', error)
-        var data = []
-        dispatch({
-          type: 'PRODUCT',
-          payload: data,
-        })
-      });
-    
-  }
-}
+export const signupRequest = () => ({ type: SIGNUP_REQUEST });
+export const signupSuccess = (user) => ({ type: SIGNUP_SUCCESS, user });
+export const signupFailure = (error) => ({ type: SIGNUP_FAILURE, error });
 
-export const GetAgents = () => {
-  return async dispatch => {
-    const token = localStorage.getItem("Xtoken");
-    fetch(`${baseURL}/agent/`, {
-      method: 'GET',
-      redirect: 'follow',
-      headers: {
-        'Authorization': `Token ${token}`
-      },
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        dispatch({
-          type: 'AGENT',
-          payload: result,
-        })
-      })
-      .catch(error => {
-        console.log('error', error)
-        var data = []
-        dispatch({
-          type: 'AGENT',
-          payload: data,
-        })
-      });
-    
-  }
-}
+// Action Types
+export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUEST";
+export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
+export const GET_PRODUCTS_FAILURE = "GET_PRODUCTS_FAILURE";
 
-export const GetComplaints = () => {
-  return async dispatch => {
-    const token = localStorage.getItem("Xtoken");
-    fetch(`${baseURL}/complaints/`, {
-      method: 'GET',
-      redirect: 'follow',
-      headers: {
-        'Authorization': `Token ${token}`
-      },
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        dispatch({
-          type: 'COMPLAINT',
-          payload: result,
-        })
-      })
-      .catch(error => {
-        console.log('error', error)
-        var data = []
-        dispatch({
-          type: 'COMPLAINT',
-          payload: data,
-        })
-      });
-    
-  }
-}
+// Action Creators
+export const getProductsRequest = () => ({ type: GET_PRODUCTS_REQUEST });
+export const getProductsSuccess = (products) => ({
+  type: GET_PRODUCTS_SUCCESS,
+  products,
+});
+export const getProductsFailure = (error) => ({
+  type: GET_PRODUCTS_FAILURE,
+  error,
+});
 
-export const GetCollection = (data) => {
-  return async dispatch => {
-    const token = localStorage.getItem("Xtoken");
-    fetch(`${baseURL}/collections/`, {
-      method: 'GET',
-      redirect: 'follow',
-      headers: {
-        'Authorization': `Token ${token}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        dispatch({
-          type: 'COLLECTION',
-          payload: result,
-        })
-      })
-      .catch(error => {
-        console.log('error', error)
-        var data = []
-        dispatch({
-          type: 'COLLECTION',
-          payload: data,
-        })
-      });
-    
-  }
-}
-export const PostProduct = (data,setLoading) => {
-  return async dispatch => {
-    setLoading(true)
-    var msg = ''
-    const token = localStorage.getItem("Xtoken");
-    fetch(`${baseURL}/products/`, {
-      method: 'POST',
-      redirect: 'follow',
-      headers: {
-        'Authorization': `Token ${token}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        setLoading(false)
-        msg = result
-      })
-      .catch(error => {
-        console.log('error', error)
-        setLoading(false)
-        msg = error
-      });
+//
 
-    dispatch({
-      type: 'MSG',
-      payload: msg,
-    })
-    // }
-  }
-}
-export const PostComplaints = (data,setLoading) => {
-  return async dispatch => {
-    setLoading(true)
-    var msg = ''
-    const token = localStorage.getItem("Xtoken");
-    fetch(`${baseURL}/complaints/`, {
-      method: 'POST',
-      redirect: 'follow',
-      headers: {
-        'Authorization': `Token ${token}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-        setLoading(false)
-        msg = result
-      })
-      .catch(error => {
-        console.log('error', error)
-        setLoading(false)
-        msg = error
-      });
+// import {
+//   loginRequest,
+//   loginSuccess,
+//   loginFailure,
+//   signupRequest,
+//   signupSuccess,
+//   signupFailure,
+//   getProductsRequest,
+//   getProductsSuccess,
+//   getProductsFailure,
+// } from "./actions";
 
-    dispatch({
-      type: 'MSG',
-      payload: msg,
-    })
-    // }
+// Thunk for logging in
+export const login = (credentials) => async (dispatch) => {
+  try {
+    dispatch(loginRequest());
+    // Make API request for login here
+    // Once successful, dispatch loginSuccess(user)
+    dispatch(loginSuccess(credentials));
+    // If there's an error, dispatch loginFailure(error)
+  } catch (error) {
+    dispatch(loginFailure(error));
   }
-}
+};
+
+// Thunk for signing up
+export const signup = (userData) => async (dispatch) => {
+  try {
+    dispatch(signupRequest());
+    // Make API request for signup here
+    // Once successful, dispatch signupSuccess(user)
+    dispatch(signupSuccess(userData));
+    // If there's an error, dispatch signupFailure(error)
+  } catch (error) {
+    dispatch(signupFailure(error));
+  }
+};
+
+// Thunk for getting all products
+export const getAllProducts = () => async (dispatch) => {
+  try {
+    dispatch(getProductsRequest());
+    // Make API request to fetch all products here
+    // Once successful, dispatch getProductsSuccess(products)
+    const preProducts = Clothingproducts;
+    dispatch(getProductsSuccess(preProducts));
+    // If there's an error, dispatch getProductsFailure(error)
+  } catch (error) {
+    dispatch(getProductsFailure(error));
+  }
+};

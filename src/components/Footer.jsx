@@ -15,92 +15,94 @@ import {
 const Footer = () => {
   return (
     <>
-      <Box className="w-full flex justify-center items-center bg-[#000111] pt-10">
-        <Box className="flex px-10 gap-5 justify-center">
-          {FooterData.map((item) => (
-            <>
-              <Box className=" w-[18%] text-left pr-6 ">
-                <Typography variant="h6" className="text-white">
-                  {item.title}
-                </Typography>
-                {item.info.map((item) => (
-                  <>
-                    <Box className="flex mt-2 ">
-                      {item.logo ? (
-                        <>
-                          {item.logoinfo === "Location" ? (
-                            <>
-                              <Place color="info" className="mr-2" />
-                            </>
-                          ) : (
-                            <>
-                              <Phone color="info" className="mr-2" />
-                            </>
-                          )}
-                        </>
-                      ) : (
-                        <></>
-                      )}
-                      <Typography className="text-gray-400">
-                        {item.title}
-                      </Typography>
-                    </Box>
-                  </>
-                ))}
-              </Box>
-            </>
-          ))}
-          <Box className="">
-            <Box className="text-left ">
-              <Typography variant="h6" className="text-white">
-                Join the List
-              </Typography>
-              <Input
-                placeholder="write your email"
-                color="primary"
-                sx={{
-                  backgroundColor: "none",
-                  color: "#eee",
-                  borderBottom: "1px solid #eee",
-                }}
-                startAdornment={
-                  <>
-                    <Mail className="mr-2" color="info" />
-                  </>
-                }
-              />
-              <Box className="flex justify-between items-center mt-5 px-4">
-                <Typography className="text-gray-400" variant="subtitle1">
-                  Follow us{" "}
-                </Typography>
-                <Box className="flex gap-1">
-                  <Facebook color="info" />
-                  <Instagram color="info" />
-                  <Twitter color="info" />
+      <Box className="max-sm:hidden">
+        <Box className="w-full flex justify-center items-center bg-[#000111] pt-10">
+          <Box className="flex px-10 gap-5 justify-center">
+            {FooterData.map((item) => (
+              <>
+                <Box className=" w-[18%] text-left pr-6 ">
+                  <Typography variant="h6" className="text-white">
+                    {item.title}
+                  </Typography>
+                  {item.info.map((item) => (
+                    <>
+                      <Box className="flex mt-2 ">
+                        {item.logo ? (
+                          <>
+                            {item.logoinfo === "Location" ? (
+                              <>
+                                <Place color="info" className="mr-2" />
+                              </>
+                            ) : (
+                              <>
+                                <Phone color="info" className="mr-2" />
+                              </>
+                            )}
+                          </>
+                        ) : (
+                          <></>
+                        )}
+                        <Typography className="text-gray-400">
+                          {item.title}
+                        </Typography>
+                      </Box>
+                    </>
+                  ))}
                 </Box>
-              </Box>
-              <Box className="flex justify-between items-center mt-5 px-4">
-                <Typography className="text-gray-400" variant="subtitle1">
-                  Payment Options{" "}
+              </>
+            ))}
+            <Box className="">
+              <Box className="text-left ">
+                <Typography variant="h6" className="text-white">
+                  Join the List
                 </Typography>
-                <Box className="flex gap-1">
-                  <Payment color="info" />
+                <Input
+                  placeholder="write your email"
+                  color="primary"
+                  sx={{
+                    backgroundColor: "none",
+                    color: "#eee",
+                    borderBottom: "1px solid #eee",
+                  }}
+                  startAdornment={
+                    <>
+                      <Mail className="mr-2" color="info" />
+                    </>
+                  }
+                />
+                <Box className="flex justify-between items-center mt-5 px-4">
+                  <Typography className="text-gray-400" variant="subtitle1">
+                    Follow us{" "}
+                  </Typography>
+                  <Box className="flex gap-1">
+                    <Facebook color="info" />
+                    <Instagram color="info" />
+                    <Twitter color="info" />
+                  </Box>
+                </Box>
+                <Box className="flex justify-between items-center mt-5 px-4">
+                  <Typography className="text-gray-400" variant="subtitle1">
+                    Payment Options{" "}
+                  </Typography>
+                  <Box className="flex gap-1">
+                    <Payment color="info" />
+                  </Box>
                 </Box>
               </Box>
             </Box>
           </Box>
         </Box>
-      </Box>
-      <Box className="w-full flex justify-center items-center bg-[#000111] py-10">
-        <img src={require("../assets/logo.png")} width={350} height={150} />{" "}
-      </Box>
-      <Box className="w-full flex flex-col justify-center items-center bg-[#000111] py-10">
-        <Typography className="text-gray-400 ">
-          <Copyright color="#eee" className="mr-1" />
-          2023 PSAREE.COM. ALL RIGHTS RESERVED.
-        </Typography>
+        <Box className="w-full flex justify-center items-center bg-[#000111] py-10">
+          <img src={require("../assets/logo.png")} width={350} height={150} />{" "}
+        </Box>
+        <Box className="w-full flex flex-col justify-center items-center bg-[#000111] py-10">
+          <Typography className="text-gray-400 ">
+            <Copyright color="#eee" className="mr-1" />
+            2023 PSAREE.COM. ALL RIGHTS RESERVED.
+          </Typography>
 
-        <Typography className="text-gray-400 ">Powerd By NerdTech</Typography>
+          <Typography className="text-gray-400 ">Powerd By NerdTech</Typography>
+        </Box>
       </Box>
     </>
   );

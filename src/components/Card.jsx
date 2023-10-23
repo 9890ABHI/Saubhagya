@@ -23,7 +23,7 @@ export const Card = ({ item }) => {
         <Box
           className="h-[430px] flex flex-col rounded-md overflow-hidden bg-white"
           sx={{
-            width: 300,
+            width: 270,
             boxShadow: "1px 2px 5px rgba(0, 0, 0,0.5 )",
           }}
         >
@@ -95,7 +95,7 @@ export const CartCard = ({ item, setFilterProds, filterProds }) => {
 
   const removeItem = (id) => {
     const responce = filterProds.filter((prod) => prod.id != id);
-    console.log(responce);
+    // console.log(responce);
     setFilterProds(responce);
   };
 
@@ -121,13 +121,16 @@ export const CartCard = ({ item, setFilterProds, filterProds }) => {
             </Typography>
             <Box className="flex justify-between">
               <Box className="flex gap-2 items-center">
-                {/* <Button
+                <Button
                   variant="outlined"
                   onClick={() => setQuantity(quantity - 1)}
-                > */}
-                <Remove onClick={() => setQuantity(quantity - 1)} />
-                {/* </Button> */}
-                {quantity}
+                  sx={{
+                    width: 20,
+                  }}
+                >
+                  <Remove />
+                </Button>
+                <Typography className="w-3">{quantity}</Typography>
                 <Button
                   variant="outlined"
                   onClick={() => setQuantity(quantity + 1)}
@@ -135,9 +138,12 @@ export const CartCard = ({ item, setFilterProds, filterProds }) => {
                   <Add />
                 </Button>
               </Box>
-              <Button onClick={() => removeItem(item.id)}>
-                Delete Item
-                <Delete color="error" />
+              <Button
+                startIcon={<Delete color="error" />}
+                onClick={() => removeItem(item.id)}
+                className="flex items-center"
+              >
+                Delete
               </Button>
             </Box>
           </Box>

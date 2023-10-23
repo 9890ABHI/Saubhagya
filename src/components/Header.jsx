@@ -1,6 +1,11 @@
 import {
+  Category,
+  CategoryOutlined,
   Close,
   FavoriteBorder,
+  Home,
+  HomeOutlined,
+  Login,
   Logout,
   Person,
   PersonOutline,
@@ -10,14 +15,30 @@ import {
 import React, { useState } from "react";
 import { Link, useNavigate, useNavigation, useParams } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import { Box, IconButton, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Button,
+  IconButton,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { useDispatch } from "react-redux";
+import { HeaderBottomData } from "../constants/index";
+import LinkOptions from "./LinkOptions";
 // import { logout } from "../redux/reducers/authReducer";
 
 const Header = () => {
   // const dispatch = useDispatch();
   const Mobile = useMediaQuery("(max-width: 640px)");
   const [openSearch, setOpenSearch] = useState(false);
+
+  // const HeaderBottomData = [
+  //   { title: "Home", link: "/", icon: HomeOutlined },
+  //   { title: "Category", link: "/shop", icon: CategoryOutlined },
+  //   // { title: "Account", link: "/account", icon: { PersonOutline } },
+  //   // { title: "Cart", link: "/cart", icon: { ShoppingCartOutlined } },
+  // ];
+
   return (
     <>
       <div
@@ -52,7 +73,22 @@ const Header = () => {
               <SearchBar />
             </Box>
 
-            <Link>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#ffa42f",
+                color: "#000120",
+                ":hover": {
+                  backgroundColor: "#f88b69",
+                  color: "#eee",
+                },
+              }}
+              startIcon={<Login />}
+            >
+              SignIn
+            </Button>
+
+            {/* <Link>
               <IconButton>
                 <FavoriteBorder sx={{ color: "#f88b69", scale: "1.2" }} />
               </IconButton>
@@ -64,9 +100,9 @@ const Header = () => {
                 </Box>
                 <ShoppingCartOutlined sx={{ color: "#f88b69", scale: "1.2" }} />
               </IconButton>
-            </Link>
+            </Link> */}
 
-            <IconButton>
+            {/* <IconButton>
               <PersonOutline
                 sx={{
                   color: "#f88b69",
@@ -75,13 +111,35 @@ const Header = () => {
                   ":hover": { color: "#f88b69" },
                 }}
               />
-            </IconButton>
+            </IconButton> */}
           </Box>
         </Box>
       </div>
       {Mobile ? (
         <>
-          <div>hiii</div>
+          <Box className="absolute z-10 bottom-0 left-0 right-0 h-14 bg-[#f88b69] w-screen flex justify-center items-center">
+            <Box className="flex justify-around items-center w-full">
+              {HeaderBottomData.map((item) => {
+                return (
+                  <>
+                    {/* <Link to={item.link}>
+                      <IconButton className="flex flex-col">
+                        <item.icon
+                          sx={{ color: "#000", marginBottom: -1, mt: 1 }}
+                        ></item.icon>
+                        <Typography variant="overline">{item.title}</Typography>
+                      </IconButton>
+                    </Link> */}
+                    <LinkOptions
+                      title={item.title}
+                      icon={item.icon}
+                      link={item.link}
+                    />
+                  </>
+                );
+              })}
+            </Box>
+          </Box>
         </>
       ) : null}
     </>

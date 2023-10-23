@@ -49,6 +49,10 @@ const Details = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  // const handleAddtoCArt = (id) => {
+  //   const responce = product.filter((prod) => prod.id === id);
+  //   console.log(responce);
+  // };
   useEffect(() => {
     const productId = parseInt(id, 10);
     // console.log(Clothingproducts);
@@ -236,7 +240,10 @@ const Details = () => {
                 title={"Buy Now"}
                 icon={<ShoppingBagOutlined />}
               />
-              <Link to={`/cart/${id}`}>
+              <Link
+                // onClick={handleAddtoCArt(product.id)}
+                to={`/cart/${id}`}
+              >
                 <ShoppingButton
                   title={"Add To Cart"}
                   icon={<ShoppingCartOutlined />}

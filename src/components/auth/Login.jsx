@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useDispatch } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 // import { login } from "../../redux/reducers/authReducer";
 import {
   Box,
@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { Label } from "@mui/icons-material";
 import { Link, useNavigate } from "react-router-dom";
+import { login } from "../../Store/actions";
 
 const Login = () => {
   const intitalState = {
@@ -22,6 +23,13 @@ const Login = () => {
   };
   const [values, setValues] = useState(intitalState);
   const navigation = useNavigate();
+  // Use the user and error from Redux state
+  // const credentials = useState(intitalState);
+
+  // const handleLogin = (credentials) => {
+  //   login(credentials);
+  // };
+
   const onChange = (e) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
@@ -30,6 +38,8 @@ const Login = () => {
   const dispatch = useDispatch();
   const handleChanges = () => {
     // dispatch(login(values));
+    // dispatch(LoginAction(res.token))
+    dispatch(login(values));
     navigation("/");
   };
 
@@ -77,4 +87,15 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => {
+  return {
+    user: state.auth.user,
+    error: state.auth.error,
+  };
+};
+
+const mapDispatchToProps = {
+  login,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

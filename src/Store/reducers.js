@@ -1,50 +1,63 @@
+import {
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  SIGNUP_REQUEST,
+  SIGNUP_SUCCESS,
+  SIGNUP_FAILURE,
+  GET_PRODUCTS_REQUEST,
+  GET_PRODUCTS_SUCCESS,
+  GET_PRODUCTS_FAILURE,
+} from "./actions";
+
 const initialState = {
-    token: null,
-    msg: 'null',
-    customer: [],
-    product: [],
-    agents: [],
-    complaints: [],
+  user: null,
+  error: null,
+  isLoading: false,
 };
 
-export default (state = initialState, action) => {
-    switch (action.type) {
-        case 'LOGIN':
-            return {
-                ...state,
-                token: action.payload,
-            };
-        case 'MSG':
-            return {
-                ...state,
-                msg: action.payload,
-            };
-        case 'CUSTOMER':
-            return {
-                ...state,
-                customer: action.payload,
-            };
-        case 'PRODUCT':
-            return {
-                ...state,
-                product: action.payload,
-            };
-        case 'AGENT':
-            return {
-                ...state,
-                agents: action.payload,
-            };
-        case 'COMPLAINT':
-            return {
-                ...state,
-                complaints: action.payload,
-            };
-        case 'LOGOUT':
-            return {
-                ...state,
-                token: action.payload,
-            };
-        default:
-            return state;
-    }
+export const authReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case LOGIN_REQUEST:
+    case SIGNUP_REQUEST:
+      return { ...state, isLoading: true };
+
+    case LOGIN_SUCCESS:
+    case SIGNUP_SUCCESS:
+      return { ...state, user: action.user, isLoading: false, error: null };
+
+    case LOGIN_FAILURE:
+    case SIGNUP_FAILURE:
+      return { ...state, user: null, isLoading: false, error: action.error };
+
+    default:
+      return state;
+  }
+};
+
+const initialStateProduct = {
+  products: [],
+  error: null,
+  isLoading: false,
+};
+
+export const productsReducer = (state = initialStateProduct, action) => {
+  switch (action.type) {
+    case GET_PRODUCTS_REQUEST:
+      return { ...state, isLoading: true };
+
+    case GET_PRODUCTS_SUCCESS:
+      return {
+        ...state,
+        products: action.products,
+        isLoading: false,
+        error: null,
+      };
+
+    case GET_PRODUCTS_FAILURE:
+      return { ...state, products: [], isLoading: false, error: action.error };
+
+    default:
+      return state;
+  }
 };

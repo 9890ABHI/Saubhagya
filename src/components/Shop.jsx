@@ -1,4 +1,4 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { FilterDataPrice } from "./filtered";
 import {
@@ -18,12 +18,15 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { Close, Filter } from "@mui/icons-material";
 import { Card } from "./Card";
+import { getAllProducts } from "../Store/actions";
 // import { setProducts as setProductAction } from "../redux/actions/productActions";
 
 const Shop = ({ title }) => {
   const Secondaryproducts = useSelector((state) => state);
   console.log("all products", Secondaryproducts);
   const dispatch = useDispatch();
+
+  const Mobile = useMediaQuery("(max-width: 640px)");
 
   const [products, setProducts] = useState([]); // Your clothing products data
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -43,6 +46,7 @@ const Shop = ({ title }) => {
     // Fetch products from an API or set products in state
     // Example: fetchProducts().then((data) => setProducts(data));
     setProducts(Clothingproducts);
+    // setProducts(getAllProducts());
     // dispatch(setProductAction(filteredProducts));
   }, []);
 
@@ -135,7 +139,7 @@ const Shop = ({ title }) => {
       <div className="flex w-[100%]  bg-[#f2f2f2] justify-around pt-5 gap-5 px-20">
         {/* Filters */}
 
-        <Box className="w-[250px] h-screen  flex flex-col pl-0 text-left">
+        <Box className="w-[250px] h-screen  flex flex-col pl-0 text-left max-sm:hidden">
           <Box className="bg-white w-[100%] px-2 py-5 rounded-md">
             {/* <div className="text-center mb-7">
               <Typography
@@ -179,6 +183,7 @@ const Shop = ({ title }) => {
             </Box>
           </Box>
         </Box>
+        {Mobile && <></>}
 
         {/*  */}
 

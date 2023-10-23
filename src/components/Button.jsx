@@ -35,7 +35,7 @@ export const ShoppingButton = ({ title, icon, sizes }) => {
 export const QuantityButtton = (id) => {
   return (
     <>
-      <Box>
+      {/* <Box>
         <Button onClick={() => AddItem(item.id)}>
           <Remove />
         </Button>
@@ -43,7 +43,7 @@ export const QuantityButtton = (id) => {
         <Button onClick={() => setQuantity(quantity + 1)}>
           <Add />
         </Button>
-      </Box>
+      </Box> */}
     </>
   );
 };

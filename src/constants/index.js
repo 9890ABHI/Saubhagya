@@ -1,3 +1,10 @@
+import {
+  CategoryOutlined,
+  HomeOutlined,
+  PersonOutline,
+  ShoppingCartOutlined,
+} from "@mui/icons-material";
+
 export const Clothingproducts = [
   {
     id: 1,
@@ -428,8 +435,6 @@ export const FooterData = [
       { title: "Account", link: "" },
       { title: "Order Status", link: "" },
       { title: "Testimonials", link: "" },
-      { title: "Blog", link: "" },
-      { title: "Book Videocall", link: "" },
     ],
   },
   {
@@ -439,7 +444,6 @@ export const FooterData = [
       { title: "Privacy Policy", link: "" },
       { title: "Shipping Policy", link: "" },
       { title: "Cancellation & Returns", link: "" },
-      { title: "Knowledge Base", link: "" },
     ],
   },
   {
@@ -448,10 +452,8 @@ export const FooterData = [
     info: [
       { title: "About Us", link: "" },
       { title: "Promotions & Offer", link: "" },
-      { title: "Our Stores", link: "" },
       { title: "Terms and Conditions", link: "" },
       { title: "Contact Us", link: "" },
-      { title: "Careers", link: "" },
     ],
   },
   {
@@ -519,4 +521,26 @@ const data = [
   {
     room: "102",
   },
+];
+
+export const ImagesData = [
+  {
+    img: "https://img.freepik.com/free-vector/mandala-design-background_79603-2152.jpg?w=996&t=st=1698039135~exp=1698039735~hmac=2a9013944089d620b85285fd8c1e6cc02d4be960b2a31fe4f03ccb403d40fb6a",
+  },
+  {
+    img: "https://img.freepik.com/free-vector/watercolor-christmas-background_79603-2159.jpg",
+  },
+  {
+    img: "https://img.freepik.com/free-vector/mysterious-galaxy-background-green-tone_79603-574.jpg",
+  },
+  {
+    img: "https://img.freepik.com/free-psd/abstract-cloud-illuminated-with-neon-light-ring-generative-ai_271628-1033.jpg?t=st=1698039111~exp=1698039711~hmac=c02aa9dcce70740e52a2411d94cb7c432bb31358a9f889fe0242dcdf03eb4059",
+  },
+];
+
+export const HeaderBottomData = [
+  { title: "Home", link: "/", icon: HomeOutlined },
+  { title: "Category", link: "/shop", icon: CategoryOutlined },
+  { title: "Cart", link: "/cart", icon: ShoppingCartOutlined },
+  { title: "Account", link: "/account", icon: PersonOutline },
 ];
