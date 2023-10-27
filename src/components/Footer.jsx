@@ -70,7 +70,7 @@ const Footer = () => {
                     </>
                   }
                 />
-                <Box className="flex justify-between items-center mt-5 px-4">
+                <Box className="flex justify-between items-center pt-5 px-4">
                   <Typography className="text-gray-400" variant="subtitle1">
                     Follow us{" "}
                   </Typography>
@@ -80,7 +80,7 @@ const Footer = () => {
                     <Twitter color="info" />
                   </Box>
                 </Box>
-                <Box className="flex justify-between items-center mt-5 px-4">
+                <Box className="flex justify-between items-center pt-5 px-4">
                   <Typography className="text-gray-400" variant="subtitle1">
                     Payment Options{" "}
                   </Typography>
@@ -92,10 +92,10 @@ const Footer = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="w-full flex justify-center items-center bg-[#000111] py-10">
-          <img src={require("../assets/logo.png")} width={350} height={150} />{" "}
+        <Box className="w-full flex justify-center items-center bg-[#000111]">
+          <img src={require("../assets/Pisarasarees.com Designed By NerdTech-2.png")} alt="/Pisarasarees.com Designed By NerdTech" className="w-[700px] h-[550px] object-fill" />
         </Box>
-        <Box className="w-full flex flex-col justify-center items-center bg-[#000111] py-10">
+        <Box className="w-full flex flex-col justify-center items-center bg-[#000111] pb-10">
           <Typography className="text-gray-400 ">
             <Copyright color="#eee" className="pr-1" />
             2023 PSAREE.COM. ALL RIGHTS RESERVED.

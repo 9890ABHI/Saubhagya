@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <>
       <Box
-        className='w-full h-[95px] flex flex-col  max-sm:hidden'
+        className='w-full h-[105px] flex flex-col  max-sm:hidden'
         style={{ borderBottom: "1px solid rgba(0,0,0,0.2)" }}
       >
         <img
@@ -56,12 +56,18 @@ const Header = () => {
             {/* Logo */}
             <Link to={"/"}>
               <img
-                src={require("../assets/logo.png")}
+                src={require("../assets/Pisara Sarees logo.png")}
                 alt="Company logo"
-                width={150}
-                height={30}
-                className="object-contain rounded-sm px-2"
+                // width={250}
+                // height={40}
+                className="w-[80px] h-[80px] object-contain rounded-sm px-2  bg-blend-multiply"
               />
+              <div style={{
+                height:80,
+                width:80,
+                backgroundImage: require('../assets/Pisara Sarees logo.png'),
+                backgroundBlendMode:'screen',
+              }} ></div>
             </Link>
           </div>
 

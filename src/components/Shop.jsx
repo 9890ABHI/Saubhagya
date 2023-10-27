@@ -28,6 +28,7 @@ const Shop = ({ title }) => {
   const dispatch = useDispatch();
 
   const Mobile = useMediaQuery("(max-width: 640px)");
+  const [active, setActive] = useState(true);
 
   const [products, setProducts] = useState([]); // Your clothing products data
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -184,24 +185,38 @@ const Shop = ({ title }) => {
             </Box>
           </Box>
         </Box>
-          <Box className="md:hidden ">
-<CategoryCard />
+        {/* <Box className="flex"> */}
+          <Box className="flex flex-col justify-start items-start h-full w-[50px] bg-[#adada6]  md:hidden ">
+            <CategoryCard active />
+            {CategoryCard(Category, "category", filters, handleCheckboxChange)}
+            <CategoryCard active />{" "}
+            {/* {FilterDataPrice("Price", filters, handlePriceRangeChange)} */}
+            {CategoryCard(
+              Colors,
+              "colors",
+              filters,
+              handleCheckboxChange,
+              active
+            )}
+            {CategoryCard(Fabrics, "fabrics", filters, handleCheckboxChange)}
+            {CategoryCard(Sizes, "sizes", filters, handleCheckboxChange)}
           </Box>
-        {Mobile && <></>}
+          {Mobile && <></>}
 
-        {/*  */}
+          {/*  */}
 
-        {/* filter products */}
+          {/* filter products */}
 
-        <Box className="w-[85%] md:w-[65%] flex pb-10 ">
-          <Box className="w-[100%] h-[100%] flex flex-wrap md:flex-wrap gap-5 md:justify-start">
-            {filteredProducts.map((item) => (
-              <>
-                <Card item={item} />
-              </>
-            ))}
+          <Box className="w-[100%] md:w-[70%] flex justify-center items-center pb-10 ">
+            <Box className="w-[100%] h-[100%] flex flex-wrap gap-1 justify-center md:gap-5 md:justify-start">
+              {filteredProducts.map((item) => (
+                <>
+                  <Card item={item} />
+                </>
+              ))}
+            </Box>
           </Box>
-        </Box>
+        {/* </Box>   */}
       </div>
     </>
   );

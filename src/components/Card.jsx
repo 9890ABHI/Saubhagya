@@ -23,33 +23,28 @@ export const Card = ({ item }) => {
         onMouseLeave={() => setShow(!show)}
       >
         <Box
-          className="h-[200px] w-[100px] md:h-[430px] flex flex-col rounded-md overflow-hidden bg-white"
-          sx={{
-            width: 270,
-            boxShadow: "1px 2px 5px rgba(0, 0, 0,0.5 )",
-          }}
+          className="h-[200px] w-[150px] md:w-[260px] md:h-[430px] flex flex-col rounded-sm md:rounded-md overflow-hidden bg-white shadow-md"
+          
         >
           <div className=" overflow-hidden">
             <img
               src={item.image}
               alt="products"
-              className="w-[100%] h-[370px] object-cover"
-              style={
-                {
-                  // filter: "grayScale(50%)",
-                }
-              }
+              className="w-[100%] md:h-[370px] object-cover"
+              
             />
           </div>
-          <div className="hidden md:block">
-            <div className="w-[100%] px-2 pt-2 text-black">
-              <p>{item.category}</p>
-              <div className="flex w-[100%] gap-1 justify-center">
-                <p>MRP: ₹</p>
-                <p>{item.price}</p>
+          <div 
+          // className="hidden md:block"
+          >
+            <div className="w-[100%] px-2 pt-2 text-black flex flex-col-reverse">
+              <Typography variant="subtitle2" className="text-sm">{item.title}</Typography>
+              <div className="flex w-[100%] gap-1 justify-start md:justify-center" >
+                <Typography variant="subtitle2" className="text-sm">MRP: ₹</Typography>
+                <Typography variant="subtitle2" className="text-sm">{item.price}</Typography>
               </div>
             </div>
-            <div className="w-[100%] text-left px-2 py-2 justify-center ">
+            <div className="w-[100%] text-left px-2 py-2 justify-center hidden md:block">
               {/* <p
                 className="px-2 py-1 text-lime-50 rounded-md w-fit"
                 style={{
@@ -60,10 +55,10 @@ export const Card = ({ item }) => {
               </p> */}
               <Ratings product={item.rating} />
             </div>
-            {show && (
+            {show ? (
               <>
                 <div
-                  className="w-full flex justify-between items-center  "
+                  className="w-full  justify-between items-center hidden md:flex "
                   style={{ borderTop: "1px solid rgba(0,0,0,0.2)" }}
                 >
                   <div className="w-[20%] flex justify-center items-center ">
@@ -84,7 +79,7 @@ export const Card = ({ item }) => {
                   </div>
                 </div>
               </>
-            )}
+            ): undefined}
           </div>
         </Box>
       </Link>
