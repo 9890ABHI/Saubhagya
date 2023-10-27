@@ -32,8 +32,8 @@ const Cart = () => {
 
   return (
     <>
-      <Box className="flex justify-around items-start bg-[#f2f2f2]">
-        <Box className="w-[70%] flex flex-col justify-center items-center gap-2">
+      <Box className="flex justify-around items-start bg-[#f2f2f2] py-10">
+        <Box className="w-[60%] flex flex-col justify-center items-center gap-2">
           {filterProds.map((item) => (
             <>
               <CartCard

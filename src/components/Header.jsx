@@ -41,17 +41,17 @@ const Header = () => {
 
   return (
     <>
-      <div
-        className={`w-[100%] h-[95px] flex flex-col  max-sm:hidden ${
-          openSearch && "relative"
-        }`}
+      <Box
+        className='w-full h-[95px] flex flex-col  max-sm:hidden'
         style={{ borderBottom: "1px solid rgba(0,0,0,0.2)" }}
       >
         <img
           src={require("../assets/Shaubhgya.png")}
-          className="w-screen h-8 object-fill"
+          className="w-full h-8 object-fill"
         />
-        <Box className="flex justify-between items-center px-10">
+        <Box className="flex justify-between items-center px-10" 
+        // style={{ border: "5px solid rgba(0,0,0,0.2)" }}
+        >
           <div className="pl-2 ">
             {/* Logo */}
             <Link to={"/"}>
@@ -69,13 +69,14 @@ const Header = () => {
             className="flex gap-4 pr-2 items-center justify-end "
             sx={{ width: openSearch ? "80%" : undefined }}
           >
-            <Box className="" sx={{ width: "70%" }}>
+            <Box className="" sx={{ width: "100%" }}>
               <SearchBar />
             </Box>
 
             <Button
               variant="contained"
               sx={{
+                px:3,
                 backgroundColor: "#ffa42f",
                 color: "#000120",
                 ":hover": {
@@ -114,22 +115,14 @@ const Header = () => {
             </IconButton> */}
           </Box>
         </Box>
-      </div>
-      {Mobile ? (
+      </Box>
+      {Mobile && (
         <>
-          <Box className="absolute z-10 bottom-0 left-0 right-0 h-14 bg-[#f88b69] w-screen flex justify-center items-center">
+          <Box className="fixed z-10 bottom-0 left-0 right-0 h-14 bg-[#f88b69] w-screen flex justify-center items-center">
             <Box className="flex justify-around items-center w-full">
               {HeaderBottomData.map((item) => {
                 return (
                   <>
-                    {/* <Link to={item.link}>
-                      <IconButton className="flex flex-col">
-                        <item.icon
-                          sx={{ color: "#000", marginBottom: -1, mt: 1 }}
-                        ></item.icon>
-                        <Typography variant="overline">{item.title}</Typography>
-                      </IconButton>
-                    </Link> */}
                     <LinkOptions
                       title={item.title}
                       icon={item.icon}
@@ -141,7 +134,7 @@ const Header = () => {
             </Box>
           </Box>
         </>
-      ) : null}
+      ) }
     </>
   );
 };

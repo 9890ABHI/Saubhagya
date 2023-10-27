@@ -20,22 +20,22 @@ const Footer = () => {
           <Box className="flex px-10 gap-5 justify-center">
             {FooterData.map((item) => (
               <>
-                <Box className=" w-[18%] text-left pr-6 ">
+                <Box className=" w-[17%] text-left pr-6 ">
                   <Typography variant="h6" className="text-white">
                     {item.title}
                   </Typography>
                   {item.info.map((item) => (
                     <>
-                      <Box className="flex mt-2 ">
+                      <Box className="flex pt-2 ">
                         {item.logo ? (
                           <>
                             {item.logoinfo === "Location" ? (
                               <>
-                                <Place color="info" className="mr-2" />
+                                <Place color="info" className="pr-2" />
                               </>
                             ) : (
                               <>
-                                <Phone color="info" className="mr-2" />
+                                <Phone color="info" className="pr-2" />
                               </>
                             )}
                           </>
@@ -66,7 +66,7 @@ const Footer = () => {
                   }}
                   startAdornment={
                     <>
-                      <Mail className="mr-2" color="info" />
+                      <Mail className="pr-2" color="info" />
                     </>
                   }
                 />
@@ -97,7 +97,7 @@ const Footer = () => {
         </Box>
         <Box className="w-full flex flex-col justify-center items-center bg-[#000111] py-10">
           <Typography className="text-gray-400 ">
-            <Copyright color="#eee" className="mr-1" />
+            <Copyright color="#eee" className="pr-1" />
             2023 PSAREE.COM. ALL RIGHTS RESERVED.
           </Typography>
 

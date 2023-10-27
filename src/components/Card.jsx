@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Ratings } from "./Rating";
@@ -13,6 +13,8 @@ import { QuantityButtton, ShoppingButton } from "./Button";
 
 export const Card = ({ item }) => {
   const [show, setShow] = useState(false);
+  
+  const Mobile = useMediaQuery("(max-width: 640px)");
   return (
     <>
       <Link
@@ -21,7 +23,7 @@ export const Card = ({ item }) => {
         onMouseLeave={() => setShow(!show)}
       >
         <Box
-          className="h-[430px] flex flex-col rounded-md overflow-hidden bg-white"
+          className="h-[200px] w-[100px] md:h-[430px] flex flex-col rounded-md overflow-hidden bg-white"
           sx={{
             width: 270,
             boxShadow: "1px 2px 5px rgba(0, 0, 0,0.5 )",
@@ -39,7 +41,7 @@ export const Card = ({ item }) => {
               }
             />
           </div>
-          <div>
+          <div className="hidden md:block">
             <div className="w-[100%] px-2 pt-2 text-black">
               <p>{item.category}</p>
               <div className="flex w-[100%] gap-1 justify-center">

@@ -19,6 +19,7 @@ import axios from "axios";
 import { Close, Filter } from "@mui/icons-material";
 import { Card } from "./Card";
 import { getAllProducts } from "../Store/actions";
+import CategoryCard from "./CategoryCard";
 // import { setProducts as setProductAction } from "../redux/actions/productActions";
 
 const Shop = ({ title }) => {
@@ -136,11 +137,11 @@ const Shop = ({ title }) => {
 
   return (
     <>
-      <div className="flex w-[100%]  bg-[#f2f2f2] justify-around pt-5 gap-5 px-20">
+      <div className="flex w-full  bg-[#f2f2f2] justify-between pt-5 md:px-20 overflow-x-hidden">
         {/* Filters */}
 
-        <Box className="w-[250px] h-screen  flex flex-col pl-0 text-left max-sm:hidden">
-          <Box className="bg-white w-[100%] px-2 py-5 rounded-md">
+        <Box className="w-[20%] h-screen  flex-col pl-0 text-left hidden md:flex">
+          <Box className="bg-white w-[250px] px-2 py-5 rounded-md">
             {/* <div className="text-center mb-7">
               <Typography
                 variant="h4"
@@ -183,14 +184,17 @@ const Shop = ({ title }) => {
             </Box>
           </Box>
         </Box>
+          <Box className="md:hidden ">
+<CategoryCard />
+          </Box>
         {Mobile && <></>}
 
         {/*  */}
 
         {/* filter products */}
 
-        <Box className="w-[75%] flex justify-end pb-10 h-screen">
-          <Box className="w-[100%] h-[100%] flex flex-wrap gap-5 justify-between overflow-scroll">
+        <Box className="w-[85%] md:w-[65%] flex pb-10 ">
+          <Box className="w-[100%] h-[100%] flex flex-wrap md:flex-wrap gap-5 md:justify-start">
             {filteredProducts.map((item) => (
               <>
                 <Card item={item} />
