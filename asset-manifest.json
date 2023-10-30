@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Saubhagya/static/css/main.99c8975e.css",
+    "main.js": "/Saubhagya/static/js/main.1bde1b96.js",
+    "static/js/787.242c83a8.chunk.js": "/Saubhagya/static/js/787.242c83a8.chunk.js",
+    "static/media/Poppins-Light.ttf": "/Saubhagya/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/Saubhagya/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/Pisara Sarees logo_1 2.PNG": "/Saubhagya/static/media/Pisara Sarees logo_1 2.e878e3cd24506db2bd3b.PNG",
+    "static/media/pb.png": "/Saubhagya/static/media/pb.e663ba2b7ccd7d025c8f.png",
+    "index.html": "/Saubhagya/index.html",
+    "main.99c8975e.css.map": "/Saubhagya/static/css/main.99c8975e.css.map",
+    "main.1bde1b96.js.map": "/Saubhagya/static/js/main.1bde1b96.js.map",
+    "787.242c83a8.chunk.js.map": "/Saubhagya/static/js/787.242c83a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99c8975e.css",
+    "static/js/main.1bde1b96.js"
+  ]
+}
