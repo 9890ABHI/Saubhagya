@@ -1015,46 +1015,6 @@ export const FooterData = [
   },
 ];
 
-// const data = [
-//   {
-//     room: "101",
-//     Beds: [
-//       {
-//         title: "B-101",
-//         isClean: true,
-//         profiles: [
-//           {
-//             title: "medical-History",
-//             desc: [
-//               {
-//                 title: 2021,
-//                 desc: "Hart attack ",
-//                 title: 2022,
-//                 desc: "Hart attack ",
-//                 title: 2023,
-//                 desc: "Hart ",
-//               },
-//             ],
-//           },
-//           {
-//             title: "doseg-History",
-//             info: [
-//               { title: "mornigs", desc: [{}] },
-//               { title: "evings", desc: [{}] },
-//             ],
-//             pateintsdetails: [{ title: "tony " }],
-//           },
-//         ],
-//       },
-//       { title: "B-102" },
-//       { title: "B-103" },
-//     ],
-//   },
-//   {
-//     room: "102",
-//   },
-// ];
-
 export const ImagesData = [
   {
     img: "https://img.freepik.com/free-photo/clothing-rack-with-floral-hawaiian-shirts-hangers-hat_23-2149366018.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
