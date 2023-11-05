@@ -5,23 +5,37 @@ export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
 
+export const LOGOUT = "LOGOUT";
+
 export const SIGNUP_REQUEST = "SIGNUP_REQUEST";
 export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
 export const SIGNUP_FAILURE = "SIGNUP_FAILURE";
+
+// Add these action types to your actions.js
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+
+
+// Action Types
+export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUEST";
+export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
+export const GET_PRODUCTS_FAILURE = "GET_PRODUCTS_FAILURE";
 
 // Action Creators
 export const loginRequest = () => ({ type: LOGIN_REQUEST });
 export const loginSuccess = (user) => ({ type: LOGIN_SUCCESS, user });
 export const loginFailure = (error) => ({ type: LOGIN_FAILURE, error });
 
+export const logout = () => ({ type: LOGOUT });
+
 export const signupRequest = () => ({ type: SIGNUP_REQUEST });
 export const signupSuccess = (user) => ({ type: SIGNUP_SUCCESS, user });
 export const signupFailure = (error) => ({ type: SIGNUP_FAILURE, error });
 
-// Action Types
-export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUEST";
-export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
-export const GET_PRODUCTS_FAILURE = "GET_PRODUCTS_FAILURE";
+// Add these action creators to your actions.js
+export const addToCart = (product) => ({ type: ADD_TO_CART, product });
+export const removeFromCart = (productId) => ({ type: REMOVE_FROM_CART, productId });
+
 
 // Action Creators
 export const getProductsRequest = () => ({ type: GET_PRODUCTS_REQUEST });
@@ -61,6 +75,15 @@ export const login = (credentials) => async (dispatch) => {
   }
 };
 
+
+
+export const logoutUser = () => (dispatch) => {
+  // You can perform any cleanup or API requests here
+
+  // Dispatch the logout action to update the user's state
+  dispatch(logout());
+};
+
 // Thunk for signing up
 export const signup = (userData) => async (dispatch) => {
   try {
@@ -80,8 +103,10 @@ export const getAllProducts = () => async (dispatch) => {
     dispatch(getProductsRequest());
     // Make API request to fetch all products here
     // Once successful, dispatch getProductsSuccess(products)
-    const preProducts = Clothingproducts;
-    dispatch(getProductsSuccess(preProducts));
+    setTimeout(() => {
+      const preProducts = Clothingproducts; // Assuming Clothingproducts is an array of products
+      dispatch(getProductsSuccess(preProducts));
+    }, 1000);
     // If there's an error, dispatch getProductsFailure(error)
   } catch (error) {
     dispatch(getProductsFailure(error));

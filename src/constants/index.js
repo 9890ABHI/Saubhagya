@@ -2,6 +2,8 @@ import {
   CategoryOutlined,
   HomeOutlined,
   PersonOutline,
+  Shop2,
+  Shop2Outlined,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
 
@@ -23,8 +25,61 @@ export const Clothingproducts = [
     occasion: "Wedding",
     look: "Elegant",
     rating: 4.5,
+    ratings: 123,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -58,8 +113,61 @@ export const Clothingproducts = [
     occasion: "Daily Wear",
     look: "Comfortable",
     rating: 4.5,
+    ratings: 93,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -93,8 +201,61 @@ export const Clothingproducts = [
     occasion: "Festivals",
     look: "Traditional",
     rating: 4.5,
+    ratings: 43,
     timeToDispatch: "3-4 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -128,8 +289,61 @@ export const Clothingproducts = [
     occasion: "Office Wear",
     look: "Stylish",
     rating: 4.5,
+    ratings: 56,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -163,8 +377,61 @@ export const Clothingproducts = [
     occasion: "Evening Parties",
     look: "Glamorous",
     rating: 4.5,
+    ratings: 67,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -198,8 +465,61 @@ export const Clothingproducts = [
     occasion: "Special Occasions",
     look: "Trendy",
     rating: 4.5,
+    ratings: 90,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -233,8 +553,61 @@ export const Clothingproducts = [
     occasion: "Weddings",
     look: "Opulent",
     rating: 4.5,
+    ratings: 76,
     timeToDispatch: "3-4 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -268,8 +641,61 @@ export const Clothingproducts = [
     occasion: "Daily Wear",
     look: "Comfortable",
     rating: 4.5,
+    ratings: 23,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -303,8 +729,61 @@ export const Clothingproducts = [
     occasion: "Cocktail Parties",
     look: "Sophisticated",
     rating: 4.5,
+    ratings: 31,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -338,8 +817,61 @@ export const Clothingproducts = [
     occasion: "Festivals",
     look: "Traditional",
     rating: 4.5,
-    timeToDispatch: "1-2 days",
+    ratings: 311,
+        timeToDispatch: "1-2 days",
     availableProducts: 10,
+    ratingsreviews:[
+  {
+    "name": "Priya",
+    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
+    "rating": 5
+  },
+  {
+    "name": "Deepa",
+    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
+    "rating": 4
+  },
+  {
+    "name": "Raj",
+    "review": "A perfect blend of tradition and style. Loved it!",
+    "rating": 5
+  },
+  {
+    "name": "Meera",
+    "review": "The intricate embroidery work on this saree is simply breathtaking.",
+    "rating": 5
+  },
+  {
+    "name": "Aarti",
+    "review": "Received my order quickly, and the saree was even more beautiful in person.",
+    "rating": 5
+  },
+  {
+    "name": "Anu",
+    "review": "The quality of the saree is exceptional. Highly recommended.",
+    "rating": 5
+  },
+  {
+    "name": "Nikhil",
+    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
+    "rating": 4
+  },
+  {
+    "name": "Swati",
+    "review": "This saree made me feel like a queen. I'm in love with it.",
+    "rating": 5
+  },
+  {
+    "name": "Sanjay",
+    "review": "A bit pricey but worth every penny. The design is one of a kind.",
+    "rating": 4
+  },
+  {
+    "name": "Karishma",
+    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+    "rating": 5
+  }
+],
 
     images: [
       {
@@ -432,28 +964,28 @@ export const FooterData = [
     title: "My Account",
     link: "/",
     info: [
-      { title: "Account", link: "" },
-      { title: "Order Status", link: "" },
-      { title: "Testimonials", link: "" },
+      { title: "Account", link: "/account" },
+      { title: "Order Status", link: "/orders" },
+      { title: "Testimonials", link: "/testimonial" },
     ],
   },
   {
     title: "Help",
     link: "/",
     info: [
-      { title: "Privacy Policy", link: "" },
+      { title: "Privacy Policy", link: "/privacypolicies" },
       { title: "Shipping Policy", link: "" },
-      { title: "Cancellation & Returns", link: "" },
+      { title: "Cancellation & Returns", link: "/returnolicies" },
     ],
   },
   {
     title: "Company",
     link: "/",
     info: [
-      { title: "About Us", link: "" },
-      { title: "Promotions & Offer", link: "" },
+      { title: "About Us", link: "/aboutus" },
+      { title: "Promotions & Offer", link: "/contactus" },
       { title: "Terms and Conditions", link: "" },
-      { title: "Contact Us", link: "" },
+      { title: "Contact Us", link: "/contactus" },
     ],
   },
   {
@@ -483,64 +1015,270 @@ export const FooterData = [
   },
 ];
 
-const data = [
-  {
-    room: "101",
-    Beds: [
-      {
-        title: "B-101",
-        isClean: true,
-        profiles: [
-          {
-            title: "medical-History",
-            desc: [
-              {
-                title: 2021,
-                desc: "Hart attack ",
-                title: 2022,
-                desc: "Hart attack ",
-                title: 2023,
-                desc: "Hart ",
-              },
-            ],
-          },
-          {
-            title: "doseg-History",
-            info: [
-              { title: "mornigs", desc: [{}] },
-              { title: "evings", desc: [{}] },
-            ],
-            pateintsdetails: [{ title: "tony " }],
-          },
-        ],
-      },
-      { title: "B-102" },
-      { title: "B-103" },
-    ],
-  },
-  {
-    room: "102",
-  },
-];
+// const data = [
+//   {
+//     room: "101",
+//     Beds: [
+//       {
+//         title: "B-101",
+//         isClean: true,
+//         profiles: [
+//           {
+//             title: "medical-History",
+//             desc: [
+//               {
+//                 title: 2021,
+//                 desc: "Hart attack ",
+//                 title: 2022,
+//                 desc: "Hart attack ",
+//                 title: 2023,
+//                 desc: "Hart ",
+//               },
+//             ],
+//           },
+//           {
+//             title: "doseg-History",
+//             info: [
+//               { title: "mornigs", desc: [{}] },
+//               { title: "evings", desc: [{}] },
+//             ],
+//             pateintsdetails: [{ title: "tony " }],
+//           },
+//         ],
+//       },
+//       { title: "B-102" },
+//       { title: "B-103" },
+//     ],
+//   },
+//   {
+//     room: "102",
+//   },
+// ];
 
 export const ImagesData = [
   {
-    img: "https://img.freepik.com/free-vector/mandala-design-background_79603-2152.jpg?w=996&t=st=1698039135~exp=1698039735~hmac=2a9013944089d620b85285fd8c1e6cc02d4be960b2a31fe4f03ccb403d40fb6a",
+    img: "https://img.freepik.com/free-photo/clothing-rack-with-floral-hawaiian-shirts-hangers-hat_23-2149366018.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
   },
   {
-    img: "https://img.freepik.com/free-vector/watercolor-christmas-background_79603-2159.jpg",
+    img: "https://img.freepik.com/premium-photo/feminine-summer-aesthetic-fashion-clothes-composition-with-sundress-slippers-sunglasses-straw-hat-earrings-white-background-flat-lay-top-view-minimal-cloth-concept_408798-9735.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
   },
   {
-    img: "https://img.freepik.com/free-vector/mysterious-galaxy-background-green-tone_79603-574.jpg",
+    img: "https://img.freepik.com/free-photo/fashion-clothing-hangers-show_1153-5492.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
   },
   {
-    img: "https://img.freepik.com/free-psd/abstract-cloud-illuminated-with-neon-light-ring-generative-ai_271628-1033.jpg?t=st=1698039111~exp=1698039711~hmac=c02aa9dcce70740e52a2411d94cb7c432bb31358a9f889fe0242dcdf03eb4059",
+    img: "https://img.freepik.com/premium-photo/beautiful-evening-dresses-hanging-wooden-hangers-hanger-stand-luxury-modern-store-ai-generated-image_99272-5041.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
   },
+  {
+    img: "https://img.freepik.com/premium-photo/multicolored-manufacturing-fabric-textiles-pile_789279-1125.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
+  },
+  // {
+  //   img: "https://img.freepik.com/free-psd/abstract-cloud-illuminated-with-neon-light-ring-generative-ai_271628-1033.jpg?t=st=1698039111~exp=1698039711~hmac=c02aa9dcce70740e52a2411d94cb7c432bb31358a9f889fe0242dcdf03eb4059",
+  // },
 ];
 
 export const HeaderBottomData = [
-  { title: "Home", link: "/", icon: HomeOutlined },
-  { title: "Category", link: "/shop", icon: CategoryOutlined },
-  { title: "Cart", link: "/cart", icon: ShoppingCartOutlined },
-  { title: "Account", link: "/account", icon: PersonOutline },
+  {id:1 , title: "Home", link: "/", icon: HomeOutlined },
+  {id:2 , title: "Category", link: "/shop", icon: CategoryOutlined },
+  {id:3 , title: "Cart", link: "/cart", icon: ShoppingCartOutlined },
+  {id:4 , title: "Account", link: "/account", icon: PersonOutline },
 ];
+
+export const CategoryData = [
+  {
+    id: 1,
+    title: "For You",
+    link: "",
+    icon: <Shop2 />,
+    iconactive: <Shop2Outlined />,
+    details:[
+      {title : "Shops for Sarres 1" , 
+    info:[
+      {title :"Net Sarees" , icon : ""},
+      {title :"Georgette Sarees" , icon : ""},
+      {title :"Chiffon Sarees" , icon : ""},
+      {title :"Net Sarees" , icon : ""},
+      {title :"Georgette Sarees" , icon : ""},
+      {title :"Chiffon Sarees" , icon : ""},
+      // {title :"" , icon : ""},
+    ]
+    }
+    ]
+  },
+  {
+    id: 2,
+    title: "test 1",
+    link: "",
+    icon: <Shop2 />,
+    iconactive: <Shop2Outlined />,
+  },
+  {
+    id: 3,
+    title: "test2",
+    link: "",
+    icon: <Shop2 />,
+    iconactive: <Shop2Outlined />,
+  },
+  {
+    id: 4,
+    title: "test3",
+    link: "",
+    icon: <Shop2 />,
+    iconactive: <Shop2Outlined />,
+  },
+
+  {
+    id: 5,
+    title: "test4",
+    link: "",
+    icon: <Shop2 />,
+    iconactive: <Shop2Outlined />,
+  },
+  {
+    id: 6,
+    title: "test5",
+    link: "",
+    icon: <Shop2 />,
+    iconactive: <Shop2Outlined />,
+  },
+];
+
+
+export const CurrentUserData = {
+  img:"https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=sph",
+  name : "Abc  XYZ",
+  Id:123221,
+  mobile:"1234554321",
+  address : "earth , solar planet from 23 ,  somewhere around world , Milky way , 123221",
+  anther_address : "earth , solar planet from 23 ,  somewhere around world , Milky way , 123221",
+  email:"abc@ghjdi.com",
+
+} 
+
+export const AccountPageData = [
+  {
+    title : "Your Orders",
+    description :"Track, return, or buy things again" ,
+    icon : "https://img.freepik.com/free-vector/3d-delivery-box-parcel_78370-825.jpg?w=740&t=st=1698664162~exp=1698664762~hmac=4f958d4a0ad563f4cd20b9361aa07c64e0fbb5de557d306d110699980ab0b641",
+    link : "/orders"
+  },
+  {
+    title : "Login & secuity",
+    description :"Edit Login , name and Mobile" ,
+    icon : "https://img.freepik.com/free-vector/padlock_78370-547.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
+    link : "/logins"
+  },
+  {
+    title : "Addresses",
+    description :"Add or change addresses" ,
+    icon : "https://img.freepik.com/free-photo/online-payment-security-concept-3d-phone-bill_107791-16722.jpg?t=st=1698665876~exp=1698666476~hmac=a1b49597b77f83576640d42cb04e426f88bfb251a49ef481d308339c79e5795f",
+    link : "/payments"
+  },
+  {
+    title : "Payments",
+    description :"Track, return, or buy things again" ,
+    icon : "https://img.freepik.com/free-photo/online-payment-security-concept-3d-phone-bill_107791-16722.jpg?t=st=1698665876~exp=1698666476~hmac=a1b49597b77f83576640d42cb04e426f88bfb251a49ef481d308339c79e5795f",
+    link : "/payments"
+  },
+  {
+    title : "Logout",
+    description :"" ,
+    icon : "",
+    link : "/logout"
+  },
+]
+
+export const PrivacyPoliciesData = [
+  {
+    title : "Introduction",
+    desc : "Welcome to 'PBSarees'. We are committed to protecting your privacy and providing you with a secure online shopping experience. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our website and services."
+  },
+  {
+    title : "Information We Collect",
+    desc : "We collect various types of information when you visit and use our website, including:",
+    info:[{
+      title : "Personal Information:",
+desc:"This includes your name, email address, shipping address, and payment information when you make a purchase."
+    } ,{
+      title : "Browsing Information: ",
+desc:"We may collect information about your visit to our website, such as your IP address, browser type, device information, and the pages you visit."
+    } ,{
+      title : "Cookies:",
+desc:"We use cookies and similar technologies to enhance your experience and collect data about your interactions with our website."
+    } ,]
+  },
+  {
+    title : "How We Use Your Information",
+    desc : "We use the information we collect for various purposes, including:",
+    bulletPoint:[
+      {title : "Processing and fulfilling your orders."},
+      {title : "Improving our website and services."},
+      {title : "Providing customer support."},
+      {title : "Sending you marketing and promotional communications with your consent."},
+      {title : "Complying with legal and regulatory obligations."},
+    ]
+  },
+  {
+    title : "Security",
+    desc : "We take reasonable measures to protect your personal information. However, no online platform is entirely secure, and we cannot guarantee the security of your data."
+  },
+  {
+    title : "Contact Us",
+    desc : "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at [Contact Information]."
+  },
+  {
+    title : "Security",
+    desc : "We take reasonable measures to protect your personal information. However, no online platform is entirely secure, and we cannot guarantee the security of your data."
+  },
+]
+
+export const ReturnPoliciesData = [
+  {
+    title : 'Returns and Exchanges',
+    desc:"We want you to be completely satisfied with your purchase from PBSarees. If you're not satisfied with your purchase, we offer a straightforward return and exchange policy."
+  },
+  {
+    title : 'Eligibility',
+    desc:"You can return or exchange fashion products purchased from our website within [X days/weeks/months] of receiving the item. To be eligible for a return or exchange, the item must be in its original condition, with all tags and packaging intact."
+  },
+  {
+    title : 'How to Initiate a Return or Exchange',
+    desc:"To initiate a return or exchange, follow these steps:",
+    info:[
+      {
+        title:'Contact our customer support team at [Customer Support Email] to request a return or exchange. Please provide your order number and a brief description of the issue.',
+
+      },
+      {
+        title:'We will provide you with a return authorization and shipping instructions.',
+
+      },
+    ]
+  },
+  {
+    title : 'Shipping Costs',
+    desc:"If the return or exchange is due to an error on our part, we will cover the shipping costs.",
+    desc2:"If the return or exchange is for any other reason, you will be responsible for the return shipping costs."
+  },
+  
+  {
+    title : 'Refunds and Processing Time',
+    desc:"Refunds will be processed within [X business days] after we receive the returned item.",
+    desc2:"The refund will be issued to the original payment method."
+  },
+  
+  {
+    title : 'Exchanges',
+    desc:"If you wish to exchange an item, please specify the replacement item you'd like in your return request.",
+    desc2:"Exchanges will be processed once we receive the returned item."
+  },
+  {
+    title : 'Contact Us',
+    desc:"If you have any questions or need assistance with your return or exchange, please contact our customer support team at [Customer Support Email].",
+  },
+  {
+    title : ' Consent',
+    desc:"By making a purchase on our website, you agree to the terms of this return policy.",
+    
+  },
+  
+]

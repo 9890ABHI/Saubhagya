@@ -1,10 +1,10 @@
-import { Box, IconButton, Typography, useMediaQuery } from "@mui/material";
+import { Box, LinearProgress, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { FilterDataPrice } from "./filtered";
 import {
   BottomStyles,
   Category,
-  Clothingproducts,
+  CategoryData,
   Colors,
   Fabrics,
   Looks,
@@ -14,24 +14,39 @@ import {
 } from "../constants";
 
 import { FilterData } from "./filtered";
-import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
-import { Close, Filter } from "@mui/icons-material";
+import {  useDispatch, useSelector } from "react-redux";
 import { Card } from "./Card";
-import { getAllProducts } from "../Store/actions";
 import CategoryCard from "./CategoryCard";
+import { getAllProducts } from "../Store/actions";
 // import { setProducts as setProductAction } from "../redux/actions/productActions";
 
-const Shop = ({ title }) => {
-  const Secondaryproducts = useSelector((state) => state);
-  console.log("all products", Secondaryproducts);
+const Shop = () => {
+  // const Secondaryproducts = useSelector((state) => state);
+  // console.log("all products", Secondaryproducts);
   const dispatch = useDispatch();
+  const product = useSelector((state) => state.products.products);
+  const loading = useSelector((state) => state.products.isLoading);
 
-  const Mobile = useMediaQuery("(max-width: 640px)");
-  const [active, setActive] = useState(true);
+  console.log('products' , product);
+  console.log('loading' , loading );
 
-  const [products, setProducts] = useState([]); // Your clothing products data
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, [dispatch]);
+    // console.log('response',response);
+    // setNewProducts(response)
+  // }, [getAllProducts]);
+
+  // console.log("get products ", getAllProducts);
+  // console.log("products ss ", product);
+  // const Mobile = useMediaQuery("(max-width: 640px)");
+  const [active, setActive] = useState(1);
+  console.log(active);
+  const [categoryInfo, setCategoryInfo] = useState(CategoryData[0].details);
+  // console.log(categoryInfo);
+
+  // const [products, setProducts] = useState([]); // Your clothing products data
+  const [filteredProducts, setFilteredProducts] = useState(product);
   const [filters, setFilters] = useState({
     category: [],
     colors: [],
@@ -44,17 +59,17 @@ const Shop = ({ title }) => {
     priceRange: [0, 400],
   });
 
-  useEffect(() => {
-    // Fetch products from an API or set products in state
-    // Example: fetchProducts().then((data) => setProducts(data));
-    setProducts(Clothingproducts);
-    // setProducts(getAllProducts());
-    // dispatch(setProductAction(filteredProducts));
-  }, []);
+  // useEffect(() => {
+  //   // Fetch products from an API or set products in state
+  //   // Example: fetchProducts().then((data) => setProducts(data));
+  //   setProducts(Clothingproducts);
+  //   // setProducts(getAllProducts());
+  //   // dispatch(setProductAction(filteredProducts));
+  // }, []);
 
   useEffect(() => {
     // Apply filters whenever filter criteria change
-    const filtered = products.filter((product) => {
+    const filtered = product.filter((product) => {
       const {
         category,
         price,
@@ -121,7 +136,7 @@ const Shop = ({ title }) => {
     });
 
     setFilteredProducts(filtered);
-  }, [filters, products]);
+  }, [filters, product]);
 
   const handleCheckboxChange = (filterKey, event) => {
     setFilters({
@@ -136,13 +151,35 @@ const Shop = ({ title }) => {
     setFilters({ ...filters, priceRange: newValue });
   };
 
+  // const handleActive = (id) => {
+  //   setActive(id)
+  // }
+
   return (
     <>
-      <div className="flex w-full  bg-[#f2f2f2] justify-between pt-5 md:px-20 overflow-x-hidden">
+    <Box className="flex flex-col w-full max-sm:h-screen   max-sm:overflow-y-scroll ">
+
+    
+    {
+      loading && <>
+      <LinearProgress sx={{
+        background:'#f2f2f2',
+        ".css-5ir5xx-MuiLinearProgress-bar1":
+        {
+         background: "pink"
+        },
+        ".css-1r8wrcl-MuiLinearProgress-bar2":{
+          backgroundColor:'pink'
+        }
+      }}/>
+      </>
+    }
+    
+      <Box className="flex bg-[#f2f2f2] justify-between gap-10 pt-0 md:pt-5 md:px-20  ">
         {/* Filters */}
 
-        <Box className="w-[20%] h-screen  flex-col pl-0 text-left hidden md:flex">
-          <Box className="bg-white w-[250px] px-2 py-5 rounded-md">
+        <Box className="md:w-[20%] w-[10%] h-screen md:flex-col text-left ">
+          <Box className="bg-white w-[250px] max-sm:w-[75px] px-2 py-5 rounded-md">
             {/* <div className="text-center mb-7">
               <Typography
                 variant="h4"
@@ -159,67 +196,91 @@ const Shop = ({ title }) => {
               style={{ borderTop: "1px solid rgba(248, 139, 105,0.5 )" }}
               className="w-[100%]"
             /> */}
-            <Box className="flex flex-col">
-              {FilterData(Category, "category", filters, handleCheckboxChange)}
-              {FilterDataPrice("Price", filters, handlePriceRangeChange)}
-              {FilterData(Colors, "colors", filters, handleCheckboxChange)}
-              {FilterData(Fabrics, "fabrics", filters, handleCheckboxChange)}
-              {FilterData(Sizes, "sizes", filters, handleCheckboxChange)}
-            </Box>
+            {/* <Box className="flex flex-col"> */}
+            {FilterData(Category, "category", filters, handleCheckboxChange)}
+            {FilterDataPrice("Price", filters, handlePriceRangeChange)}
+            {FilterData(Colors, "colors", filters, handleCheckboxChange)}
+            {FilterData(Fabrics, "fabrics", filters, handleCheckboxChange)}
+            {FilterData(Sizes, "sizes", filters, handleCheckboxChange)}
+            {/* </Box> */}
 
-            <Box>
-              {FilterData(Styles, "styles", filters, handleCheckboxChange)}
-              {FilterData(
-                BottomStyles,
-                "bottomStyles",
-                filters,
-                handleCheckboxChange
-              )}
-              {FilterData(
-                Occasions,
-                "occasions",
-                filters,
-                handleCheckboxChange
-              )}
-              {FilterData(Looks, "looks", filters, handleCheckboxChange)}
-            </Box>
+            {/* <Box> */}
+            {FilterData(Styles, "styles", filters, handleCheckboxChange)}
+            {FilterData(
+              BottomStyles,
+              "bottomStyles",
+              filters,
+              handleCheckboxChange
+            )}
+            {FilterData(Occasions, "occasions", filters, handleCheckboxChange)}
+            {FilterData(Looks, "looks", filters, handleCheckboxChange)}
+            {/* </Box> */}
           </Box>
         </Box>
+        <Box className='hidden'>
         {/* <Box className="flex"> */}
-          <Box className="flex flex-col justify-start items-start h-full w-[50px] bg-[#adada6]  md:hidden ">
-            <CategoryCard active />
-            {CategoryCard(Category, "category", filters, handleCheckboxChange)}
-            <CategoryCard active />{" "}
-            {/* {FilterDataPrice("Price", filters, handlePriceRangeChange)} */}
-            {CategoryCard(
-              Colors,
-              "colors",
-              filters,
-              handleCheckboxChange,
-              active
-            )}
-            {CategoryCard(Fabrics, "fabrics", filters, handleCheckboxChange)}
-            {CategoryCard(Sizes, "sizes", filters, handleCheckboxChange)}
-          </Box>
-          {Mobile && <></>}
+        <Box className="flex flex-col  h-full md:hidden ">
+          {CategoryData.map((item) => (
+            <CategoryCard
+              title={item.title}
+              icon={item.icon}
+              id={item.id}
+              iconActive={item.iconactive}
+              // handleActive={handleActive}
+              active={active}
+              setActive={setActive}
+              item={item}
+              setCategoryInfo={setCategoryInfo}
+            />
+          ))}
+        </Box>
+        <Box className="flex w-full pl-2 justify-start items-start md:hidden pb-10 pr-5 overflow-hidden ">
+          <Box className="flex flex-col gap-2">
+            {categoryInfo?.map((item) => (
+              <>
+                <Typography>{item.title}</Typography>
+                <Box className="flex justify-start items-baseline overflow-scroll">
+                  {item?.info?.map((item) => (
+                    <>
+                      <Box className="flex flex-col justify-center items-center w-[100px] h-[100px] ">
+                        <img
+                          src={""}
+                          alt=""
+                          className="w-[60px] h-[60px] rounded-2xl outline-none"
+                        />
+                        <Typography variant="caption" className="text-center">
+                          {item.title}
+                        </Typography>
+                      </Box>
+                    </>
+                  ))}
+                </Box>
+              </>
+            ))}
 
-          {/*  */}
-
-          {/* filter products */}
-
-          <Box className="w-[100%] md:w-[70%] flex justify-center items-center pb-10 ">
-            <Box className="w-[100%] h-[100%] flex flex-wrap gap-1 justify-center md:gap-5 md:justify-start">
-              {filteredProducts.map((item) => (
+            {/* {filteredProducts.map((item) => (
                 <>
                   <Card item={item} />
                 </>
-              ))}
-            </Box>
+              ))} */}
           </Box>
-        {/* </Box>   */}
-      </div>
+        </Box>
+        </Box>
+        <Box className=" md:w-[70%] w-[100%] md:flex pb-10 pr-5 ">
+          <Box className="flex flex-wrap gap-2 md:gap-5 md:justify-start">
+            {filteredProducts.map((item) => (
+              <>
+                <Card item={item} />
+              </>
+            ))}
+          </Box>
+        </Box>
+      </Box>
+      </Box>
     </>
   );
 };
+
+
 
 export default Shop;

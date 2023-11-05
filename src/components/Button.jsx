@@ -1,16 +1,43 @@
-import { Add, Remove } from "@mui/icons-material";
-import { Box, Button } from "@mui/material";
+
+import {  Button, useMediaQuery } from "@mui/material";
 import React from "react";
 
 export const ShoppingButton = ({ title, icon, sizes }) => {
+  
+  const Mobile = useMediaQuery("(max-width: 640px)");
   return (
     <>
       <Button
-        sx={{
-          color: "#000",
+        sx={Mobile ? {
+          color: "#fff",
+          fontSize: 13,
+          ":hover": {
+            color: "#000",
+            "&.MuiButton-root": {
+              // background: "linear-gradient(to right,  #c90f72, #c90f7270)",
+              background: "#c90f72",
+            },
+
+          },
+          width: sizes ? "100%" : undefined,
+          px: 6,
+          py: 2,
+          borderRadius: sizes ? 0 : 2,
+          gap: 2,
+          "&.MuiButton-root": {
+            background: "linear-gradient(to right,  #c90f72, #c90f7290)",
+          },
+          display: "flex",
+          alignItems: "center",
+        } : {
+          color: "#fff",
           fontSize: sizes ? "13px" : "15px",
           ":hover": {
-            color: "#eee",
+            color: "#000",
+            "&.MuiButton-root": {
+              background: "linear-gradient(to right,  #c90f72, #c90f7270)",
+            },
+
           },
           width: sizes ? "100%" : undefined,
           px: sizes ? null : 8,
@@ -18,10 +45,12 @@ export const ShoppingButton = ({ title, icon, sizes }) => {
           borderRadius: sizes ? 0 : 2,
           gap: 2,
           "&.MuiButton-root": {
-            background: "linear-gradient(to left,  #f88b69, #f7797d)",
+            // background: "linear-gradient(to right,  #c90f72, #c90f7290)",
+            background: "#c90f72",
           },
           display: "flex",
           alignItems: "center",
+
         }}
         variant="contained"
         startIcon={icon}

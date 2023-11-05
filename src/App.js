@@ -11,17 +11,21 @@ import SignUp from "./components/auth/SignUp";
 import { useSelector } from "react-redux";
 import React from "react";
 import Cart from "./screens/Cart";
+import Account from "./screens/Account";
+import { Logins, Orders, Payments } from "./components/account/Orders";
+import BuyNow from "./screens/BuyNow";
+import { AboutUs, ContactUs } from "./components/footer/AboutUs";
+import { PrivacyPolicies, ReturnPolicies } from "./components/footer/PrivacyPolicies";
 
 function App() {
-  // const user = useSelector((state) => state.auth.user);
+  const user = useSelector((state) => state.auth.user);
   // console.log(user);
 
-  // const { authUser } = user;
   return (
     <>
       <div
         style={{
-          width: "100vw",
+          width: "screen",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
@@ -31,23 +35,38 @@ function App() {
         <Header />
         <StyledEngineProvider injectFirst>
           <Routes>
-            {/* {!user ? (
+            {!user ? (
               <>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signUp" element={<SignUp />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/shop" element={<Shop />} />
+                <Route path="/shop/:id" element={<Details />} />
               </>
             ) : (
               <>
+              <Route path="/" element={<Home />} />
+              <Route path="/shop" element={<Shop />} />
                 <Route path="/shop/:id" element={<Details />} />
-                <Route path="/cart/:id" element={<Cart />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/buynow/:id" element={<BuyNow />} />
+                <Route path="/account" element={<Account />} />
+            <>
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/logins" element={<Logins />} />
+            <Route path="/payments" element={<Payments />} />
+            </>
               </>
-            )} */}
-            <Route path="/" element={<Home />} />
+            )}
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/privacypolicies" element={<PrivacyPolicies />} />
+            <Route path="/returnolicies" element={<ReturnPolicies />} />
+            {/* <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/:id" element={<Details />} />
-            <Route path="/cart/:userid" element={<Cart />} />
+            <Route path="/cart/:userid" element={<Cart />} /> */}
+
           </Routes>
         </StyledEngineProvider>
         <Footer />

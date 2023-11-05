@@ -1,37 +1,32 @@
-import {
-  Category,
-  CategoryOutlined,
-  Close,
-  FavoriteBorder,
-  Home,
-  HomeOutlined,
-  Login,
-  Logout,
-  Person,
-  PersonOutline,
-  Search,
-  ShoppingCartOutlined,
-} from "@mui/icons-material";
+import { Login, Logout, Person2Outlined } from "@mui/icons-material";
 import React, { useState } from "react";
-import { Link, useNavigate, useNavigation, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import {
-  Box,
-  Button,
-  IconButton,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
-import { useDispatch } from "react-redux";
+import { Box, Button, useMediaQuery } from "@mui/material";
 import { HeaderBottomData } from "../constants/index";
 import LinkOptions from "./LinkOptions";
-// import { logout } from "../redux/reducers/authReducer";
+import { connect, useDispatch, useSelector } from "react-redux";
+import { logout } from "../Store/actions";
 
 const Header = () => {
-  // const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.user);
+  // console.log(user);
+  // console.log(location);
+  const [count, setCount] = useState(1);
+  const dispatch = useDispatch();
   const Mobile = useMediaQuery("(max-width: 640px)");
-  const [openSearch, setOpenSearch] = useState(false);
+  const navigation = useNavigate()
+  const [
+    openSearch,
+    //  setOpenSearch
+  ] = useState(false);
 
+  const handleLogout = () => {
+    // Dispatch the LOGOUT action when the button is clicked
+    dispatch(logout());
+    navigation('/login')
+
+  };
   // const HeaderBottomData = [
   //   { title: "Home", link: "/", icon: HomeOutlined },
   //   { title: "Category", link: "/shop", icon: CategoryOutlined },
@@ -42,32 +37,28 @@ const Header = () => {
   return (
     <>
       <Box
-        className='w-full h-[105px] flex flex-col  max-sm:hidden'
+        className="w-full h-[75px] flex flex-col  max-sm:hidden pt-1 top-0 bg-white"
         style={{ borderBottom: "1px solid rgba(0,0,0,0.2)" }}
       >
-        <img
+        {/* <img
           src={require("../assets/Shaubhgya.png")}
           className="w-full h-8 object-fill"
-        />
-        <Box className="flex justify-between items-center px-10" 
-        // style={{ border: "5px solid rgba(0,0,0,0.2)" }}
+          alt=""
+        /> */}
+        <Box
+          className="flex justify-between items-center px-10"
+          // style={{ border: "5px solid rgba(0,0,0,0.2)" }}
         >
           <div className="pl-2 ">
             {/* Logo */}
             <Link to={"/"}>
               <img
-                src={require("../assets/Pisara Sarees logo.png")}
+                src={require("../assets/Pisara Sarees logo_1 2.PNG")}
                 alt="Company logo"
                 // width={250}
                 // height={40}
-                className="w-[80px] h-[80px] object-contain rounded-sm px-2  bg-blend-multiply"
+                className="w-full h-[65px] object-contain rounded-sm px-2  bg-blend-multiply"
               />
-              <div style={{
-                height:80,
-                width:80,
-                backgroundImage: require('../assets/Pisara Sarees logo.png'),
-                backgroundBlendMode:'screen',
-              }} ></div>
             </Link>
           </div>
 
@@ -78,22 +69,58 @@ const Header = () => {
             <Box className="" sx={{ width: "100%" }}>
               <SearchBar />
             </Box>
-
-            <Button
-              variant="contained"
-              sx={{
-                px:3,
-                backgroundColor: "#ffa42f",
-                color: "#000120",
-                ":hover": {
-                  backgroundColor: "#f88b69",
-                  color: "#eee",
-                },
-              }}
-              startIcon={<Login />}
-            >
-              SignIn
-            </Button>
+            <Link to={"/account"}>
+              <Person2Outlined color="disabled" />
+            </Link>
+            {!user ? (
+              <>
+                <Link to="/login">
+                  <Button
+                    variant="contained"
+                    sx={{
+                      px: 3,
+                      background:'#c90f72' ,
+                        // "linear-gradient(to right,  #c90f7290, #c90f72)",
+                      color: "#fff",
+                      transition: "0.5s",
+                      ":hover": {
+                        background:
+                          "linear-gradient(to left,  #c90f7290, #c90f72)",
+                        color: "pink",
+                      },
+                    }}
+                    startIcon={<Login />}
+                  >
+                    SignIn
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <>
+                {/* <Link to='/login'> */}
+                <Button
+                  variant="contained"
+                  sx={{
+                    px: 3,
+                    background:
+                      "linear-gradient(to right,  #c90f7290, #c90f72)",
+                    color: "#fff",
+                    transition: "0.5s",
+                    ":hover": {
+                      background:
+                        "linear-gradient(to left,  #c90f7290, #c90f72)",
+                      color: "pink",
+                    },
+                  }}
+                  startIcon={<Logout />}
+                  //  onClick={() => }
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
+                {/* </Link> */}
+              </>
+            )}
 
             {/* <Link>
               <IconButton>
@@ -124,25 +151,51 @@ const Header = () => {
       </Box>
       {Mobile && (
         <>
-          <Box className="fixed z-10 bottom-0 left-0 right-0 h-14 bg-[#f88b69] w-screen flex justify-center items-center">
+        <Box>
+          {
+            !user && <><Box onClick={handleLogout}>LOGOUT</Box></>
+          }
+        </Box>
+        <Box className='fixed z-10 bottom-0 h-14 w-full bg-white'>
+
+          <Box
+            className=" 
+          // bg-[#f88b69]
+           w-full flex justify-center items-center"
+            sx={{
+              // background:'linear-gradient(90deg, #c90f7290 0% 2%, #c90f72 0% 20%);'
+              background:
+                (count === 1 &&
+                  "linear-gradient(to right,  #c90f7290, #c90f72 , #c90f72 , #c90f72)") ||
+                (count === 2 &&
+                  "linear-gradient(to right,  #c90f72, #c90f7290 , #c90f72 , #c90f72)") ||
+                  (count === 3 &&
+                  "linear-gradient(to right,  #c90f72, #c90f72 , #c90f7290 , #c90f72)") ||
+                (count === 4 &&
+                  "linear-gradient(to right,  #c90f72, #c90f72 , #c90f72 , #c90f7290)"),
+                }}
+          >
             <Box className="flex justify-around items-center w-full">
               {HeaderBottomData.map((item) => {
                 return (
                   <>
                     <LinkOptions
+                      id={item.id}
                       title={item.title}
                       icon={item.icon}
                       link={item.link}
-                    />
+                      setCount={setCount}
+                      />
                   </>
                 );
               })}
             </Box>
+              </Box>
           </Box>
         </>
-      ) }
+      )}
     </>
   );
 };
 
-export default Header;
+export default connect()(Header);

@@ -1,4 +1,4 @@
-import { Box, FormLabel, Input, TextField, Typography } from "@mui/material";
+import { Box,  Input, Typography } from "@mui/material";
 import React from "react";
 import { FooterData } from "../constants";
 import {
@@ -11,6 +11,7 @@ import {
   Place,
   Twitter,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -26,6 +27,7 @@ const Footer = () => {
                   </Typography>
                   {item.info.map((item) => (
                     <>
+                    <Link to={item.link}>
                       <Box className="flex pt-2 ">
                         {item.logo ? (
                           <>
@@ -41,11 +43,12 @@ const Footer = () => {
                           </>
                         ) : (
                           <></>
-                        )}
+                          )}
                         <Typography className="text-gray-400">
                           {item.title}
                         </Typography>
                       </Box>
+                          </Link>
                     </>
                   ))}
                 </Box>
@@ -92,16 +95,17 @@ const Footer = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="w-full flex justify-center items-center bg-[#000111]">
-          <img src={require("../assets/Pisarasarees.com Designed By NerdTech-2.png")} alt="/Pisarasarees.com Designed By NerdTech" className="w-[700px] h-[550px] object-fill" />
+        <Box className="w-full flex justify-center items-center bg-[#000111] pt-24 pb-52">
+          <img src={require("../assets/pb.png")} alt="/Pisarasarees.com Designed By NerdTech" className="w-[800px] h-full  object-fill" />
         </Box>
-        <Box className="w-full flex flex-col justify-center items-center bg-[#000111] pb-10">
-          <Typography className="text-gray-400 ">
+        <Box className="w-full flex flex-col justify-center items-center bg-[#e80071] pb-10">
+          
+          <img src={require("../assets/NT.png")} alt="/Pisarasarees.com Designed By NerdTech" className="w-[700px] h-full object-fill" />
+          {/* <Typography className="text-gray-400 ">Powerd By NerdTech</Typography> */}
+          <Typography className="text-gray-100 ">
             <Copyright color="#eee" className="pr-1" />
             2023 PSAREE.COM. ALL RIGHTS RESERVED.
           </Typography>
-
-          <Typography className="text-gray-400 ">Powerd By NerdTech</Typography>
         </Box>
       </Box>
     </>

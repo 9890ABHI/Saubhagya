@@ -84,20 +84,24 @@ const Details = () => {
 
   return (
     <>
-      <Container className="flex flex-row justify-between pt-5 max-md:hidden">
+    <Box className='max-sm:h-screen  max-sm:overflow-y-scroll '>
+
+    
+      <Container className="flex flex-row justify-between pt-5 max-md:hidden max-sm:h-screen   max-sm:overflow-y-scroll  ">
         <Box
           sx={{
             width: "45% ",
             display: "flex",
             height:"600px",
             gap: 2,
+            overflow:'hidden'
            // flexDirection:Mobile ? 'fle' : undefined,
           //  flexDirection:Mobile ? 'column-reverse' : undefined,
           //  overflow:Mobile ? 'unset' : 'auto',
           //  justifyContent:Mobile ? "space-around" : undefined
           }}
         >
-          <Box className='flex w-screen h-[100px] gap-3'>
+          <Box className='flex max-sm:w-full h-[100px] gap-3 md:h-[100%] overflow-y-scroll md:flex-col'>
             {product?.images?.map((item) => (
               <>
                 <img
@@ -299,10 +303,10 @@ const Details = () => {
       <Box>
 {/*  */}
 {/* first container mobile view */}
-<Box className="flex flex-col w-[100%] items-center">
-<ArrowBack onClick={() => Navigate(-1)} className="fixed top-5 left-5" />
+<Box className="flex flex-col w-[100%] items-center md:hidden">
+<ArrowBack onClick={() => Navigate(-1)} className="absolute top-5 left-5" />
 <Box className="flex flex-col-reverse h-[400px] w-full gap-3 md:hidden">
-          <Box className='flex w-screen h-[100px] gap-3'>
+          <Box className='flex w-full h-[120px] px-2 gap-5 overflow-x-scroll'>
             {product?.images?.map((item) => (
               <>
                 <img
@@ -310,11 +314,8 @@ const Details = () => {
                   onMouseEnter={() => setImge(item.img)}
                   key={item.id}
                   alt=""
-                  className="object-contain rounded-sm shadow-md"
-                  style={{
-                    width:Mobile? 100 :undefined, 
-                    height:Mobile ? 100 :undefined
-                  }}
+                  className="w-24 h-24 object-contain rounded-md"
+                  
                 />
               </>
             ))}
@@ -445,7 +446,7 @@ const Details = () => {
               />
             </Box>
             <hr className="border-t-gray-300 pt-2" />
-            <Box className="pt-12 pb-7 flex justify-around">
+            <Box className="pt-12 pb-7 max-sm:py-4  flex justify-around">
               <ShoppingButton
                 title={"Buy Now"}
                 icon={<ShoppingBagOutlined />}
@@ -542,6 +543,7 @@ const Details = () => {
           </TabContext>
         </Box>
       </Container>
+      </Box>
     </>
   );
 };

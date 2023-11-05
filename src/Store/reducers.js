@@ -8,12 +8,16 @@ import {
   GET_PRODUCTS_REQUEST,
   GET_PRODUCTS_SUCCESS,
   GET_PRODUCTS_FAILURE,
+  LOGOUT,
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
 } from "./actions";
 
 const initialState = {
   user: null,
   error: null,
   isLoading: false,
+  cart: [],
 };
 
 export const authReducer = (state = initialState, action) => {
@@ -29,6 +33,21 @@ export const authReducer = (state = initialState, action) => {
     case LOGIN_FAILURE:
     case SIGNUP_FAILURE:
       return { ...state, user: null, isLoading: false, error: action.error };
+
+    case ADD_TO_CART:
+      return {
+        ...state,
+        cart: [...state.cart, action.product],
+      };
+
+    case REMOVE_FROM_CART:
+      return {
+        ...state,
+        cart: state.cart.filter((product) => product.id !== action.productId),
+      };
+
+    case LOGOUT: // Handle the LOGOUT action
+      return { ...state, user: null, error: null, isLoading: false };
 
     default:
       return state;

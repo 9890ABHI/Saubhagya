@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // import { signup } from "../../redux/reducers/authReducer";
 import {
   Alert,
@@ -13,8 +13,10 @@ import {
   Typography,
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
+import { signup } from "../../Store/actions";
 
 const SignUp = () => {
+  const user = useSelector((state) => state.auth.user);
   const intitalState = {
     name: "",
     phone: "",
@@ -48,25 +50,27 @@ const SignUp = () => {
     e.preventDefault();
 
     if (values.password === values.confirmPassword) {
-      // dispatch(signup(values));
-      navigation("/login");
+      dispatch(signup(values));
+      navigation("/");
     } else {
       setPasswordMatch(false);
-      window.alert("password dosent match");
-      setPassword("");
+      // window.alert("password dosent match");
+      // setPassword("");
       setConfirmPassword("");
     }
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-[35%] px-5  py-10">
-        <Typography variant="h4" className="mb-10" color="black">
+    <>
+    {
+      !user ? <><div className="flex items-center justify-center py-10 h-full bg-[#f2f2f2] ">
+      <Card className="w-[35%] px-5  py-10 bg-[#fff] flex flex-col justify-center text-center">
+        <Typography variant="h4" className="pb-5" color="black">
           Create an Account
         </Typography>
 
-        <form onSubmit={handleSubmit}>
-          <Box className="flex flex-col gap-4 px-20 text-left">
+        <form onSubmit={handleSubmit} className="flex flex-col items-center">
+          <Box className="flex flex-col gap-4 px-10 w-[75%]  text-left ">
             <TextField
               label="Name"
               size=""
@@ -121,11 +125,21 @@ const SignUp = () => {
           </Box>
           <Box className="pt-5">
             <Button
-              variant="text"
+              variant="contained"
               type="submit"
-              // onClick={() => dispatch(signup(values))}
+              onClick={handleSubmit}
+              sx={{
+                px:3,
+                background: "linear-gradient(to right,  #c90f7290, #c90f72)",
+                color: "#fff",
+                transition:'0.5s',
+                ":hover": {
+                  background: "linear-gradient(to left,  #c90f7290, #c90f72)",
+                  color: "pink",
+                },
+              }}
             >
-              Sign Up
+              Sign Up 
             </Button>
 
             <Typography variant="small" className="mt-6 flex justify-center">
@@ -137,7 +151,10 @@ const SignUp = () => {
           </Box>
         </form>
       </Card>
-    </div>
+    </div> </> : navigation('/')
+    }
+    
+    </>
   );
 };
 

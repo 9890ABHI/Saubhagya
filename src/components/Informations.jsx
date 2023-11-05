@@ -10,6 +10,7 @@ import {
 import React, { useState } from "react";
 import { PrimaryText, SecondaryText } from "./TextComponent";
 import { Link } from "react-router-dom";
+import { Reviews } from "@mui/icons-material";
 
 export function InformationDetails() {
   // { infoDetails }
@@ -29,8 +30,8 @@ export function InformationDetails() {
       <Box className="flex flex-col w-full">
         {infoDetails.map((item) => (
           <>
-            <Box className="flex items-center justify-start text-left my-2">
-              <Box className="flex w-[35%] pl-14">
+            <Box className="flex items-center justify-start text-left max-sm:my-0 my-2">
+              <Box className="flex w-[35%] max-sm:pl-2 pl-14">
                 <SecondaryText text={item.title + " : "} isInfo />{" "}
               </Box>
               <Box className="flex w-full">
@@ -45,7 +46,7 @@ export function InformationDetails() {
   );
 }
 
-export function ReviewDetails() {
+export function ReviewDetails({item}) {
   // {reviewDetails}
   const [value, setValue] = React.useState(0);
   const [qualityValue, setQualityValue] = React.useState(0);
@@ -61,14 +62,21 @@ export function ReviewDetails() {
   };
   const [values, setValues] = useState(intitalState);
   const onSubmit = () => {};
+  
+
+  const Reviews =({item}) => (
+    <>
+    
+    </>
+  )
   return (
     <>
       <Box className="flex flex-col justify-center items-center w-full pl-20 gap-4">
-        <Typography variant="h6" color={"CaptionText"} className="">
+        {/* <Typography variant="h6" color={"CaptionText"} className="">
           Write Your Own Review
-        </Typography>
+        </Typography> */}
 
-        <form onSubmit={onSubmit}>
+        {/* <form onSubmit={onSubmit}>
           <Box className="flex flex-col  justify-center text-left gap-1 mt-3">
             <FormLabel className="text-xl ">Quaility</FormLabel>
             <Rating
@@ -145,7 +153,8 @@ export function ReviewDetails() {
           <Button type="submit" variant="text" className=" text-base mt-5">
             Submit Review
           </Button>
-        </form>
+        </form> */}
+        <Reviews />
       </Box>
     </>
   );
@@ -154,7 +163,7 @@ export function ReviewDetails() {
 export function ReturnsPolicyDetails() {
   return (
     <>
-      <Box className="text-left gap-3 flex flex-col pl-20">
+      <Box className="text-left gap-3 flex flex-col max-sm:pl-0 pl-20">
         <Typography variant={"body1"} className="text-xl">
           All stitched & customized products are not returnable.
           <Link className="text-blue-500"> Read more </Link> about our return

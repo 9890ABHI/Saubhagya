@@ -18,7 +18,7 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <FormControl component="fieldset" className="w-full flex justify-between">
+      <FormControl component="fieldset" className="w-full flex justify-between relative">
         <Box
           className="w-[100%] flex justify-between px-5 py-2 cursor-pointer"
           onClick={() => setOpen(!open)}
@@ -28,20 +28,20 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
             color: "GrayText",
           }}
         >
-          <Typography variant="h6" className="capitalize" color={"GrayText"}>
+          <Typography variant="h6" className="capitalize max-sm:hidden" color={"GrayText"}>
             {filterKey}
           </Typography>
           {!open ? <ExpandMore /> : <ExpandLess />}
         </Box>
 
-        <Box classname="flex w-[100%] pl-9">
+        <Box classname="max-sm:absolute max-sm:left-[75px] bg-white w-full">
           {open && (
             <FormGroup>
               {data.map((item) => (
                 <>
                   {filterKey === "colors" ? (
                     <>
-                      <Box sx={{ pl: 9 }}>
+                      <Box sx={{ pl: 4 }}>
                         <FormControlLabel
                           key={item.title}
                           control={
@@ -116,7 +116,7 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
   const maximum = useState(filters.priceRange[1]);
   return (
     <>
-      <FormControl component="fieldset" className="w-full justify-start">
+      <FormControl component="fieldset" className="w-full justify-start relative">
         <Box
           className="w-[100%] flex justify-between px-5 py-2 cursor-pointer"
           onClick={() => setOpen(!open)}
@@ -126,16 +126,16 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
             color: "GrayText",
           }}
         >
-          <Typography variant="h6" className="capitalize">
+          <Typography variant="h6" className="capitalize max-sm:hidden">
             {filterKey}
           </Typography>
           {!open ? <ExpandMore /> : <ExpandLess />}
         </Box>
 
-        <Box sx={{ width: "70%", pl: 3 }}>
+        <Box  className=' max-sm:absolute max-sm:left-[75px] max-sm:bg-white max-sm:w-fit'>
           {open && (
             <>
-              <Box className="flex ">
+              <Box className="flex  w-full">
                 <FormControl fullWidth sx={{ m: 1 }} variant="standard">
                   <InputLabel htmlFor="standard-adornment-amount">
                     Min
