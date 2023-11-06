@@ -11,10 +11,10 @@ const Home = () => {
   return (
     <>
     <Box className="max-sm:h-screen  max-sm:overflow-y-scroll ">
-    <Box className="w-full flex justify-center pt-7 md:hidden ">
+    {/* <Box className="w-full flex justify-center pt-7 md:hidden ">
       <img src={require('../assets/pb.png')} className="w-fit h-16 object-fill" alt="" />
 
-      </Box>
+      </Box> */}
    
       {/* home page container 1 */}
       <Container
@@ -22,7 +22,7 @@ const Home = () => {
           // width: "100vw",
 
         }}
-        className="pb-10 pt-10"
+        className="pb-10 pt-10 max-sm:pt-20"
       >
         <Link to={`/shop`}>
           <Carousel

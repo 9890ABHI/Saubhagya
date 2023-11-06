@@ -150,12 +150,20 @@ const Header = () => {
         </Box>
       </Box>
       {Mobile && (
-        <>
-        <Box>
+        <><Box className='fixed z-20 top-0 flex justify-between items-center  bg-white w-full h-fill'>
+
+        <Box className=' w-full flex justify-between items-center px-3 bg-gradient-to-t from-[#c388a790] to-[#f3e8ee]'>
           {
             !user && <><Box onClick={handleLogout}>LOGOUT</Box></>
           }
+          <Box>
+            <img src={require('../assets/Pisara Sarees logo_1 2.PNG')} className="w-[70px] h-[70px] object-contain"/>
+          </Box>
+          <Box className='w-[70%] flex justify-center py-1 bg-white rounded-md  '>
+            <SearchBar />
+            </Box>
         </Box>
+          </Box>
         <Box className='fixed z-10 bottom-0 h-14 w-full bg-white'>
 
           <Box

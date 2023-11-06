@@ -29,7 +29,7 @@ export const Card = ({ item }) => {
         }}
       >
         <Box
-          className="h-[300px] w-[140px] md:w-[260px] md:h-[430px] flex flex-col rounded-sm md:rounded-md overflow-hidden bg-white shadow-md"
+          className="h-[300px] max-sm:w-[140px] md:w-[260px] md:h-[430px] flex flex-col rounded-sm md:rounded-md overflow-hidden bg-white shadow-md"
           
         >
           <div className=" overflow-hidden">

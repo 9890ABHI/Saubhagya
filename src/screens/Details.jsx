@@ -5,11 +5,7 @@ import {
   Typography,
   Box,
   Container,
-  Button,
-  Select,
-  FormControl,
-  MenuItem,
-  InputLabel,
+
   Tab,
   Rating,
   useMediaQuery,
@@ -23,7 +19,6 @@ import {
   Instagram,
   LocalShippingOutlined,
   Policy,
-  Radio,
   ShoppingBagOutlined,
   ShoppingCartOutlined,
   Star,
@@ -84,7 +79,7 @@ const Details = () => {
 
   return (
     <>
-    <Box className='max-sm:h-screen  max-sm:overflow-y-scroll '>
+    <Box className='max-sm:h-screen  max-sm:overflow-y-scroll max-sm:pt-20'>
 
     
       <Container className="flex flex-row justify-between pt-5 max-md:hidden max-sm:h-screen   max-sm:overflow-y-scroll  ">
@@ -304,7 +299,9 @@ const Details = () => {
 {/*  */}
 {/* first container mobile view */}
 <Box className="flex flex-col w-[100%] items-center md:hidden">
-<ArrowBack onClick={() => Navigate(-1)} className="absolute top-5 left-5" />
+  <Box className="absolute top-15 left-5 flex justify-items-center bg-[#fff] rounded-md px-2 py-2">
+<ArrowBack onClick={() => Navigate(-1)}  />
+  </Box>
 <Box className="flex flex-col-reverse h-[400px] w-full gap-3 md:hidden">
           <Box className='flex w-full h-[120px] px-2 gap-5 overflow-x-scroll'>
             {product?.images?.map((item) => (
@@ -493,7 +490,7 @@ const Details = () => {
 
 {/*  */}
       </Box>
-      <Container className="flex pt-5 ">
+      <Container className="flex pt-5 max-sm:pb-12 ">
         <Box
           sx={{
             width: "100%",

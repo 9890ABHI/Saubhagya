@@ -13,7 +13,7 @@ export const Orders = () => {
   const [filterProds, setFilterProds] = useState(prods);
   return (
     <>
-    <Container sx={{background:"#f2f2f2" ,pt:2 , pb:1}} className=''>
+    <Container sx={{background:"#f2f2f2" ,pt:2 , pb:1}} className='max-sm:pt-20'>
       <Box className=" flex px-24 py-10">
         <Account />
       </Box>

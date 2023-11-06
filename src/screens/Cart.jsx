@@ -34,7 +34,7 @@ const Cart = () => {
   return (
     <>
       <Box className="flex flex-col md:flex-row justify-around items-start bg-[#f2f2f2] py-10">
-        <Box className="px-2 md:px-0 max-sm:pb-32 md:w-[60%] flex flex-col justify-center items-center gap-2">
+        <Box className="px-2 md:px-0 max-sm:pb-32 max-sm:pt-10 max-sm:-z-0 md:w-[60%] flex flex-col justify-center items-center gap-2">
           {filterProds.map((item) => (
             <>
               <CartCard
@@ -50,13 +50,13 @@ const Cart = () => {
 
        
         <Box
-          className="max-sm:fixed max-sm:bottom-14 w-full h-28 bg-[#fff] md:bg-[#fff] rounded-md bottom-14 flex flex-col justify-between items-center rounded-t-lg  md:rounded-none md:justify-between md:items-start md:w-[450px] md:h-fit px-2 md:px-5  "
+          className="max-sm:fixed max-sm:z-10 max-sm:bottom-14 w-full h-28 max-sm:h-fit bg-[#fff] md:bg-[#fff] rounded-md bottom-14 flex flex-col justify-between items-center rounded-t-lg  md:rounded-none md:justify-between md:items-start md:w-[450px] md:h-fit px-2 md:px-5  "
           // sx={{ border: "1px solid gray" }}
         >
-          <hr className="w-[95%]" />
-            <Box className="w-full flex flex-col gap-2 md:pt-2">
+          <hr className="w-[95%] max-sm:hidden" />
+            <Box className="w-full flex flex-col gap-2 max-sm:pt-0 md:pt-2">
               <Box className="px-2">
-                <Typography className="text-gray-500" variant="h6">
+                <Typography className="text-gray-500 text-xl" variant="">
                   Price Details
                 </Typography>
                 </Box>
@@ -86,7 +86,7 @@ const Cart = () => {
           </Box>
             </Box>
           <hr className="w-[95%]" />
-          <Box className="w-full flex justify-between md:py-5 bg-[#fff]">
+          <Box className="w-full flex justify-between max-sm:pt-2 md:py-5 bg-[#fff]">
 
           <Box className="md:hidden w-full">
           <Typography className="flex gap-3" variant="h6">

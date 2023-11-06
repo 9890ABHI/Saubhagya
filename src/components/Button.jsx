@@ -10,7 +10,7 @@ export const ShoppingButton = ({ title, icon, sizes }) => {
       <Button
         sx={Mobile ? {
           color: "#fff",
-          fontSize: 13,
+          fontSize: 10,
           ":hover": {
             color: "#000",
             "&.MuiButton-root": {
@@ -20,10 +20,10 @@ export const ShoppingButton = ({ title, icon, sizes }) => {
 
           },
           width: sizes ? "100%" : undefined,
-          px: 6,
+          px: 5,
           py: 2,
           borderRadius: sizes ? 0 : 2,
-          gap: 2,
+          gap: 1,
           "&.MuiButton-root": {
             background: "linear-gradient(to right,  #c90f72, #c90f7290)",
           },

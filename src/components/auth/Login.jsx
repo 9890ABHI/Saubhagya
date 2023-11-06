@@ -80,11 +80,13 @@ const Login = () => {
           // className="px-16 py-2 "
           sx={{
             px:3,
-            background: "linear-gradient(to right,  #c90f7290, #c90f72)",
+            // background: "linear-gradient(to right,  #c90f7290, #c90f72)",
+            background: "#c90f72",
             color: "#fff",
             transition:'0.5s',
             ":hover": {
-              background: "linear-gradient(to left,  #c90f7290, #c90f72)",
+              // background: "linear-gradient(to left,  #c90f7290, #c90f72)",
+              background: "#c90f72",
               color: "pink",
             },
           }}

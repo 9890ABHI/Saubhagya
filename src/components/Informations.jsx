@@ -30,11 +30,11 @@ export function InformationDetails() {
       <Box className="flex flex-col w-full">
         {infoDetails.map((item) => (
           <>
-            <Box className="flex items-center justify-start text-left max-sm:my-0 my-2">
-              <Box className="flex w-[35%] max-sm:pl-2 pl-14">
+            <Box className="flex  max-sm:w-[20%] items-start justify-start text-left max-sm:my-0 my-2">
+              <Box className="flex w-[35%] max-sm:pl-0 pl-14">
                 <SecondaryText text={item.title + " : "} isInfo />{" "}
               </Box>
-              <Box className="flex w-full">
+              <Box className="flex w-full max-sm:w-fit">
                 <PrimaryText text={item.description} isInfo />
               </Box>
               <Box></Box>

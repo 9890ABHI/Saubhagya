@@ -14,13 +14,15 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 
-export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
+export const FilterData = (data, filterKey, filters, handleCheckboxChange ,openBox) => {
   const [open, setOpen] = useState(false);
+  console.log('openBox',openBox);
   return (
     <>
+  
       <FormControl component="fieldset" className="w-full flex justify-between relative">
         <Box
-          className="w-[100%] flex justify-between px-5 py-2 cursor-pointer"
+          className="w-[100%] flex justify-between items-center px-5 py-2 cursor-pointer max-sm:bg-white"
           onClick={() => setOpen(!open)}
           sx={{
             borderBottom: "1px solid rgba(0,0,0,0.2)",
@@ -28,20 +30,21 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
             color: "GrayText",
           }}
         >
-          <Typography variant="h6" className="capitalize max-sm:hidden" color={"GrayText"}>
+          <Typography variant="h6" className={`capitalize ${openBox ? 'flex' : 'max-sm:hidden'}`}  color={"GrayText"}>
             {filterKey}
           </Typography>
           {!open ? <ExpandMore /> : <ExpandLess />}
         </Box>
 
-        <Box classname="max-sm:absolute max-sm:left-[75px] bg-white w-full">
           {open && (
-            <FormGroup>
+        <Box classname=" bg-white w-full absolute">
+            <FormGroup className="">
               {data.map((item) => (
                 <>
                   {filterKey === "colors" ? (
                     <>
-                      <Box sx={{ pl: 4 }}>
+                      <Box sx={{ pl: 4 }} className="">
+
                         <FormControlLabel
                           key={item.title}
                           control={
@@ -84,32 +87,35 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange) => {
                     </>
                   ) : (
                     <>
+                    <Box className=" ">
+
                       <FormControlLabel
-                        className="pl-8"
+                        className="md:pl-8 max-sm:pl-2"
                         key={item.title}
                         control={
                           <Checkbox
-                            checked={filters[filterKey].includes(item.title)}
+                          checked={filters[filterKey].includes(item.title)}
                             onChange={(e) => handleCheckboxChange(filterKey, e)}
                             value={item.title}
                             color="info"
-                          />
-                        }
-                        label={item.title}
+                            />
+                          }
+                          label={item.title}
                       />
+                          </Box>
                     </>
                   )}
                 </>
               ))}
             </FormGroup>
-          )}
         </Box>
+          )}
       </FormControl>
     </>
   );
 };
 
-export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
+export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange ,openBox) => {
   const [open, setOpen] = useState(false);
   const [minPrice, setMinPrice] = useState(filters.priceRange[0]);
   const [maxPrice, setMaxPrice] = useState(filters.priceRange[1]);
@@ -126,7 +132,7 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange) => {
             color: "GrayText",
           }}
         >
-          <Typography variant="h6" className="capitalize max-sm:hidden">
+          <Typography variant="h6" className={`capitalize ${openBox ? 'flex' : 'max-sm:hidden'}`}>
             {filterKey}
           </Typography>
           {!open ? <ExpandMore /> : <ExpandLess />}

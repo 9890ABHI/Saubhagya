@@ -16,7 +16,7 @@ else {
     <>
     <Box className="bg-[#f2f2f2]">
 
-    <Container className=' w-full h-full flex flex-wrap md:gap-10 max-sm:gap-2 justify-center items-center p-4 px-24 py-10 '>
+    <Container className=' w-full h-full flex flex-wrap md:gap-10 max-sm:gap-2 justify-center items-center p-4 px-24 py-10 max-sm:pt-20 '>
         {
           AccountPageData.map((item) => (
             <>
