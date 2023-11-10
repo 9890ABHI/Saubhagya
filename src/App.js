@@ -12,10 +12,14 @@ import { useSelector } from "react-redux";
 import React from "react";
 import Cart from "./screens/Cart";
 import Account from "./screens/Account";
-import { Logins, Orders, Payments } from "./components/account/Orders";
+import { Addresses, Logins, Orders } from "./components/account/Orders";
 import BuyNow from "./screens/BuyNow";
 import { AboutUs, ContactUs } from "./components/footer/AboutUs";
 import { PrivacyPolicies, ReturnPolicies } from "./components/footer/PrivacyPolicies";
+import BottomBar from "./components/BottomBar";
+import Payments from "./screens/Payments";
+import PageNotFound from "./screens/PageNotFound";
+import TermsandCondition from "./components/footer/TermandCondition";
 
 function App() {
   const user = useSelector((state) => state.auth.user);
@@ -30,7 +34,7 @@ function App() {
           justifyContent: "center",
           flexDirection: "column",
         }}
-        // className="App"
+        className="bg-[#f2f2f2]"
       >
         <Header />
         <StyledEngineProvider injectFirst>
@@ -51,17 +55,20 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/buynow/:id" element={<BuyNow />} />
                 <Route path="/account" element={<Account />} />
+                <Route path="/payments" element={<Payments />} />
             <>
             <Route path="/orders" element={<Orders />} />
             <Route path="/logins" element={<Logins />} />
-            <Route path="/payments" element={<Payments />} />
+            <Route path="/addresses" element={<Addresses />} />
             </>
               </>
             )}
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/privacypolicies" element={<PrivacyPolicies />} />
+            <Route path="/termsandcondition" element={<TermsandCondition />} />
             <Route path="/returnolicies" element={<ReturnPolicies />} />
+            <Route path="*" element={<PageNotFound />} />
             {/* <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/:id" element={<Details />} />
@@ -69,6 +76,7 @@ function App() {
 
           </Routes>
         </StyledEngineProvider>
+        <BottomBar />
         <Footer />
       </div>
     </>

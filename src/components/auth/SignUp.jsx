@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 // import { signup } from "../../redux/reducers/authReducer";
@@ -17,6 +17,9 @@ import { signup } from "../../Store/actions";
 
 const SignUp = () => {
   const user = useSelector((state) => state.auth.user);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const intitalState = {
     name: "",
     phone: "",
@@ -63,14 +66,14 @@ const SignUp = () => {
   return (
     <>
     {
-      !user ? <><div className="flex items-center justify-center py-10 h-full bg-[#f2f2f2] ">
-      <Card className="w-[35%] px-5  py-10 bg-[#fff] flex flex-col justify-center text-center">
+      !user ? <><div className="flex items-center justify-center max-sm:pt-20 py-10 h-full bg-[#f2f2f2] ">
+      <Card className="md:w-[35%] px-5  py-10 bg-[#fff] flex flex-col justify-center text-center">
         <Typography variant="h4" className="pb-5" color="black">
           Create an Account
         </Typography>
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
-          <Box className="flex flex-col gap-4 px-10 w-[75%]  text-left ">
+          <Box className="flex flex-col gap-4 px-10 md:w-[75%] text-left ">
             <TextField
               label="Name"
               size=""
@@ -128,16 +131,17 @@ const SignUp = () => {
               variant="contained"
               type="submit"
               onClick={handleSubmit}
-              sx={{
-                px:3,
-                background: "linear-gradient(to right,  #c90f7290, #c90f72)",
-                color: "#fff",
-                transition:'0.5s',
-                ":hover": {
-                  background: "linear-gradient(to left,  #c90f7290, #c90f72)",
-                  color: "pink",
-                },
-              }}
+              // sx={{
+              //   px:3,
+              //   background: "linear-gradient(to left,  #c90f72, #c90f7290)",
+              //   color: "#fff",
+              //   transition:'0.5s',
+              //   ":hover": {
+              //     background: "linear-gradient(to left,  #c90f7290, #c90f72)",
+              //     color: "pink",
+              //   },
+              // }}
+              className="bg-[#c90f72] hover:bg-[#c90f7299]"
             >
               Sign Up 
             </Button>

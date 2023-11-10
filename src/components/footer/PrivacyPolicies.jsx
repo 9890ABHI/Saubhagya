@@ -1,8 +1,11 @@
 import { Box, Container, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { PrivacyPoliciesData, ReturnPoliciesData } from '../../constants'
 
 export const PrivacyPolicies = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
  <>
  <Box className='bg-[#f2f2f2] flex justify-center items-center'>
@@ -62,6 +65,9 @@ item.bulletPoint &&
 }
 
 export const ReturnPolicies = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
     return (
       <>
       <Box className='bg-[#f2f2f2] flex justify-center items-center'>

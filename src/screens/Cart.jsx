@@ -1,29 +1,61 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 // import { connect } from "react-redux";
 // import { useParams } from "react-router-dom";
 import { Clothingproducts } from "../constants";
 // import { Add, Delete, Remove } from "@mui/icons-material";
 // import { ProductPricing } from "../components/Informations";
 import { CartCard } from "../components/Card";
+import { connect, useSelector } from "react-redux";
 
 const Cart = () => {
+const cart = useSelector((state) => state.auth.cart)
+useEffect(() => {
+  window.scroll(0, 0);
+}, []);
+// console.log('cart details',cart);
+
   const [products
     // , setProducts
   ] = useState(Clothingproducts);
 
   const prods = products.slice(0, 4);
-  const [filterProds, setFilterProds] = useState(prods);
-  let sum = 0;
-  let ogprice = 0;
-  // iterate over each item in the array
-  for (let i = 0; i < filterProds.length; i++) {
-    // if (quantity > 0) {
-    sum += filterProds[i].price;
-    ogprice += filterProds[i].oldPrice;
-    // }
-  }
-  const disccount = ogprice - sum;
+  const [filterProds, setFilterProds] = useState(cart);
+  // let sum = 0;
+  // let ogprice = 0;
+  // // iterate over each item in the array
+  // for (let i = 0; i < filterProds.length; i++) {
+  //   // if (quantity > 0) {
+  //   sum += filterProds[i].price;
+  //   ogprice += filterProds[i].oldPrice;
+  //   // }
+  // }
+  const initialTotal = 0
+
+  const [more , setmore] = React.useState(initialTotal)
+useEffect(() => {
+  let newPrice = 0;  // Initialize the newPrice variable
+
+  // Calculate the total price of items in the cart
+  cart.forEach((item) => {
+    newPrice += item.price * item.quntity;
+  });
+
+  setmore(newPrice);
+  } , [cart] )
+  
+  console.log('setTotal' , more);
+  // const [ogtotal , setOgTotal] = useState(0)
+  // useEffect(() =>{
+  //   let price = 0
+  //   cart.map((item) => {
+  //     price = price + item.oldPrice * item.quntity 
+  //   })
+  //   setOgTotal(price)
+  // } , [ogtotal] )
+
+
+  // const disccount = ogprice - sum;
 
   // useEffect(() => {
   //   const responce = prods.filter(removeItem);
@@ -33,18 +65,20 @@ const Cart = () => {
 
   return (
     <>
-      <Box className="flex flex-col md:flex-row justify-around items-start bg-[#f2f2f2] py-10">
-        <Box className="px-2 md:px-0 max-sm:pb-32 max-sm:pt-10 max-sm:-z-0 md:w-[60%] flex flex-col justify-center items-center gap-2">
-          {filterProds.map((item) => (
-            <>
+      <Box className="flex flex-col md:flex-row justify-around items-start bg-[#f2f2f2] py-10 max-sm:py-2">
+        <Box className="px-2 md:px-0 max-sm:pb-40 max-sm:pt-0 max-sm:-z-0 md:w-[60%] flex flex-col justify-center items-center gap-2">
+          {cart.map((item) => 
               <CartCard
                 item={item}
-                prods={prods}
-                setFilterProds={setFilterProds}
-                filterProds={filterProds}
+                cart={cart}
+                // setFilterProds={setFilterProds}
+                // filterProds={cart}
+                price={item.price} 
+                total={more} 
+                setTot={setmore}
               />
-            </>
-          ))}
+            )}
+
         </Box>
         <Box className="flex flex-col gap-5 max-sm:w-full">
 
@@ -71,7 +105,8 @@ const Cart = () => {
           </Box>
           <Box className="hidden md:flex w-full md:px-2 justify-between">
             <Typography className="flex" variant="body2">Total Save :</Typography>
-            <Typography variant="body1" className="text-gray-500 relative overflow-hidden">₹ {disccount}
+            <Typography variant="body1" className="text-gray-500 relative overflow-hidden">₹ 
+            {/* {disccount} */}
             <div className="w-[90%] absolute top-1 h-[1px] left-3" style={{borderTop:'1px solid #12121290' , transform:'rotate(14deg)' , transformOrigin:'left',    }}/>  
             {/* {filterProds.length} */}
             </Typography>
@@ -79,7 +114,9 @@ const Cart = () => {
           </Box>
           <Box className="hidden md:flex w-full px-2 justify-between">
             <Typography className="flex" variant="body1">Total Ammount :</Typography>
-            <Typography variant="h6" className="">₹ {sum}  
+            <Typography variant="h6" className="">₹ 
+            {/* {total} */}
+            {/* {sum}   */}
             {/* {filterProds.length} */}
             </Typography>
 
@@ -91,14 +128,15 @@ const Cart = () => {
           <Box className="md:hidden w-full">
           <Typography className="flex gap-3" variant="h6">
             <Typography className="line-through text-gray-500">
-            ₹ {ogprice} {' '} 
+            {/* ₹ {ogprice} {' '}  */}
             </Typography>
-            ₹ {sum} 
+            {/* ₹ {total}  */}
             
             </Typography>
             
             <Typography className="text-gray-600">
-            Total save :{disccount}
+            Total save :
+            {/* {disccount} */}
             </Typography>
            
           </Box>
@@ -114,14 +152,14 @@ const Cart = () => {
         <Box className="hidden  md:bg-[#fff] md:rounded-xl bottom-14 md:flex md:flex-col md:justify-between md:items-start md:w-[450px] md:h-[400px] md:p-5   "
         //  sx={{ border: "1px solid gray" }}
          >
-          <Box className="h-full">
+          <Box className="h-full w-full">
             <Typography variant="h5"  >
               Featured items you may like
             </Typography>
-            <Box className="overflow-y-scroll bg-[#f2f2f2] pt-2 flex flex-col gap-2 h-[90%]">
-            {
-              filterProds.map((item) => (
-                <>
+            <Box className="overflow-y-scroll bg-[#f2f2f2] rounded-md px-2 pt-2 w-full flex flex-col gap-2 h-[90%]">
+            { 
+              prods.map((item) => (
+                <>  
                 
                 <CartCard 
                 Feature 
@@ -144,7 +182,7 @@ const Cart = () => {
 };
 
 const mapStateToProps = (state) => ({
-  cart: state.cart,
+  cart: state.auth.cart,
 });
 
-export default Cart;
+export default connect(mapStateToProps) (Cart);

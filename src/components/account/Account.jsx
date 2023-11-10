@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { CurrentUserData } from '../../constants';
 import { Box, Button, Typography } from '@mui/material';
 import { Edit } from '@mui/icons-material';
+import { useSelector } from 'react-redux';
 
 const Account = () => {
   const user = useSelector((state) => state.auth);
@@ -10,8 +11,8 @@ const Account = () => {
     console.log(CurrentUser);
   return (
     <>
-    <Box className="w-[400px] h-fit bg-[#f2f2f2] flex  p-5 justify-center rounded">
-           <Box className="flex flex-col  items-center" >
+    <Box className="md:w-[400px] flex p-5 justify-center items-start pt-10 ">
+           <Box className="flex flex-col  items-center bg-white rounded-md pb-10" >
             <img src={CurrentUser[0].img} alt='' className='w-[100px] h-[100px] rounded-2xl' />
             <Box className='pt-3 flex flex-col items-start gap-2'>
 <Box className="flex gap-2 bg-[#fff] pl-4 py-1 rounded">

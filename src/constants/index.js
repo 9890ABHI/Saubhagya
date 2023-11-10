@@ -28,6 +28,7 @@ export const Clothingproducts = [
     ratings: 123,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -116,6 +117,7 @@ export const Clothingproducts = [
     ratings: 93,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -204,6 +206,7 @@ export const Clothingproducts = [
     ratings: 43,
     timeToDispatch: "3-4 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -292,6 +295,7 @@ export const Clothingproducts = [
     ratings: 56,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -380,6 +384,7 @@ export const Clothingproducts = [
     ratings: 67,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -468,6 +473,7 @@ export const Clothingproducts = [
     ratings: 90,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -556,6 +562,7 @@ export const Clothingproducts = [
     ratings: 76,
     timeToDispatch: "3-4 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -644,6 +651,7 @@ export const Clothingproducts = [
     ratings: 23,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -732,6 +740,7 @@ export const Clothingproducts = [
     ratings: 31,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -820,6 +829,7 @@ export const Clothingproducts = [
     ratings: 311,
         timeToDispatch: "1-2 days",
     availableProducts: 10,
+    quntity:1 ,
     ratingsreviews:[
   {
     "name": "Priya",
@@ -984,7 +994,7 @@ export const FooterData = [
     info: [
       { title: "About Us", link: "/aboutus" },
       { title: "Promotions & Offer", link: "/contactus" },
-      { title: "Terms and Conditions", link: "" },
+      { title: "Terms and Conditions", link: "/termsandcondition" },
       { title: "Contact Us", link: "/contactus" },
     ],
   },
@@ -1131,19 +1141,7 @@ export const AccountPageData = [
     title : "Addresses",
     description :"Add or change addresses" ,
     icon : "https://img.freepik.com/free-photo/online-payment-security-concept-3d-phone-bill_107791-16722.jpg?t=st=1698665876~exp=1698666476~hmac=a1b49597b77f83576640d42cb04e426f88bfb251a49ef481d308339c79e5795f",
-    link : "/payments"
-  },
-  {
-    title : "Payments",
-    description :"Track, return, or buy things again" ,
-    icon : "https://img.freepik.com/free-photo/online-payment-security-concept-3d-phone-bill_107791-16722.jpg?t=st=1698665876~exp=1698666476~hmac=a1b49597b77f83576640d42cb04e426f88bfb251a49ef481d308339c79e5795f",
-    link : "/payments"
-  },
-  {
-    title : "Logout",
-    description :"" ,
-    icon : "",
-    link : "/logout"
+    link : "/addresses"
   },
 ]
 
@@ -1241,4 +1239,107 @@ export const ReturnPoliciesData = [
     
   },
   
+]
+
+
+export const CurrentUserAddresses = [
+  {
+    title : "address",
+    isActive: true,
+    address : "earth , solar planet from 1 ,  somewhere around world , Milky way , 123221",
+  },{
+    title : "address",
+    isActive: false,
+    address : "earth , solar planet from 2 ,  somewhere around world , Milky way , 123222",
+  },{
+    title : "address",
+    isActive: false,
+    address : "earth , solar planet from 3 ,  somewhere around world , Milky way , 123223",
+  },
+]
+
+
+export const TermsandConditionData = [
+  {
+    title :"Acceptance of Terms",
+    desc:'By accessing and using this pbsarees website, you agree to be bound by these terms and conditions. If you do not agree with these terms, please do not use the website.'
+  },
+  {
+    title :"Website Use",
+    desc:'',
+    info:[
+      {title:'User Account',
+      desc:' You may be required to create an account to access certain features of the website. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.'
+    },
+    {title:' Prohibited Activities',
+      desc:"You agree not to engage in any activities that violate applicable laws, infringe upon intellectual property rights, or disrupt the website's functionality. This includes but is not limited to hacking, data scraping, or spamming."
+    },
+    ]
+  },
+  {
+    title :"Purchases and Transactions",
+    desc:'',
+    info:[
+      {
+        title:' Product Information',
+        desc:'We strive to provide accurate and up-to-date product information on the website. However, we do not warrant the accuracy of product descriptions, prices, or availability. We reserve the right to correct any errors and to cancel orders if necessary.'
+      },
+      {
+        title:'Payment',
+        desc:'All payments are processed securely through our chosen payment gateway. By placing an order, you agree to pay for the products and any associated fees.'
+      },
+      {
+        title:' Shipping and Returns',
+        desc:' Please refer to our Shipping and Returns Policy for information regarding shipping, delivery, and returns.'
+      },
+    ]
+  },
+  {
+    title :"Privacy and Data Security",
+    desc:'',
+    info:[
+      {
+        title:"Privacy Policy",
+        desc:"Please review our Privacy Policy to understand how we collect, use, and protect your personal information."
+      },
+      {
+        title:" Data Security",
+        desc:"We take reasonable steps to secure your data. However, no system is completely immune to security breaches. You agree that we are not responsible for any data breaches or unauthorized access to your account."
+      }
+    ]
+  },
+  {
+    title :"Intellectual Property / Copyright",
+    desc:' All content, including text, images, logos, and designs on the website, is protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute any content without our written permission.'
+  },
+  {
+    title :" Termination",
+    desc:'We reserve the right to terminate or suspend your access to the website at our discretion, without notice, for any violation of these terms and conditions'
+  },
+  {
+    title :"Disclaimers and Limitation of Liability",
+    desc:'',
+    info :[
+{
+  title:"Disclaimer",
+  desc:"The website is provided 'as is' and 'as available' without warranties of any kind, either express or implied. We do not guarantee that the website will be error-free or uninterrupted."
+},
+{
+  title:"Limitation of Liability",
+  desc:" In no event shall we be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of the website."
+}
+    ]
+  },
+  {
+    title :" Governing Law",
+    desc:'These terms and conditions are governed by and construed in accordance with the laws of [Your Jurisdiction], and any disputes will be subject to the exclusive jurisdiction of the courts in [Your Jurisdiction].'
+  },
+  {
+    title :"Changes to Terms and Conditions",
+    desc:'We reserve the right to modify these terms and conditions at any time. You are responsible for regularly reviewing them.'
+  },
+  {
+    title :"Contact Information",
+    desc:'If you have any questions or concerns about these terms and conditions, please contact us at [Your Contact Information].'
+  },
 ]

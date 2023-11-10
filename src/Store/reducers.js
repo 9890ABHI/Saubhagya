@@ -11,6 +11,7 @@ import {
   LOGOUT,
   ADD_TO_CART,
   REMOVE_FROM_CART,
+  UPDATE_QUANTITY,
 } from "./actions";
 
 const initialState = {
@@ -34,17 +35,33 @@ export const authReducer = (state = initialState, action) => {
     case SIGNUP_FAILURE:
       return { ...state, user: null, isLoading: false, error: action.error };
 
+    // case ADD_TO_CART:
+    //   return {
+    //     ...state,
+    //     cart: [...state.cart , action.product],
+    //   };
     case ADD_TO_CART:
       return {
         ...state,
-        cart: [...state.cart, action.product],
+        cart: [...state.cart , action.payload],
       };
-
+    
     case REMOVE_FROM_CART:
       return {
         ...state,
-        cart: state.cart.filter((product) => product.id !== action.productId),
+        cart: state.cart.filter((product) => product.id !== action.payload),
       };
+
+      case UPDATE_QUANTITY:
+        return{
+          ...state,
+          cart:action.payload
+        }
+    // case REMOVE_FROM_CART:
+    //   return {
+    //     ...state,
+    //     cart: state.cart.filter((product) => product.id !== action.productId),
+    //   };
 
     case LOGOUT: // Handle the LOGOUT action
       return { ...state, user: null, error: null, isLoading: false };

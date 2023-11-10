@@ -30,7 +30,9 @@ const Shop = () => {
 
   console.log('products' , product);
   console.log('loading' , loading );
-
+  useEffect(() => {
+    window.scroll(0, 0);
+}, []);
   useEffect(() => {
     dispatch(getAllProducts());
   }, [dispatch]);
@@ -159,7 +161,7 @@ const Shop = () => {
 
   return (
     <>
-    <Box className="flex flex-col w-full max-sm:h-screen max-sm:pt-20 max-sm:pb-10  max-sm:overflow-y-scroll ">
+    <Box className="flex flex-col w-full max-sm:h-screen max-sm:pt-2 max-sm:pb-10  max-sm:overflow-y-scroll ">
 
     
     {

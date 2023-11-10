@@ -1,13 +1,16 @@
 
-import {  Button, useMediaQuery } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
+import {  Box, Button, useMediaQuery } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-export const ShoppingButton = ({ title, icon, sizes }) => {
+export const ShoppingButton = ({ title, icon, sizes , onClick }) => {
   
   const Mobile = useMediaQuery("(max-width: 640px)");
   return (
     <>
       <Button
+      onClick={ onClick}
         sx={Mobile ? {
           color: "#fff",
           fontSize: 10,
@@ -15,7 +18,7 @@ export const ShoppingButton = ({ title, icon, sizes }) => {
             color: "#000",
             "&.MuiButton-root": {
               // background: "linear-gradient(to right,  #c90f72, #c90f7270)",
-              background: "#c90f72",
+              backgroundColor: "#c90f72",
             },
 
           },
@@ -25,7 +28,8 @@ export const ShoppingButton = ({ title, icon, sizes }) => {
           borderRadius: sizes ? 0 : 2,
           gap: 1,
           "&.MuiButton-root": {
-            background: "linear-gradient(to right,  #c90f72, #c90f7290)",
+            // background: "linear-gradient(to right,  #c90f72, #c90f7290)",
+            backgroundColor: "#c90f72",
           },
           display: "flex",
           alignItems: "center",
@@ -45,8 +49,8 @@ export const ShoppingButton = ({ title, icon, sizes }) => {
           borderRadius: sizes ? 0 : 2,
           gap: 2,
           "&.MuiButton-root": {
-            // background: "linear-gradient(to right,  #c90f72, #c90f7290)",
-            background: "#c90f72",
+            background: "linear-gradient(to right,  #c90f72, #c90f7290)",
+            backgroundColor: "#c90f72",
           },
           display: "flex",
           alignItems: "center",
@@ -76,3 +80,15 @@ export const QuantityButtton = (id) => {
     </>
   );
 };
+
+
+export const BackButton = () => {
+  const Navigate = useNavigate() 
+  return(
+    <>
+     <Box className="absolute top-[72px] hidden max-sm:flex  left-5  justify-items-center bg-[#fff] rounded-md px-2 py-2 shadow-md">
+<ArrowBack onClick={() => Navigate(-1)}  />
+  </Box>
+    </>
+  )
+}

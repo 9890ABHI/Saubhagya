@@ -1,8 +1,8 @@
-import { Login, Logout, Person2Outlined } from "@mui/icons-material";
+import { Login, Logout, Person2Outlined, ShoppingCartOutlined } from "@mui/icons-material";
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import { Box, Button, useMediaQuery } from "@mui/material";
+import { Box, Button, IconButton, useMediaQuery } from "@mui/material";
 import { HeaderBottomData } from "../constants/index";
 import LinkOptions from "./LinkOptions";
 import { connect, useDispatch, useSelector } from "react-redux";
@@ -10,9 +10,11 @@ import { logout } from "../Store/actions";
 
 const Header = () => {
   const user = useSelector((state) => state.auth.user);
+  const cartItem = useSelector((state) => state.auth.cart)
+  // console.log(cartItem);
   // console.log(user);
   // console.log(location);
-  const [count, setCount] = useState(1);
+  const location = useLocation()
   const dispatch = useDispatch();
   const Mobile = useMediaQuery("(max-width: 640px)");
   const navigation = useNavigate()
@@ -127,14 +129,15 @@ const Header = () => {
                 <FavoriteBorder sx={{ color: "#f88b69", scale: "1.2" }} />
               </IconButton>
             </Link>
-            <Link>
-              <IconButton>
-                <Box className="absolute right-2 top-[-7px] text-xs font-medium bg-[#000000a1] text-[#f88b69] w-5 h-5 justify-items-center rounded-2xl">
-                  2
-                </Box>
-                <ShoppingCartOutlined sx={{ color: "#f88b69", scale: "1.2" }} />
-              </IconButton>
-            </Link> */}
+          */}
+          <Link to={'/cart'}>
+            <IconButton>
+              <Box className="absolute right-2 top-[-7px] pt-[2px] text-xs font-medium bg-[#000000a1] text-white w-5 h-5 justify-items-center rounded-2xl">
+                {cartItem.length}
+              </Box>
+              <ShoppingCartOutlined sx={{ color: "#c90f72", scale: "1.2" }} />
+            </IconButton>
+          </Link> 
 
             {/* <IconButton>
               <PersonOutline
@@ -150,7 +153,7 @@ const Header = () => {
         </Box>
       </Box>
       {Mobile && (
-        <><Box className='fixed z-20 top-0 flex justify-between items-center  bg-white w-full h-fill'>
+        <><Box className='sticky z-20 top-0 flex justify-between items-center  bg-white w-full h-fill'>
 
         <Box className=' w-full flex justify-between items-center px-3 bg-gradient-to-t from-[#c388a790] to-[#f3e8ee]'>
           {
@@ -164,23 +167,22 @@ const Header = () => {
             </Box>
         </Box>
           </Box>
-        <Box className='fixed z-10 bottom-0 h-14 w-full bg-white'>
+        {/* <Box className='fixed z-10 bottom-0 h-14 w-full bg-white'>
 
           <Box
-            className=" 
-          // bg-[#f88b69]
+            className="
            w-full flex justify-center items-center"
             sx={{
               // background:'linear-gradient(90deg, #c90f7290 0% 2%, #c90f72 0% 20%);'
               background:
-                (count === 1 &&
+                (location.pathname === '/' &&
                   "linear-gradient(to right,  #c90f7290, #c90f72 , #c90f72 , #c90f72)") ||
-                (count === 2 &&
+                (location.pathname ===  "/shop" &&
                   "linear-gradient(to right,  #c90f72, #c90f7290 , #c90f72 , #c90f72)") ||
-                  (count === 3 &&
+                  (location.pathname === "/cart" &&
                   "linear-gradient(to right,  #c90f72, #c90f72 , #c90f7290 , #c90f72)") ||
-                (count === 4 &&
-                  "linear-gradient(to right,  #c90f72, #c90f72 , #c90f72 , #c90f7290)"),
+                (location.pathname === "/account" &&
+                  "linear-gradient(to right,  #c90f72, #c90f72 , #c90f72 , #c90f7290)") ||  "linear-gradient(to right,  #c90f72, #c90f72 , #c90f72 , #c90f7290)"
                 }}
           >
             <Box className="flex justify-around items-center w-full">
@@ -192,14 +194,14 @@ const Header = () => {
                       title={item.title}
                       icon={item.icon}
                       link={item.link}
-                      setCount={setCount}
+                      // setCount={setCount}
                       />
                   </>
                 );
               })}
             </Box>
-              </Box>
-          </Box>
+              </Box> */}
+          {/* </Box> */}
         </>
       )}
     </>

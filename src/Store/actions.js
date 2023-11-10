@@ -14,7 +14,7 @@ export const SIGNUP_FAILURE = "SIGNUP_FAILURE";
 // Add these action types to your actions.js
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
-
+export const UPDATE_QUANTITY = 'UPDATE_QUANTITY'
 
 // Action Types
 export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUEST";
@@ -32,11 +32,17 @@ export const signupRequest = () => ({ type: SIGNUP_REQUEST });
 export const signupSuccess = (user) => ({ type: SIGNUP_SUCCESS, user });
 export const signupFailure = (error) => ({ type: SIGNUP_FAILURE, error });
 
-// Add these action creators to your actions.js
-export const addToCart = (product) => ({ type: ADD_TO_CART, product });
-export const removeFromCart = (productId) => ({ type: REMOVE_FROM_CART, productId });
+// // Add these action creators to your actions.js
+// export const addToCart = (product) => ({ type: ADD_TO_CART,payload: product });
+// export const removeFromCart = (productId) => ({ type: REMOVE_FROM_CART,payload: productId });
 
 
+export const addToCart = (product) => ({ type: 'ADD_TO_CART', payload: product });
+export const removeFromCart = (productId) => ({ type: 'REMOVE_FROM_CART', payload: productId });
+// export const updateQuntity = (product) => ({type : 'UPDATE_QUANTITY' , payload:product})
+//
+//
+///
 // Action Creators
 export const getProductsRequest = () => ({ type: GET_PRODUCTS_REQUEST });
 export const getProductsSuccess = (products) => ({
@@ -112,3 +118,43 @@ export const getAllProducts = () => async (dispatch) => {
     dispatch(getProductsFailure(error));
   }
 };
+
+
+// export const getCartProducts = () => (dispatch) =>{
+//   try{
+//     dispatch()
+//   }
+// }
+
+// export const addToCartproduct = (product) => (dispatch ) => {
+//   // You can include additional logic here, such as checking if the product is already in the cart
+//   // and handling quantity, etc., before dispatching the action.
+//   // For simplicity, we're directly dispatching the addToCart action.
+
+//  console.log(product);
+//     dispatch(addToCart(product));
+//     // dispatch({ type: ADD_TO_CART, payload: product });
+  
+// };
+export const addToCartproduct = (payload) => (dispatch) => {
+  // Simulate an asynchronous operation, e.g., API call
+
+  try {
+    setTimeout(() => {
+      dispatch(addToCart(payload));
+    }, 1000); // Simulate a 1-second delay
+    
+  } catch (error) {
+    console.log('eroro add in cart' , error);
+  }
+};
+
+export const UpdateCartProduct = (data) => {
+  return async dispatch =>{
+    dispatch({
+      type:UPDATE_QUANTITY,
+      payload : data
+    })
+    
+  } 
+}

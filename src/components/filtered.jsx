@@ -14,9 +14,9 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 
-export const FilterData = (data, filterKey, filters, handleCheckboxChange ,openBox) => {
+export const FilterData = (data, filterKey, filters, handleCheckboxChange ) => {
   const [open, setOpen] = useState(false);
-  console.log('openBox',openBox);
+  
   return (
     <>
   
@@ -30,7 +30,7 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange ,openB
             color: "GrayText",
           }}
         >
-          <Typography variant="h6" className={`capitalize ${openBox ? 'flex' : 'max-sm:hidden'}`}  color={"GrayText"}>
+          <Typography variant="h6" className={`capitalize `}  color={"GrayText"}>
             {filterKey}
           </Typography>
           {!open ? <ExpandMore /> : <ExpandLess />}
@@ -115,7 +115,7 @@ export const FilterData = (data, filterKey, filters, handleCheckboxChange ,openB
   );
 };
 
-export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange ,openBox) => {
+export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange ) => {
   const [open, setOpen] = useState(false);
   const [minPrice, setMinPrice] = useState(filters.priceRange[0]);
   const [maxPrice, setMaxPrice] = useState(filters.priceRange[1]);
@@ -132,7 +132,7 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange ,open
             color: "GrayText",
           }}
         >
-          <Typography variant="h6" className={`capitalize ${openBox ? 'flex' : 'max-sm:hidden'}`}>
+          <Typography variant="h6" className={`capitalize`}>
             {filterKey}
           </Typography>
           {!open ? <ExpandMore /> : <ExpandLess />}

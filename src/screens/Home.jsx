@@ -1,5 +1,5 @@
 import { Box,  Container,  Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
@@ -8,6 +8,9 @@ import { ArrowRightAlt, ChevronRight } from "@mui/icons-material";
 import { Ratings } from "../components/Rating";
 
 const Home = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
     <Box className="max-sm:h-screen  max-sm:overflow-y-scroll ">
@@ -22,7 +25,7 @@ const Home = () => {
           // width: "100vw",
 
         }}
-        className="pb-10 pt-10 max-sm:pt-20"
+        className="pb-10 pt-10 max-sm:pt-5"
       >
         <Link to={`/shop`}>
           <Carousel

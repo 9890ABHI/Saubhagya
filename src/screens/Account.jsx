@@ -1,22 +1,25 @@
 import { Box, Button, Container, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AccountPageData, CurrentUserData } from '../constants'
-import { Edit } from '@mui/icons-material'
+import { Edit, Logout } from '@mui/icons-material'
 import { Link, useNavigate, useNavigation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const Account = () => {
   const user = useSelector((state) => state.auth.user);
 const navigation = useNavigate()
+useEffect(() => {
+  window.scroll(0, 0);
+}, []);
   if(!user) {
     navigation('/login')
   }
 else {
   return (
     <>
-    <Box className="bg-[#f2f2f2]">
+    <Box className="bg-[#f2f2f2] h-screen">
 
-    <Container className=' w-full h-full flex flex-wrap md:gap-10 max-sm:gap-2 justify-center items-center p-4 px-24 py-10 max-sm:pt-20 '>
+    <Container className=' w-full flex flex-wrap md:gap-10 max-sm:gap-2 justify-center items-center p-4 px-24 py-10 max-sm:pt-5 '>
         {
           AccountPageData.map((item) => (
             <>
@@ -39,7 +42,13 @@ else {
             </>
           ))
         }
-        <hr className='w-[100%]' />
+        <Box className="fixed bottom-[60px] w-full flex justify-center gap-4 items-center py-5 bg-[#c90f72] rounded-tl-md rounded-tr-md">
+          <Logout className='text-white' />
+          <Typography color={'white'}>
+            Logout
+          </Typography>
+        </Box>
+        {/* <hr className='w-[100%]' /> */}
     </Container>
     
     </Box>

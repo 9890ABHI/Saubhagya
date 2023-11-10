@@ -32,12 +32,14 @@ import {
   ReturnsPolicyDetails,
   ReviewDetails,
 } from "../components/Informations";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
+import { addToCart, addToCartproduct } from "../Store/actions";
 
 const Details = () => {
   const { id } = useParams();
   const Mobile = useMediaQuery("(max-width: 640px)");
   const Navigate = useNavigate() 
+  const dispatch = useDispatch()
   // console.log(id);
   const [product, setProduct] = useState([]);
   const [imge, setImge] = useState("");
@@ -47,7 +49,9 @@ const Details = () => {
   const offerOfProduct = Math.round(
     ((product.oldPrice - product.price) / product.oldPrice) * 100
   );
-
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -68,9 +72,15 @@ const Details = () => {
     setImge(filteredProducts[0]?.images[0]?.img);
   }, [id]);
 
-  const handleSizeChange = (e) => {
-    setSize(e.target.value);
-  };
+  // const handleSizeChange = (e) => {
+  //   setSize(e.target.value);
+  // };
+
+  const handleAddToCart = (product) => {
+
+    dispatch(addToCartproduct(product))
+    console.log('add into the cart');
+  }
 
   if (!product) {
     return <div>Loading...</div>;
@@ -79,7 +89,7 @@ const Details = () => {
 
   return (
     <>
-    <Box className='max-sm:h-screen  max-sm:overflow-y-scroll max-sm:pt-20'>
+    <Box className='max-sm:h-screen  max-sm:overflow-y-scroll '>
 
     
       <Container className="flex flex-row justify-between pt-5 max-md:hidden max-sm:h-screen   max-sm:overflow-y-scroll  ">
@@ -90,11 +100,7 @@ const Details = () => {
             height:"600px",
             gap: 2,
             overflow:'hidden'
-           // flexDirection:Mobile ? 'fle' : undefined,
-          //  flexDirection:Mobile ? 'column-reverse' : undefined,
-          //  overflow:Mobile ? 'unset' : 'auto',
-          //  justifyContent:Mobile ? "space-around" : undefined
-          }}
+           }}
         >
           <Box className='flex max-sm:w-full h-[100px] gap-3 md:h-[100%] overflow-y-scroll md:flex-col'>
             {product?.images?.map((item) => (
@@ -256,15 +262,18 @@ const Details = () => {
                 title={"Buy Now"}
                 icon={<ShoppingBagOutlined />}
               />
-              <Link
+              {/* <Link
                 // onClick={handleAddtoCArt(product.id)}
                 to={`/cart/${id}`}
-              >
+              > */}
                 <ShoppingButton
                   title={"Add To Cart"}
                   icon={<ShoppingCartOutlined />}
+                  onClick ={
+                   ()=> handleAddToCart(product)
+                  }
                 />
-              </Link>
+              {/* </Link> */}
             </Box>
 
             <Box className="pt-5">
@@ -299,7 +308,7 @@ const Details = () => {
 {/*  */}
 {/* first container mobile view */}
 <Box className="flex flex-col w-[100%] items-center md:hidden">
-  <Box className="absolute top-15 left-5 flex justify-items-center bg-[#fff] rounded-md px-2 py-2">
+  <Box className="absolute top-20 left-5 flex justify-items-center bg-[#fff] rounded-md px-2 py-2">
 <ArrowBack onClick={() => Navigate(-1)}  />
   </Box>
 <Box className="flex flex-col-reverse h-[400px] w-full gap-3 md:hidden">
@@ -448,15 +457,18 @@ const Details = () => {
                 title={"Buy Now"}
                 icon={<ShoppingBagOutlined />}
               />
-              <Link
+              {/* <Link
                 // onClick={handleAddtoCArt(product.id)}
                 to={`/cart/${id}`}
-              >
+              > */}
                 <ShoppingButton
                   title={"Add To Cart"}
                   icon={<ShoppingCartOutlined />}
+                  onClick ={
+                    ()=> handleAddToCart(product)
+                  }
                 />
-              </Link>
+              {/* </Link> */}
             </Box>
 
             <Box className="pt-5">
@@ -545,11 +557,11 @@ const Details = () => {
   );
 };
 
-// const mapStateToProps = (state, ownProps) => {
-//   const productId = ownProps.match.params.id; // Assuming you're using React Router
-//   return {
-//     product: state.products[productId], // Assuming you store products in the state
-//   };
-// };
+const mapStateToProps = (state, ownProps) => {
+  const productId = ownProps.match.params.id; // Assuming you're using React Router
+  return {
+    product: state.products[productId], // Assuming you store products in the state
+  };
+};
 
-export default Details;
+export default connect(null )(Details);

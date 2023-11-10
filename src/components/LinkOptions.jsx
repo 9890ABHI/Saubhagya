@@ -2,7 +2,7 @@ import {  Typography } from "@mui/material";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const LinkOptions = ({ title, icon, link ,setCount ,id }) => {
+const LinkOptions = ({ title, icon, link  }) => {
   const Icons = icon;
   const location = useLocation()
   console.log(location.pathname);
@@ -12,7 +12,9 @@ const LinkOptions = ({ title, icon, link ,setCount ,id }) => {
       <Link to={link} className="flex w-fit flex-col justify-center items-center rounded-t-xl rounded-tr-xl" style={{
         //  backgroundColor:location.pathname === link ? '#f2f' : "",
          paddingBottom:location.pathname === link ? 5 : 0
-      }} onClick={() => setCount(id)}>
+      }}
+     
+       >
         {/* <IconButton className="flex flex-col w-[50px] h-[50px]" sx={{
           backgroundColor:location.pathname === link ? '#f2f' : "",
           mb:location.pathname === link ? 1 : 0

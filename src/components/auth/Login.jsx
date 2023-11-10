@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { connect, useDispatch, useSelector } from "react-redux";
 // import { login } from "../../redux/reducers/authReducer";
@@ -18,7 +18,9 @@ import { login } from "../../Store/actions";
 
 const Login = () => {
   const user = useSelector((state) => state.auth.user);
-
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const intitalState = {
     email: "",
     password: "",
@@ -77,19 +79,19 @@ const Login = () => {
         </Box>
         <Box className=" w-full flex flex-col justify-center items-center pt-10">
           <Button variant="contained" 
-          // className="px-16 py-2 "
-          sx={{
-            px:3,
-            // background: "linear-gradient(to right,  #c90f7290, #c90f72)",
-            background: "#c90f72",
-            color: "#fff",
-            transition:'0.5s',
-            ":hover": {
-              // background: "linear-gradient(to left,  #c90f7290, #c90f72)",
-              background: "#c90f72",
-              color: "pink",
-            },
-          }}
+          className="px-16 py-2 bg-[#c90f72] hover:bg-[#c90f7299]"
+          // sx={{
+          //   px:3,
+          //   // background: "linear-gradient(to right,  #c90f7290, #c90f72)",
+          //   background: "#c90f72",
+          //   color: "#fff",
+          //   transition:'0.5s',
+          //   ":hover": {
+          //     // background: "linear-gradient(to left,  #c90f7290, #c90f72)",
+          //     background: "#c90f72",
+          //     color: "pink",
+          //   },
+          // }}
                onClick={handleChanges}
                >
             Sign In
@@ -103,7 +105,7 @@ const Login = () => {
           </Typography>
         </Box>
       </Card>
-    </div></> : navigation("/")
+    </div></> : navigation('/')
     }
     
     </>
