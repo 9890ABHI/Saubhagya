@@ -2,7 +2,7 @@ import { Login, Logout, Person2Outlined, ShoppingCartOutlined } from "@mui/icons
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import { Box, Button, IconButton, useMediaQuery } from "@mui/material";
+import { Box, Button, IconButton, Typography, useMediaQuery } from "@mui/material";
 import { HeaderBottomData } from "../constants/index";
 import LinkOptions from "./LinkOptions";
 import { connect, useDispatch, useSelector } from "react-redux";
@@ -68,12 +68,6 @@ const Header = () => {
             className="flex gap-4 pr-2 items-center justify-end "
             sx={{ width: openSearch ? "80%" : undefined }}
           >
-            <Box className="" sx={{ width: "100%" }}>
-              <SearchBar />
-            </Box>
-            <Link to={"/account"}>
-              <Person2Outlined color="disabled" />
-            </Link>
             {!user ? (
               <>
                 <Link to="/login">
@@ -97,32 +91,20 @@ const Header = () => {
                   </Button>
                 </Link>
               </>
-            ) : (
-              <>
-                {/* <Link to='/login'> */}
-                <Button
-                  variant="contained"
-                  sx={{
-                    px: 3,
-                    background:
-                      "linear-gradient(to right,  #c90f7290, #c90f72)",
-                    color: "#fff",
-                    transition: "0.5s",
-                    ":hover": {
-                      background:
-                        "linear-gradient(to left,  #c90f7290, #c90f72)",
-                      color: "pink",
-                    },
-                  }}
-                  startIcon={<Logout />}
-                  //  onClick={() => }
-                  onClick={handleLogout}
-                >
-                  Logout
-                </Button>
-                {/* </Link> */}
-              </>
-            )}
+            ) : <>
+            <Box className="" sx={{ width: "100%" }}>
+              <SearchBar />
+            </Box>
+            <Link to={"/account"} className="w-[75%]">
+              <Box className='flex justify-evenly gap-2 px-3 py-2 rounded-lg border-solid border-2 border-gray-400'>
+                <Typography className="flex">
+                  My Account
+                </Typography>
+              <Person2Outlined color="disabled" sx={{ color: "#c90f72", scale: "1.1" }} />
+              </Box>
+            </Link>
+
+                </>}
 
             {/* <Link>
               <IconButton>
@@ -138,6 +120,15 @@ const Header = () => {
               <ShoppingCartOutlined sx={{ color: "#c90f72", scale: "1.2" }} />
             </IconButton>
           </Link> 
+          {/* {
+            user && (
+              <>
+              <IconButton onClick={() => dispatch(logout())}>
+               <Logout sx={{ color: "#c90f72", scale: "1.1" }} />
+              </IconButton>
+              </>
+            )
+          } */}
 
             {/* <IconButton>
               <PersonOutline

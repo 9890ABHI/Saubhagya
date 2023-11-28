@@ -166,7 +166,7 @@ export function ReturnsPolicyDetails() {
       <Box className="text-left gap-3 flex flex-col max-sm:pl-0 pl-20">
         <Typography variant={"body1"} className="text-xl">
           All stitched & customized products are not returnable.
-          <Link className="text-blue-500"> Read more </Link> about our return
+          <Link className="text-blue-500" to={'/returnolicies'}> Read more </Link> about our return
           policy.{" "}
         </Typography>
         <Typography variant={"body1"} className="text-xl">

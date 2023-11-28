@@ -42,12 +42,12 @@ else {
             </>
           ))
         }
-        <Box className="fixed bottom-[60px] w-full flex justify-center gap-4 items-center py-5 bg-[#c90f72] rounded-tl-md rounded-tr-md">
+        {/* <Box className="fixed md:hidden bottom-[60px] w-full flex justify-center gap-4 items-center py-5 bg-[#c90f72] rounded-tl-md rounded-tr-md">
           <Logout className='text-white' />
           <Typography color={'white'}>
             Logout
           </Typography>
-        </Box>
+        </Box> */}
         {/* <hr className='w-[100%]' /> */}
     </Container>
     

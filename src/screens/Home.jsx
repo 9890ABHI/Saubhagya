@@ -297,7 +297,7 @@ const Home = () => {
         >
           <Carousel
             autoPlay
-            infiniteLoop
+            // infiniteLoop
             animationHandler="fade"
             showThumbs={false}
             showIndicators={false}
@@ -305,17 +305,17 @@ const Home = () => {
             showStatus={false}
             interval={3500}
             transitionTime={1500}
-            className="text-[#000] w-full hidden md:block"
+            className="text-[#000] w-full"
           >
             <Box className="flex w-full justify-around ">
               <Typography 
               variant="h4" 
-              className="font-semibold">Luca Faloni </Typography>
+              className="font-semibold ">Luca Faloni </Typography>
               <Typography variant="h4"  className="font-semibold">Louis Vuitton </Typography>
               <Typography variant="h4"  className="font-semibold"> Gucci </Typography>
               <Typography variant="h4"  className="font-semibold">Balenciaga </Typography>
             </Box>
-             {/* <Box className="flex w-full justify-around">
+             <Box className="flex w-full justify-around">
               <Typography variant="h4"  className="font-semibold">Dior Homme </Typography>
               <Typography variant="h4"  className="font-semibold">Prada </Typography>
               <Typography variant="h4"  className="font-semibold">Stella McCartney </Typography>
@@ -332,7 +332,7 @@ const Home = () => {
               <Typography variant="h4"  className="font-semibold">Chanel </Typography>
               <Typography variant="h4"  className="font-semibold">Armani </Typography>
               <Typography variant="h4"  className="font-semibold">Calvin Klein </Typography>
-            </Box> */}
+            </Box>
           </Carousel>
         </Box>
       </Box>

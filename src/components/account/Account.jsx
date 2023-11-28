@@ -11,8 +11,8 @@ const Account = () => {
     console.log(CurrentUser);
   return (
     <>
-    <Box className="md:w-[400px] flex p-5 justify-center items-start pt-10 ">
-           <Box className="flex flex-col  items-center bg-white rounded-md pb-10" >
+    <Box className=" flex justify-center items-center py-5">
+           <Box className="flex flex-col  items-center bg-white rounded-md  py-10 px-10" >
             <img src={CurrentUser[0].img} alt='' className='w-[100px] h-[100px] rounded-2xl' />
             <Box className='pt-3 flex flex-col items-start gap-2'>
 <Box className="flex gap-2 bg-[#fff] pl-4 py-1 rounded">

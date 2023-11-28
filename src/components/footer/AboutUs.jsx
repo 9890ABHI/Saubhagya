@@ -17,8 +17,8 @@ export const AboutUs = () => {
 </Typography>
 <Box className='flex-col flex gap-2 pt-10'>
 <Typography variant='h5' className='font-medium'>
-{/* At PBSarees, we are dedicated to bringing you the finest collection of sarees that reflect the timeless charm and elegance of Indian fashion. Our journey started with a deep passion for the rich heritage of sarees, and we have made it our mission to share this exquisite tradition with you. */}
-Discover the essence of elegance at PBSarees. We curate a selection of timeless sarees that blend tradition with contemporary style. Our commitment to quality and authenticity ensures that every saree tells a unique story. Explore our collection and embrace the beauty of Indian fashion.
+{/* At PRATIKSHA B ENTERPRISE , we are dedicated to bringing you the finest collection of sarees that reflect the timeless charm and elegance of Indian fashion. Our journey started with a deep passion for the rich heritage of sarees, and we have made it our mission to share this exquisite tradition with you. */}
+Discover the essence of elegance at <Typography  variant='h5' className='font-semibold'>PRATIKSHA B ENTERPRISE .</Typography> We curate a selection of timeless sarees that blend tradition with contemporary style. Our commitment to quality and authenticity ensures that every saree tells a unique story. Explore our collection and embrace the beauty of Indian fashion.
 </Typography>
 
 <Typography >
@@ -39,12 +39,12 @@ Discover the essence of elegance at PBSarees. We curate a selection of timeless 
      
         <Box className='w-[45%] max-sm:w-full flex flex-col justify-center'>
 <Typography variant='h2' className='font-bold text-[#c90f80]'>
-  About PBSarees
+  About PRATIKSHA B ENTERPRISE
 </Typography>
 <Box className='flex-col flex gap-2 pt-10'>
 <Typography>
-At PBSarees, we are dedicated to bringing you the finest collection of sarees that reflect the timeless charm and elegance of Indian fashion. Our journey started with a deep passion for the rich heritage of sarees, and we have made it our mission to share this exquisite tradition with you.
-{/* Discover the essence of elegance at PBSarees. We curate a selection of timeless sarees that blend tradition with contemporary style. Our commitment to quality and authenticity ensures that every saree tells a unique story. Explore our collection and embrace the beauty of Indian fashion. */}
+At PRATIKSHA B ENTERPRISE , we are dedicated to bringing you the finest collection of sarees that reflect the timeless charm and elegance of Indian fashion. Our journey started with a deep passion for the rich heritage of sarees, and we have made it our mission to share this exquisite tradition with you.
+{/* Discover the essence of elegance at PRATIKSHA B ENTERPRISE . We curate a selection of timeless sarees that blend tradition with contemporary style. Our commitment to quality and authenticity ensures that every saree tells a unique story. Explore our collection and embrace the beauty of Indian fashion. */}
 </Typography>
 
 <Typography >
@@ -67,13 +67,13 @@ Each saree in our collection is a masterpiece, carefully curated to cater to a d
 </Typography>
 <Box className='flex-col flex gap-2 pt-10'>
 <Typography>
-Quality, authenticity, and customer satisfaction are at the core of our values. We collaborate with skilled artisans and designers to ensure that every saree tells a story of craftsmanship and artistry. PBSarees is more than just an online store; it's a celebration of culture and an exploration of the endless possibilities of saree fashion.
+Quality, authenticity, and customer satisfaction are at the core of our values. We collaborate with skilled artisans and designers to ensure that every saree tells a story of craftsmanship and artistry. PRATIKSHA B ENTERPRISE  is more than just an online store; it's a celebration of culture and an exploration of the endless possibilities of saree fashion.
 </Typography>
 <Typography>
-We invite you to explore our wide range of sarees, each a testament to our commitment to tradition and style. Your journey into the world of PBSarees is a voyage into the heart of Indian fashion, where you'll find the perfect saree to celebrate every occasion and moment in life.
+We invite you to explore our wide range of sarees, each a testament to our commitment to tradition and style. Your journey into the world of PRATIKSHA B ENTERPRISE  is a voyage into the heart of Indian fashion, where you'll find the perfect saree to celebrate every occasion and moment in life.
 </Typography>
 <Typography variant='h6'>
-Thank you for choosing PBSarees, and we look forward to being a part of your special moments.
+Thank you for choosing PRATIKSHA B ENTERPRISE , and we look forward to being a part of your special moments.
 </Typography>
 
 

@@ -28,59 +28,66 @@ export const Clothingproducts = [
     ratings: 123,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -117,59 +124,66 @@ export const Clothingproducts = [
     ratings: 93,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -206,59 +220,66 @@ export const Clothingproducts = [
     ratings: 43,
     timeToDispatch: "3-4 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -295,59 +316,66 @@ export const Clothingproducts = [
     ratings: 56,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -384,59 +412,66 @@ export const Clothingproducts = [
     ratings: 67,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -473,59 +508,66 @@ export const Clothingproducts = [
     ratings: 90,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -562,59 +604,66 @@ export const Clothingproducts = [
     ratings: 76,
     timeToDispatch: "3-4 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -651,59 +700,66 @@ export const Clothingproducts = [
     ratings: 23,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -740,59 +796,66 @@ export const Clothingproducts = [
     ratings: 31,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
     images: [
       {
         img: "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.2085897651.1682179198&semt=sph",
@@ -827,61 +890,68 @@ export const Clothingproducts = [
     look: "Traditional",
     rating: 4.5,
     ratings: 311,
-        timeToDispatch: "1-2 days",
+    timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity:1 ,
-    ratingsreviews:[
-  {
-    "name": "Priya",
-    "review": "Beautiful and elegant saree! I received many compliments at the wedding.",
-    "rating": 5
-  },
-  {
-    "name": "Deepa",
-    "review": "The colors are stunning, and the fabric is so comfortable to wear.",
-    "rating": 4
-  },
-  {
-    "name": "Raj",
-    "review": "A perfect blend of tradition and style. Loved it!",
-    "rating": 5
-  },
-  {
-    "name": "Meera",
-    "review": "The intricate embroidery work on this saree is simply breathtaking.",
-    "rating": 5
-  },
-  {
-    "name": "Aarti",
-    "review": "Received my order quickly, and the saree was even more beautiful in person.",
-    "rating": 5
-  },
-  {
-    "name": "Anu",
-    "review": "The quality of the saree is exceptional. Highly recommended.",
-    "rating": 5
-  },
-  {
-    "name": "Nikhil",
-    "review": "Bought it for my wife, and she looks stunning in it. Great purchase!",
-    "rating": 4
-  },
-  {
-    "name": "Swati",
-    "review": "This saree made me feel like a queen. I'm in love with it.",
-    "rating": 5
-  },
-  {
-    "name": "Sanjay",
-    "review": "A bit pricey but worth every penny. The design is one of a kind.",
-    "rating": 4
-  },
-  {
-    "name": "Karishma",
-    "review": "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
-    "rating": 5
-  }
-],
+    quntity: 1,
+    ratingsreviews: [
+      {
+        name: "Priya",
+        review:
+          "Beautiful and elegant saree! I received many compliments at the wedding.",
+        rating: 5,
+      },
+      {
+        name: "Deepa",
+        review:
+          "The colors are stunning, and the fabric is so comfortable to wear.",
+        rating: 4,
+      },
+      {
+        name: "Raj",
+        review: "A perfect blend of tradition and style. Loved it!",
+        rating: 5,
+      },
+      {
+        name: "Meera",
+        review:
+          "The intricate embroidery work on this saree is simply breathtaking.",
+        rating: 5,
+      },
+      {
+        name: "Aarti",
+        review:
+          "Received my order quickly, and the saree was even more beautiful in person.",
+        rating: 5,
+      },
+      {
+        name: "Anu",
+        review: "The quality of the saree is exceptional. Highly recommended.",
+        rating: 5,
+      },
+      {
+        name: "Nikhil",
+        review:
+          "Bought it for my wife, and she looks stunning in it. Great purchase!",
+        rating: 4,
+      },
+      {
+        name: "Swati",
+        review: "This saree made me feel like a queen. I'm in love with it.",
+        rating: 5,
+      },
+      {
+        name: "Sanjay",
+        review:
+          "A bit pricey but worth every penny. The design is one of a kind.",
+        rating: 4,
+      },
+      {
+        name: "Karishma",
+        review:
+          "The delivery was prompt, and the saree is of excellent quality. I'm a happy customer.",
+        rating: 5,
+      },
+    ],
 
     images: [
       {
@@ -984,8 +1054,8 @@ export const FooterData = [
     link: "/",
     info: [
       { title: "Privacy Policy", link: "/privacypolicies" },
-      { title: "Shipping Policy", link: "" },
-      { title: "Cancellation & Returns", link: "/returnolicies" },
+      { title: "Shipping Policy", link: "shippingpolicies" },
+      { title: "Cancellation & Returns", link: "/returnpolicies" },
     ],
   },
   {
@@ -1047,10 +1117,10 @@ export const ImagesData = [
 ];
 
 export const HeaderBottomData = [
-  {id:1 , title: "Home", link: "/", icon: HomeOutlined },
-  {id:2 , title: "Category", link: "/shop", icon: CategoryOutlined },
-  {id:3 , title: "Cart", link: "/cart", icon: ShoppingCartOutlined },
-  {id:4 , title: "Account", link: "/account", icon: PersonOutline },
+  { id: 1, title: "Home", link: "/", icon: HomeOutlined },
+  { id: 2, title: "Category", link: "/shop", icon: CategoryOutlined },
+  { id: 3, title: "Cart", link: "/cart", icon: ShoppingCartOutlined },
+  { id: 4, title: "Account", link: "/account", icon: PersonOutline },
 ];
 
 export const CategoryData = [
@@ -1060,19 +1130,20 @@ export const CategoryData = [
     link: "",
     icon: <Shop2 />,
     iconactive: <Shop2Outlined />,
-    details:[
-      {title : "Shops for Sarres 1" , 
-    info:[
-      {title :"Net Sarees" , icon : ""},
-      {title :"Georgette Sarees" , icon : ""},
-      {title :"Chiffon Sarees" , icon : ""},
-      {title :"Net Sarees" , icon : ""},
-      {title :"Georgette Sarees" , icon : ""},
-      {title :"Chiffon Sarees" , icon : ""},
-      // {title :"" , icon : ""},
-    ]
-    }
-    ]
+    details: [
+      {
+        title: "Shops for Sarres 1",
+        info: [
+          { title: "Net Sarees", icon: "" },
+          { title: "Georgette Sarees", icon: "" },
+          { title: "Chiffon Sarees", icon: "" },
+          { title: "Net Sarees", icon: "" },
+          { title: "Georgette Sarees", icon: "" },
+          { title: "Chiffon Sarees", icon: "" },
+          // {title :"" , icon : ""},
+        ],
+      },
+    ],
   },
   {
     id: 2,
@@ -1112,234 +1183,331 @@ export const CategoryData = [
   },
 ];
 
-
 export const CurrentUserData = {
-  img:"https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=sph",
-  name : "Abc  XYZ",
-  Id:123221,
-  mobile:"1234554321",
-  address : "earth , solar planet from 23 ,  somewhere around world , Milky way , 123221",
-  anther_address : "earth , solar planet from 23 ,  somewhere around world , Milky way , 123221",
-  email:"abc@ghjdi.com",
-
-} 
+  img: "https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=sph",
+  name: "Abc  XYZ",
+  Id: 123221,
+  mobile: "1234554321",
+  address:
+    "earth , solar planet from 23 ,  somewhere around world , Milky way , 123221",
+  anther_address:
+    "earth , solar planet from 23 ,  somewhere around world , Milky way , 123221",
+  email: "abc@ghjdi.com",
+};
 
 export const AccountPageData = [
   {
-    title : "Your Orders",
-    description :"Track, return, or buy things again" ,
-    icon : "https://img.freepik.com/free-vector/3d-delivery-box-parcel_78370-825.jpg?w=740&t=st=1698664162~exp=1698664762~hmac=4f958d4a0ad563f4cd20b9361aa07c64e0fbb5de557d306d110699980ab0b641",
-    link : "/orders"
+    id:1,
+    title: "Your Orders",
+    description: "Track, return, or buy things again",
+    icon: "https://img.freepik.com/free-vector/3d-delivery-box-parcel_78370-825.jpg?w=740&t=st=1698664162~exp=1698664762~hmac=4f958d4a0ad563f4cd20b9361aa07c64e0fbb5de557d306d110699980ab0b641",
+    link: "/orders",
   },
   {
-    title : "Login & secuity",
-    description :"Edit Login , name and Mobile" ,
-    icon : "https://img.freepik.com/free-vector/padlock_78370-547.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
-    link : "/logins"
+    id:2,
+    title: "Login & secuity",
+    description: "Edit Login , name and Mobile",
+    icon: "https://img.freepik.com/free-vector/padlock_78370-547.jpg?size=626&ext=jpg&ga=GA1.1.1529557540.1698478113&semt=ais",
+    link: "/logins",
   },
   {
-    title : "Addresses",
-    description :"Add or change addresses" ,
-    icon : "https://img.freepik.com/free-photo/online-payment-security-concept-3d-phone-bill_107791-16722.jpg?t=st=1698665876~exp=1698666476~hmac=a1b49597b77f83576640d42cb04e426f88bfb251a49ef481d308339c79e5795f",
-    link : "/addresses"
+    id:3,
+    title: "Addresses",
+    description: "Add or change addresses",
+    icon: "https://img.freepik.com/free-photo/online-payment-security-concept-3d-phone-bill_107791-16722.jpg?t=st=1698665876~exp=1698666476~hmac=a1b49597b77f83576640d42cb04e426f88bfb251a49ef481d308339c79e5795f",
+    link: "/addresses",
   },
-]
+];
 
 export const PrivacyPoliciesData = [
   {
-    title : "Introduction",
-    desc : "Welcome to 'PBSarees'. We are committed to protecting your privacy and providing you with a secure online shopping experience. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our website and services."
+    title: "Introduction",
+    desc: "Welcome to 'PBSarees'. We are committed to protecting your privacy and providing you with a secure online shopping experience. This Privacy Policy explains how we collect, use, share, and protect your personal information when you use our website and services.",
   },
   {
-    title : "Information We Collect",
-    desc : "We collect various types of information when you visit and use our website, including:",
-    info:[{
-      title : "Personal Information:",
-desc:"This includes your name, email address, shipping address, and payment information when you make a purchase."
-    } ,{
-      title : "Browsing Information: ",
-desc:"We may collect information about your visit to our website, such as your IP address, browser type, device information, and the pages you visit."
-    } ,{
-      title : "Cookies:",
-desc:"We use cookies and similar technologies to enhance your experience and collect data about your interactions with our website."
-    } ,]
+    title: "Information We Collect",
+    desc: "We collect various types of information when you visit and use our website, including:",
+    info: [
+      {
+        title: "Personal Information:",
+        desc: "This includes your name, email address, shipping address, and payment information when you make a purchase.",
+      },
+      {
+        title: "Browsing Information: ",
+        desc: "We may collect information about your visit to our website, such as your IP address, browser type, device information, and the pages you visit.",
+      },
+      {
+        title: "Cookies:",
+        desc: "We use cookies and similar technologies to enhance your experience and collect data about your interactions with our website.",
+      },
+    ],
   },
   {
-    title : "How We Use Your Information",
-    desc : "We use the information we collect for various purposes, including:",
-    bulletPoint:[
-      {title : "Processing and fulfilling your orders."},
-      {title : "Improving our website and services."},
-      {title : "Providing customer support."},
-      {title : "Sending you marketing and promotional communications with your consent."},
-      {title : "Complying with legal and regulatory obligations."},
-    ]
+    title: "How We Use Your Information",
+    desc: "We use the information we collect for various purposes, including:",
+    bulletPoint: [
+      { title: "Processing and fulfilling your orders." },
+      { title: "Improving our website and services." },
+      { title: "Providing customer support." },
+      {
+        title:
+          "Sending you marketing and promotional communications with your consent.",
+      },
+      { title: "Complying with legal and regulatory obligations." },
+    ],
   },
   {
-    title : "Security",
-    desc : "We take reasonable measures to protect your personal information. However, no online platform is entirely secure, and we cannot guarantee the security of your data."
+    title: "Security",
+    desc: "We take reasonable measures to protect your personal information. However, no online platform is entirely secure, and we cannot guarantee the security of your data.",
   },
   {
-    title : "Contact Us",
-    desc : "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at [Contact Information]."
+    title: "Contact Us",
+    desc: "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at [Contact Information].",
   },
   {
-    title : "Security",
-    desc : "We take reasonable measures to protect your personal information. However, no online platform is entirely secure, and we cannot guarantee the security of your data."
+    title: "Security",
+    desc: "We take reasonable measures to protect your personal information. However, no online platform is entirely secure, and we cannot guarantee the security of your data.",
   },
-]
+];
 
 export const ReturnPoliciesData = [
   {
-    title : 'Returns and Exchanges',
-    desc:"We want you to be completely satisfied with your purchase from PBSarees. If you're not satisfied with your purchase, we offer a straightforward return and exchange policy."
+    title: "Returns and Exchanges",
+    desc: "We want you to be completely satisfied with your purchase from PBSarees. If you're not satisfied with your purchase, we offer a straightforward return and exchange policy.",
   },
   {
-    title : 'Eligibility',
-    desc:"You can return or exchange fashion products purchased from our website within [X days/weeks/months] of receiving the item. To be eligible for a return or exchange, the item must be in its original condition, with all tags and packaging intact."
+    title: "Eligibility",
+    desc: "You can return or exchange fashion products purchased from our website within [X days/weeks/months] of receiving the item. To be eligible for a return or exchange, the item must be in its original condition, with all tags and packaging intact.",
   },
   {
-    title : 'How to Initiate a Return or Exchange',
-    desc:"To initiate a return or exchange, follow these steps:",
-    info:[
+    title: "How to Initiate a Return or Exchange",
+    desc: "To initiate a return or exchange, follow these steps:",
+    info: [
       {
-        title:'Contact our customer support team at [Customer Support Email] to request a return or exchange. Please provide your order number and a brief description of the issue.',
-
+        title:
+          "Contact our customer support team at [Customer Support Email] to request a return or exchange. Please provide your order number and a brief description of the issue.",
       },
       {
-        title:'We will provide you with a return authorization and shipping instructions.',
-
+        title:
+          "We will provide you with a return authorization and shipping instructions.",
       },
-    ]
+    ],
   },
   {
-    title : 'Shipping Costs',
-    desc:"If the return or exchange is due to an error on our part, we will cover the shipping costs.",
-    desc2:"If the return or exchange is for any other reason, you will be responsible for the return shipping costs."
+    title: "Shipping Costs",
+    desc: "If the return or exchange is due to an error on our part, we will cover the shipping costs.",
+    desc2:
+      "If the return or exchange is for any other reason, you will be responsible for the return shipping costs.",
   },
-  
-  {
-    title : 'Refunds and Processing Time',
-    desc:"Refunds will be processed within [X business days] after we receive the returned item.",
-    desc2:"The refund will be issued to the original payment method."
-  },
-  
-  {
-    title : 'Exchanges',
-    desc:"If you wish to exchange an item, please specify the replacement item you'd like in your return request.",
-    desc2:"Exchanges will be processed once we receive the returned item."
-  },
-  {
-    title : 'Contact Us',
-    desc:"If you have any questions or need assistance with your return or exchange, please contact our customer support team at [Customer Support Email].",
-  },
-  {
-    title : ' Consent',
-    desc:"By making a purchase on our website, you agree to the terms of this return policy.",
-    
-  },
-  
-]
 
+  {
+    title: "Refunds and Processing Time",
+    desc: "Refunds will be processed within [X business days] after we receive the returned item.",
+    desc2: "The refund will be issued to the original payment method.",
+  },
+
+  {
+    title: "Exchanges",
+    desc: "If you wish to exchange an item, please specify the replacement item you'd like in your return request.",
+    desc2: "Exchanges will be processed once we receive the returned item.",
+  },
+  {
+    title: "Contact Us",
+    desc: "If you have any questions or need assistance with your return or exchange, please contact our customer support team at [Customer Support Email].",
+  },
+  {
+    title: " Consent",
+    desc: "By making a purchase on our website, you agree to the terms of this return policy.",
+  },
+];
 
 export const CurrentUserAddresses = [
   {
-    title : "address",
+    title: "address",
     isActive: true,
-    address : "earth , solar planet from 1 ,  somewhere around world , Milky way , 123221",
-  },{
-    title : "address",
-    isActive: false,
-    address : "earth , solar planet from 2 ,  somewhere around world , Milky way , 123222",
-  },{
-    title : "address",
-    isActive: false,
-    address : "earth , solar planet from 3 ,  somewhere around world , Milky way , 123223",
+    address:
+      "earth , solar planet from 1 ,  somewhere around world , Milky way , 123221",
   },
-]
-
+  {
+    title: "address",
+    isActive: false,
+    address:
+      "earth , solar planet from 2 ,  somewhere around world , Milky way , 123222",
+  },
+  {
+    title: "address",
+    isActive: false,
+    address:
+      "earth , solar planet from 3 ,  somewhere around world , Milky way , 123223",
+  },
+];
 
 export const TermsandConditionData = [
   {
-    title :"Acceptance of Terms",
-    desc:'By accessing and using this pbsarees website, you agree to be bound by these terms and conditions. If you do not agree with these terms, please do not use the website.'
+    title: "Acceptance of Terms",
+    desc: "By accessing and using this pbsarees website, you agree to be bound by these terms and conditions. If you do not agree with these terms, please do not use the website.",
   },
   {
-    title :"Website Use",
-    desc:'',
-    info:[
-      {title:'User Account',
-      desc:' You may be required to create an account to access certain features of the website. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.'
-    },
-    {title:' Prohibited Activities',
-      desc:"You agree not to engage in any activities that violate applicable laws, infringe upon intellectual property rights, or disrupt the website's functionality. This includes but is not limited to hacking, data scraping, or spamming."
-    },
-    ]
-  },
-  {
-    title :"Purchases and Transactions",
-    desc:'',
-    info:[
+    title: "Website Use",
+    desc: "",
+    info: [
       {
-        title:' Product Information',
-        desc:'We strive to provide accurate and up-to-date product information on the website. However, we do not warrant the accuracy of product descriptions, prices, or availability. We reserve the right to correct any errors and to cancel orders if necessary.'
+        title: "User Account",
+        desc: " You may be required to create an account to access certain features of the website. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
       },
       {
-        title:'Payment',
-        desc:'All payments are processed securely through our chosen payment gateway. By placing an order, you agree to pay for the products and any associated fees.'
+        title: " Prohibited Activities",
+        desc: "You agree not to engage in any activities that violate applicable laws, infringe upon intellectual property rights, or disrupt the website's functionality. This includes but is not limited to hacking, data scraping, or spamming.",
+      },
+    ],
+  },
+  {
+    title: "Purchases and Transactions",
+    desc: "",
+    info: [
+      {
+        title: " Product Information",
+        desc: "We strive to provide accurate and up-to-date product information on the website. However, we do not warrant the accuracy of product descriptions, prices, or availability. We reserve the right to correct any errors and to cancel orders if necessary.",
       },
       {
-        title:' Shipping and Returns',
-        desc:' Please refer to our Shipping and Returns Policy for information regarding shipping, delivery, and returns.'
-      },
-    ]
-  },
-  {
-    title :"Privacy and Data Security",
-    desc:'',
-    info:[
-      {
-        title:"Privacy Policy",
-        desc:"Please review our Privacy Policy to understand how we collect, use, and protect your personal information."
+        title: "Payment",
+        desc: "All payments are processed securely through our chosen payment gateway. By placing an order, you agree to pay for the products and any associated fees.",
       },
       {
-        title:" Data Security",
-        desc:"We take reasonable steps to secure your data. However, no system is completely immune to security breaches. You agree that we are not responsible for any data breaches or unauthorized access to your account."
-      }
-    ]
+        title: " Shipping and Returns",
+        desc: " Please refer to our Shipping and Returns Policy for information regarding shipping, delivery, and returns.",
+      },
+    ],
   },
   {
-    title :"Intellectual Property / Copyright",
-    desc:' All content, including text, images, logos, and designs on the website, is protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute any content without our written permission.'
+    title: "Privacy and Data Security",
+    desc: "",
+    info: [
+      {
+        title: "Privacy Policy",
+        desc: "Please review our Privacy Policy to understand how we collect, use, and protect your personal information.",
+      },
+      {
+        title: " Data Security",
+        desc: "We take reasonable steps to secure your data. However, no system is completely immune to security breaches. You agree that we are not responsible for any data breaches or unauthorized access to your account.",
+      },
+    ],
   },
   {
-    title :" Termination",
-    desc:'We reserve the right to terminate or suspend your access to the website at our discretion, without notice, for any violation of these terms and conditions'
+    title: "Intellectual Property / Copyright",
+    desc: " All content, including text, images, logos, and designs on the website, is protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute any content without our written permission.",
   },
   {
-    title :"Disclaimers and Limitation of Liability",
-    desc:'',
-    info :[
-{
-  title:"Disclaimer",
-  desc:"The website is provided 'as is' and 'as available' without warranties of any kind, either express or implied. We do not guarantee that the website will be error-free or uninterrupted."
-},
-{
-  title:"Limitation of Liability",
-  desc:" In no event shall we be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of the website."
-}
-    ]
+    title: " Termination",
+    desc: "We reserve the right to terminate or suspend your access to the website at our discretion, without notice, for any violation of these terms and conditions",
   },
   {
-    title :" Governing Law",
-    desc:'These terms and conditions are governed by and construed in accordance with the laws of [Your Jurisdiction], and any disputes will be subject to the exclusive jurisdiction of the courts in [Your Jurisdiction].'
+    title: "Disclaimers and Limitation of Liability",
+    desc: "",
+    info: [
+      {
+        title: "Disclaimer",
+        desc: "The website is provided 'as is' and 'as available' without warranties of any kind, either express or implied. We do not guarantee that the website will be error-free or uninterrupted.",
+      },
+      {
+        title: "Limitation of Liability",
+        desc: " In no event shall we be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of the website.",
+      },
+    ],
   },
   {
-    title :"Changes to Terms and Conditions",
-    desc:'We reserve the right to modify these terms and conditions at any time. You are responsible for regularly reviewing them.'
+    title: " Governing Law",
+    desc: "These terms and conditions are governed by and construed in accordance with the laws of [Your Jurisdiction], and any disputes will be subject to the exclusive jurisdiction of the courts in [Your Jurisdiction].",
   },
   {
-    title :"Contact Information",
-    desc:'If you have any questions or concerns about these terms and conditions, please contact us at [Your Contact Information].'
+    title: "Changes to Terms and Conditions",
+    desc: "We reserve the right to modify these terms and conditions at any time. You are responsible for regularly reviewing them.",
   },
-]
+  {
+    title: "Contact Information",
+    desc: "If you have any questions or concerns about these terms and conditions, please contact us at [Your Contact Information].",
+  },
+];
+
+export const ShippingPoliceData = [
+  {
+    title: "Delivery Charges:",
+    desc: "Delivery charges may vary based on the individual sellers. Sellers incur higher shipping costs for low-value items, and a nominal delivery charge may be applied to offset logistics costs. Please refer to your order summary for specific delivery charges for each product.",
+    desc2:
+      "For items listed as [Your E-commerce Website] Plus, a delivery charge of [Specify Amount] per item may be applicable if the order value is less than [Specify Amount]. Orders of [Specify Amount] or above qualify for free delivery.",
+  },
+  {
+    title: "Estimated Delivery Time:",
+    desc: "Sellers typically procure and ship items within the time specified on the product page. Business days exclude public holidays and Sundays. The estimated delivery time depends on factors such as the seller, product availability, shipping destination, and the location of the seller.",
+  },
+  {
+    title: "Hidden Costs:",
+    desc: "There are no hidden charges when making a purchase on [Your E-commerce Website]. The prices listed on the product page are final and all-inclusive. Delivery charges, if applicable, are transparent and based on the seller's shipping policy.",
+  },
+  {
+    title: "Delivery Date Discrepancies:",
+    desc: "The delivery date may not correspond to the estimated timeline due to holidays between the order placement and delivery date. Some courier partners and sellers may not operate on Sundays, affecting the delivery dates.",
+  },
+  {
+    title: "Serviceability and Shipping Restrictions:",
+    desc: "Please enter your default pin code on the product page to check for accurate delivery times and serviceability. If a seller does not ship to your location, it may be due to their discretion, legal restrictions, or the availability of reliable courier partners in your area.",
+  },
+  {
+    title: "Cash on Delivery (CoD):",
+    desc: "The availability of CoD depends on our courier partner's ability to accept cash as payment at the time of delivery. Check the product page by entering your pin code to see if CoD is available in your location.",
+  },
+  {
+    title: "Returns and Pick-Up:",
+    desc: "Returns are easy; initiate a return through our contact form. Ekart Logistics will facilitate the pick-up whenever possible. If not, you can return the item through a third-party courier service, with return fees borne by the seller.",
+  },
+  {
+    title: "Non-receipt of Order:",
+    desc: "If you did not receive your order but got a delivery confirmation, report the issue within 7 days from the date of confirmation for the seller to investigate.",
+  },
+  {
+    title: "Product Availability Status:",
+    desc: "",
+    info: [
+      {
+        title: "In Stock:",
+        desc: "Delivered in 2-6 business days (standard courier) or 1-2 weeks (Registered Post for certain areas).",
+      },
+      {
+        title: "Available:",
+        desc: "Procured when ordered, delivery time based on procurement and shipping.",
+      },
+      {
+        title: "Preorder/Forthcoming:",
+        desc: "Expected release with pre-booking option.",
+      },
+      {
+        title: "Out of Stock:",
+        desc: "Currently not available. Use 'Notify Me' for updates.",
+      },
+      {
+        title: "Imported: ",
+        desc: "Sourced from outside India, may take at least 10 days for delivery.",
+      },
+      {
+        title: "Back In Stock Soon:",
+        desc: " Popular item temporarily sold out.",
+      },
+      {
+        title: "Temporarily Unavailable: ",
+        desc: "Out of stock, expected to be available soon.",
+      },
+      {
+        title: "Permanently Discontinued: ",
+        desc: "Obsolete, no longer available.",
+      },
+      {
+        title: "Out of Print: ",
+        desc: " No longer published and permanently discontinued.",
+      },
+    ],
+  },
+  {
+    title: "International Delivery:",
+    desc: "As of now, [Your E-commerce Website] does not deliver items internationally. Purchases can be made globally with credit/debit cards from India and 21 other countries, but delivery addresses must be within India.",
+  },
+];

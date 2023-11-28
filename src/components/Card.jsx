@@ -316,21 +316,21 @@ export const CartCard = ({
 export const OrderCard = ({ item }) => {
   return (
     <>
-      <Box className="flex justify-between md:w-[75%] max-sm:w-[95%] items-center md:px-10 px-3 py-2 bg-[#fff] rounded-md">
+      <Box className="flex justify-between md:w-full max-sm:w-[95%] items-center md:px-10 px-3 py-2 bg-[#fff] rounded-md">
         <Box>
           <img
-            className="md:w-[100px] md:h-[100px] h-[] object-cover rounded-md"
+            className="md:w-[100px] md:h-[100px] object-cover rounded-md"
             alt=""
             src={item.image}
           />
         </Box>
-        <Box className="flex max-sm:flex-col max-sm:pl-5 md:justify-between md:items-center">
-          <Box>
+        <Box className="flex max-sm:flex-col w-full pl-10 max-sm:pl-5 justify-between md:items-center">
+          {/* <Box */}
             {/* <Typography >
           {item.title}
         </Typography> */}
-            <Typography sx={{ fontWeight: 600 }}>₹ {item.price}</Typography>
-          </Box>
+            <Typography sx={{ fontWeight: 400 , color:'GrayText' }}>₹ {item.price}</Typography>
+          {/* </Box> */}
           <Box className="flex flex-col justify-start items-start">
             <Typography>Deliverd on Nov 01,2023</Typography>
             <Typography>your item has been deliver</Typography>

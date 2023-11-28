@@ -122,7 +122,7 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange ) => 
   const maximum = useState(filters.priceRange[1]);
   return (
     <>
-      <FormControl component="fieldset" className="w-full justify-start relative">
+      <FormControl component="fieldset" className="w-full justify-start relative ">
         <Box
           className="w-[100%] flex justify-between px-5 py-2 cursor-pointer"
           onClick={() => setOpen(!open)}
@@ -141,7 +141,7 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange ) => 
         <Box  className=' max-sm:absolute max-sm:left-[75px] max-sm:bg-white max-sm:w-fit'>
           {open && (
             <>
-              <Box className="flex  w-full">
+              <Box className="flex  w-full ">
                 <FormControl fullWidth sx={{ m: 1 }} variant="standard">
                   <InputLabel htmlFor="standard-adornment-amount">
                     Min
@@ -170,6 +170,8 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange ) => 
                   />
                 </FormControl>
               </Box>
+              <Box className="flex px-5 py-2">
+
               <Slider
                 value={filters.priceRange}
                 onChange={handlePriceRangeChange}
@@ -178,22 +180,25 @@ export const FilterDataPrice = (filterKey, filters, handlePriceRangeChange ) => 
                 max={maxPrice}
                 sx={{
                   color: "rgba(0,0,0,0.87)",
+                  // paddingInline: 10,
                   "& .MuiSlider-track": {
                     border: "none",
+                    color:"#12adad"
                   },
                   "& .MuiSlider-thumb": {
-                    width: 24,
-                    height: 24,
+                    width: 20,
+                    height: 20,
                     backgroundColor: "#12edad",
                     "&:before": {
-                      boxShadow: "0 4px 8px rgba(0,0,0,0.4)",
+                      boxShadow: "0 0 5px rgba(0,0,0,0.9)",
                     },
                     "&:hover, &.Mui-focusVisible, &.Mui-active": {
                       boxShadow: "none",
                     },
                   },
                 }}
-              />
+                />
+                </Box>
             </>
           )}
         </Box>

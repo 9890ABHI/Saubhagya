@@ -15,11 +15,12 @@ import Account from "./screens/Account";
 import { Addresses, Logins, Orders } from "./components/account/Orders";
 import BuyNow from "./screens/BuyNow";
 import { AboutUs, ContactUs } from "./components/footer/AboutUs";
-import { PrivacyPolicies, ReturnPolicies } from "./components/footer/PrivacyPolicies";
+import { PrivacyPolicies, ReturnPolicies, ShippingPolicies } from "./components/footer/PrivacyPolicies";
 import BottomBar from "./components/BottomBar";
 import Payments from "./screens/Payments";
 import PageNotFound from "./screens/PageNotFound";
 import TermsandCondition from "./components/footer/TermandCondition";
+import Deatils from "./components/account/Deatils";
 
 function App() {
   const user = useSelector((state) => state.auth.user);
@@ -54,7 +55,7 @@ function App() {
                 <Route path="/shop/:id" element={<Details />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/buynow/:id" element={<BuyNow />} />
-                <Route path="/account" element={<Account />} />
+                <Route path="/account" element={<Deatils />} />
                 <Route path="/payments" element={<Payments />} />
             <>
             <Route path="/orders" element={<Orders />} />
@@ -67,7 +68,8 @@ function App() {
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/privacypolicies" element={<PrivacyPolicies />} />
             <Route path="/termsandcondition" element={<TermsandCondition />} />
-            <Route path="/returnolicies" element={<ReturnPolicies />} />
+            <Route path="/returnpolicies" element={<ReturnPolicies />} />
+            <Route path="/shippingpolicies" element={<ShippingPolicies />} />
             <Route path="*" element={<PageNotFound />} />
             {/* <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
