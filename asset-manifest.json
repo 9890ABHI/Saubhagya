@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Saubhagya/static/css/main.577b443b.css",
-    "main.js": "/Saubhagya/static/js/main.83058126.js",
+    "main.css": "/Saubhagya/static/css/main.49b2ca0b.css",
+    "main.js": "/Saubhagya/static/js/main.a7b7d38a.js",
     "static/js/787.242c83a8.chunk.js": "/Saubhagya/static/js/787.242c83a8.chunk.js",
     "static/media/img5.jpg": "/Saubhagya/static/media/img5.2432a99623a64980c953.jpg",
     "static/media/img5.png": "/Saubhagya/static/media/img5.85c2f95316a169d240da.png",
@@ -24,12 +24,12 @@
     "static/media/Pisara Sarees logo_1 2.PNG": "/Saubhagya/static/media/Pisara Sarees logo_1 2.e878e3cd24506db2bd3b.PNG",
     "static/media/pb.png": "/Saubhagya/static/media/pb.e663ba2b7ccd7d025c8f.png",
     "index.html": "/Saubhagya/index.html",
-    "main.577b443b.css.map": "/Saubhagya/static/css/main.577b443b.css.map",
-    "main.83058126.js.map": "/Saubhagya/static/js/main.83058126.js.map",
+    "main.49b2ca0b.css.map": "/Saubhagya/static/css/main.49b2ca0b.css.map",
+    "main.a7b7d38a.js.map": "/Saubhagya/static/js/main.a7b7d38a.js.map",
     "787.242c83a8.chunk.js.map": "/Saubhagya/static/js/787.242c83a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.577b443b.css",
-    "static/js/main.83058126.js"
+    "static/css/main.49b2ca0b.css",
+    "static/js/main.a7b7d38a.js"
   ]
 }
