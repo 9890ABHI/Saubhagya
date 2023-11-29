@@ -11,7 +11,9 @@ import {
   LOGOUT,
   ADD_TO_CART,
   REMOVE_FROM_CART,
-  UPDATE_QUANTITY,
+  // UPDATE_QUANTITY,
+  INCREASE_CART_ITEM_VALUE,
+  DECREASE_CART_ITEM_VALUE
 } from "./actions";
 
 const initialState = {
@@ -41,22 +43,46 @@ export const authReducer = (state = initialState, action) => {
     //     cart: [...state.cart , action.product],
     //   };
     case ADD_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart , action.payload],
-      };
-    
-    case REMOVE_FROM_CART:
-      return {
-        ...state,
-        cart: state.cart.filter((product) => product.id !== action.payload),
-      };
-
-      case UPDATE_QUANTITY:
-        return{
+      const existingProduct = state.cart.find((item) => item.id === action.payload.id);
+      if (existingProduct) {
+        return {
           ...state,
-          cart:action.payload
-        }
+          cart: state.cart.map((item) =>
+            item.id === existingProduct.id ? { ...item, quantity: item.quantity + 1 } : item
+          ),
+        };
+      } else {
+        return {
+          ...state,
+          cart: [...state.cart, { ...action.payload, quantity: 1 }],
+        };
+      }
+
+      // case UPDATE_QUANTITY:
+      //   return{
+      //     ...state,
+      //     cart:action.payload
+      //   }
+
+        case REMOVE_FROM_CART:
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload),
+      };
+    case INCREASE_CART_ITEM_VALUE:
+      return {
+        ...state,
+        cart: state.cart.map((item) =>
+          item.id === action.payload ? { ...item, quantity : item.quantity + 1 } : item
+        ),
+      };
+      case DECREASE_CART_ITEM_VALUE:
+      return {
+        ...state,
+        cart: state.cart.map((item) =>
+          item.id === action.payload ? { ...item, quantity : item.quantity - 1 } : item
+        ),
+      };
     // case REMOVE_FROM_CART:
     //   return {
     //     ...state,

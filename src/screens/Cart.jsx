@@ -7,29 +7,22 @@ import { Clothingproducts } from "../constants";
 // import { ProductPricing } from "../components/Informations";
 import { CartCard } from "../components/Card";
 import { connect, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
 const cart = useSelector((state) => state.auth.cart)
 useEffect(() => {
   window.scroll(0, 0);
 }, []);
-// console.log('cart details',cart);
+console.log('cart details',cart);
 
   const [products
-    // , setProducts
+    , setProducts
   ] = useState(Clothingproducts);
 
   const prods = products.slice(0, 4);
   const [filterProds, setFilterProds] = useState(cart);
-  // let sum = 0;
-  // let ogprice = 0;
-  // // iterate over each item in the array
-  // for (let i = 0; i < filterProds.length; i++) {
-  //   // if (quantity > 0) {
-  //   sum += filterProds[i].price;
-  //   ogprice += filterProds[i].oldPrice;
-  //   // }
-  // }
+
   const initialTotal = 0
 
   const [more , setmore] = React.useState(initialTotal)
@@ -38,21 +31,21 @@ useEffect(() => {
 
   // Calculate the total price of items in the cart
   cart.forEach((item) => {
-    newPrice += item.price * item.quntity;
+    newPrice += item.price * item.quantity;
   });
 
   setmore(newPrice);
   } , [cart] )
   
   console.log('setTotal' , more);
-  // const [ogtotal , setOgTotal] = useState(0)
-  // useEffect(() =>{
-  //   let price = 0
-  //   cart.map((item) => {
-  //     price = price + item.oldPrice * item.quntity 
-  //   })
-  //   setOgTotal(price)
-  // } , [ogtotal] )
+  const [ogtotal , setOgTotal] = useState(0)
+  useEffect(() =>{
+    let price = 0
+    cart.map((item) => {
+      price = price + item.oldPrice * item.quantity 
+    })
+    setOgTotal(price)
+  } , [ogtotal] )
 
 
   // const disccount = ogprice - sum;
@@ -67,7 +60,14 @@ useEffect(() => {
     <>
       <Box className="flex flex-col md:flex-row justify-around items-start bg-[#f2f2f2] py-10 max-sm:py-2">
         <Box className="px-2 md:px-0 max-sm:pb-40 max-sm:pt-0 max-sm:-z-0 md:w-[60%] flex flex-col justify-center items-center gap-2">
-          {cart.map((item) => 
+         {
+          cart.length === 0 && (<>
+          <Typography color={'GrayText'}>
+            No Product found in Cart
+          </Typography>
+           </>)
+         }
+          { cart.map((item) => 
               <CartCard
                 item={item}
                 cart={cart}
@@ -99,7 +99,7 @@ useEffect(() => {
             <Typography className="flex" variant="body1">Products :</Typography>
             <Typography variant="h6" className="text-gray-500">
               {/* ₹ {disccount}   */}
-            {filterProds.length}
+            {cart.length}
             </Typography>
 
           </Box>
@@ -107,7 +107,8 @@ useEffect(() => {
             <Typography className="flex" variant="body2">Total Save :</Typography>
             <Typography variant="body1" className="text-gray-500 relative overflow-hidden">₹ 
             {/* {disccount} */}
-            <div className="w-[90%] absolute top-1 h-[1px] left-3" style={{borderTop:'1px solid #12121290' , transform:'rotate(14deg)' , transformOrigin:'left',    }}/>  
+            {ogtotal}
+            <div className="w-[90%] absolute top-1 h-[1px] left-3" style={{borderTop:'2px solid #00000090' , transform:'rotate(20deg)' , transformOrigin:'left',}}/>  
             {/* {filterProds.length} */}
             </Typography>
 
@@ -118,6 +119,7 @@ useEffect(() => {
             {/* {total} */}
             {/* {sum}   */}
             {/* {filterProds.length} */}
+            {more}
             </Typography>
 
           </Box>
@@ -129,6 +131,7 @@ useEffect(() => {
           <Typography className="flex gap-3" variant="h6">
             <Typography className="line-through text-gray-500">
             {/* ₹ {ogprice} {' '}  */}
+            
             </Typography>
             {/* ₹ {total}  */}
             
@@ -160,7 +163,9 @@ useEffect(() => {
             { 
               prods.map((item) => (
                 <>  
-                
+                <Link
+                to={`/shop/${item.id}`}
+                >
                 <CartCard 
                 Feature 
                 item={item}
@@ -168,6 +173,7 @@ useEffect(() => {
                 // setFilterProds={setFilterProds}
                 // filterProds={filterProds} 
                 />
+                </Link>
                 </>
               ))
             }

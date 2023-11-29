@@ -20,12 +20,12 @@ const Home = () => {
       </Box> */}
    
       {/* home page container 1 */}
-      <Container
+      <Box
         sx={{
           // width: "100vw",
 
         }}
-        className="pb-10 pt-10 max-sm:pt-5"
+        className="pt-3 max-sm:pt-5"
       >
         <Link to={`/shop`}>
           <Carousel
@@ -63,7 +63,7 @@ const Home = () => {
             className="object-cover w-[100%] h-[100%] rounded-md"
           /> */}
         </Link>
-      </Container>
+      </Box>
       {/* home page container 2 */}
       <Container
         sx={{
@@ -298,11 +298,11 @@ const Home = () => {
           <Carousel
             autoPlay
             // infiniteLoop
-            animationHandler="fade"
-            showThumbs={false}
-            showIndicators={false}
-            showArrows={false}
-            showStatus={false}
+            // animationHandler="fade"
+            // showThumbs={false}
+            // showIndicators={false}
+            // showArrows={false}
+            // showStatus={false}
             interval={3500}
             transitionTime={1500}
             className="text-[#000] w-full"

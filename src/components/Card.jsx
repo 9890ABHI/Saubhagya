@@ -11,7 +11,7 @@ import {
 } from "@mui/icons-material";
 import { ShoppingButton } from "./Button";
 import { useDispatch } from "react-redux";
-import { UpdateCartProduct } from "../Store/actions";
+import { addToCartproduct, decreaseCartItemValue, increaseCartItemValue, removeFromCart } from "../Store/actions";
 
 export const Card = ({ item }) => {
   const [show, setShow] = useState(false);
@@ -131,27 +131,31 @@ export const CartCard = ({
   item,
   Feature,
   cart,
-  total,
-  setTot,
-  price
 }) => {
-  const [quantity, setQuantity] = React.useState(item.quntity);
+  const [quantity, setQuantity] = React.useState(item.quantity);
   const dispatch = useDispatch();
-  // React.useEffect(() => {setTotal(quantity * price + total)} , [quantity])
-  React.useEffect(() => {
-    setTot(quantity * price + total);
-  }, [cart]);
-  console.log('settotal in card',setTot);
-  
+
+  console.log('====================================');
+  console.log(item.id);
+  console.log('====================================');
   function handleRemove(id) {
-    quantity <= 1 ? removeItem(id) : setQuantity(quantity - 1);
+    quantity <= 1 ? removeItem(id) : decreseItem(id);
   }
-  
-  const removeItem = (id) => {
-  //   const responce = filterProds.filter((prod) => prod.id !== id);
-  //   // console.log(responce);
-  //   setFilterProds(responce);
+  const decreseItem  = (id) => {
+    dispatch(decreaseCartItemValue(id))
+    setQuantity(quantity - 1)
+  }
+  const IncreaseValue = (productId)=> {
+    dispatch(increaseCartItemValue(productId))
+    setQuantity(quantity + 1)
+  }
+  const removeItem = (productId) => {
+    dispatch(removeFromCart(productId))
   };
+
+  // const handleAddToCart = (product) => {
+  //   dispatch(addToCartproduct(product))
+  // };
   return (
     <>
       <Box
@@ -169,7 +173,7 @@ export const CartCard = ({
             />
           </Box>
           <Box
-            className={` w-[70%] md:w-[90%] flex justify-between items-center text-left`}
+            className={` w-[70%] md:w-[90%] px-5 flex justify-between items-center text-left`}
           >
             <Box className={`w-[50%] md:w-[80%]  ${Feature && "w-[75%] pl-2"}`}>
              <Typography sx={{ fontFamily: "Regular" }} className="hidden max-sm:flex ">
@@ -180,7 +184,7 @@ export const CartCard = ({
               }
               
             </Typography>
-             {/* <Typography sx={{ fontFamily: "Regular" }} className="max-sm:hidden">
+             <Typography sx={{ fontFamily: "Regular" }} className="max-sm:hidden">
               {
                 Feature ? (
                   item?.title.length >= 40
@@ -193,7 +197,7 @@ export const CartCard = ({
                 )
               }
               
-            </Typography> */}
+            </Typography>
               <Box
                 className={`flex ${Feature && "hidden"} justify-between pt-3`}
               >
@@ -208,16 +212,17 @@ export const CartCard = ({
                   <Box className="flex px-3 py-2 rounded-md border ">
                     <Remove
                       onClick={() => {
-                        setQuantity(quantity - 1);
-                        console.log(quantity);
-                        cart.map((item) => {
-                          console.log(item);
-                          if (item.id === item.id) {
-                            item.quntity = quantity - 1;
-                          }
-                        });
-                        console.log(cart);
-                        dispatch(UpdateCartProduct(cart));
+                        handleRemove(item.id)
+                        // setQuantity(quantity - 1);
+                        // console.log(quantity);
+                        // cart.map((item) => {
+                        //   console.log(item);
+                        //   if (item.id === item.id) {
+                        //     item.quntity = quantity - 1;
+                        //   }
+                        // });
+                        // console.log(cart);
+                        // dispatch(UpdateCartProduct(cart));
                       }}
                       color="primary"
                     />
@@ -233,16 +238,17 @@ export const CartCard = ({
                   <Box className="flex px-3 py-2 rounded-md border ">
                     <Add
                       onClick={() => {
-                        setQuantity(quantity + 1);
-                        console.log(quantity);
-                        cart.map((item) => {
-                          console.log(item);
-                          if (item.id === item.id) {
-                            item.quntity = quantity + 1;
-                          }
-                        });
-                        console.log(cart);
-                        dispatch(UpdateCartProduct(cart));
+                        IncreaseValue(item.id)
+                        // setQuantity(quantity + 1);
+                        // console.log(quantity);
+                        // cart.map((item) => {
+                        //   console.log(item);
+                        //   if (item.id === item.id) {
+                        //     item.quntity = quantity + 1;
+                        //   }
+                        // });
+                        // console.log(cart);
+                        // dispatch(UpdateCartProduct(cart));
                       }}
                       // () => setQuantity(quantity + 1)
 
@@ -254,8 +260,8 @@ export const CartCard = ({
                 <Button
                   variant="text"
                   // startIcon={<Delete color="error" />}
-                  onClick={() => removeItem()}
-                  className="flex items-center md:pr-10 max-sm:pl-10"
+                  onClick={() => removeItem(item.id)}
+                  className="flex items-center max-sm:pl-10"
                   sx={{
                     ":hover": {
                       color: "red",
@@ -278,7 +284,7 @@ export const CartCard = ({
                 className="text-sm font-semibold "
                 // sx={{ fontFamily: "" }}
               >
-                ₹ {item?.price * quantity} /-
+               {'₹'}{item?.price * quantity}{'/-'}
               </Typography>
               {Feature && (
                 <>
@@ -299,6 +305,7 @@ export const CartCard = ({
                       alignItems: "center",
                       gap: 1,
                     }}
+                    // onClick={() => handleAddToCart(item)}
                   >
                     {/* <ShoppingCart sx={{fontSize:10}} /> */}
                     Add to Cart

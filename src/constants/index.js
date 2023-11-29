@@ -28,7 +28,7 @@ export const Clothingproducts = [
     ratings: 123,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -124,7 +124,7 @@ export const Clothingproducts = [
     ratings: 93,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -220,7 +220,7 @@ export const Clothingproducts = [
     ratings: 43,
     timeToDispatch: "3-4 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -316,7 +316,7 @@ export const Clothingproducts = [
     ratings: 56,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -412,7 +412,7 @@ export const Clothingproducts = [
     ratings: 67,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -508,7 +508,7 @@ export const Clothingproducts = [
     ratings: 90,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -604,7 +604,7 @@ export const Clothingproducts = [
     ratings: 76,
     timeToDispatch: "3-4 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -700,7 +700,7 @@ export const Clothingproducts = [
     ratings: 23,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -796,7 +796,7 @@ export const Clothingproducts = [
     ratings: 31,
     timeToDispatch: "2-3 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",
@@ -892,7 +892,7 @@ export const Clothingproducts = [
     ratings: 311,
     timeToDispatch: "1-2 days",
     availableProducts: 10,
-    quntity: 1,
+    quantity: 1,
     ratingsreviews: [
       {
         name: "Priya",

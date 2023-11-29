@@ -20,7 +20,7 @@ const Deatils = () => {
                 <Box className={`flex justify-start px-5 w-full items-center gap-5 py-3 border-2 border-gray rounded-md ${active === item.id - 1 ? "bg-gray-300" : ""} `}
                 onClick={() => setActive(item.id - 1)}
                 >
-                    <img src={item.icon} className={`w-[50px] h-[50px] ${active === item.id ? "bg-gray-300" : ""}`} />
+                    <img src={item.icon} className={`w-[50px] h-[50px] ${active === item.id ? "bg-gray-300" : ""}`} style={{mixBlendMode:"multiply"}} />
                     <Typography className='text-gray-700'>
                         {item.title}
                     </Typography>

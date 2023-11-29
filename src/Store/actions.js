@@ -14,7 +14,8 @@ export const SIGNUP_FAILURE = "SIGNUP_FAILURE";
 // Add these action types to your actions.js
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
-export const UPDATE_QUANTITY = 'UPDATE_QUANTITY'
+export const INCREASE_CART_ITEM_VALUE = 'INCREASE_CART_ITEM_VALUE'
+export const DECREASE_CART_ITEM_VALUE = 'DECREASE_CART_ITEM_VALUE'
 
 // Action Types
 export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUEST";
@@ -38,10 +39,19 @@ export const signupFailure = (error) => ({ type: SIGNUP_FAILURE, error });
 
 
 export const addToCart = (product) => ({ type: 'ADD_TO_CART', payload: product });
-export const removeFromCart = (productId) => ({ type: 'REMOVE_FROM_CART', payload: productId });
-// export const updateQuntity = (product) => ({type : 'UPDATE_QUANTITY' , payload:product})
-//
-//
+export const removeFromCart = (productId) => ({
+  type: REMOVE_FROM_CART,
+  payload: productId,
+});
+
+export const increaseCartItemValue = (productId) => ({
+  type: INCREASE_CART_ITEM_VALUE,
+  payload: productId,
+});
+export const decreaseCartItemValue = (productId) => ({
+  type: DECREASE_CART_ITEM_VALUE,
+  payload: productId,
+});
 ///
 // Action Creators
 export const getProductsRequest = () => ({ type: GET_PRODUCTS_REQUEST });
@@ -149,12 +159,12 @@ export const addToCartproduct = (payload) => (dispatch) => {
   }
 };
 
-export const UpdateCartProduct = (data) => {
-  return async dispatch =>{
-    dispatch({
-      type:UPDATE_QUANTITY,
-      payload : data
-    })
+// export const UpdateCartProduct = (data) => {
+//   return async dispatch =>{
+//     dispatch({
+//       type:UPDATE_QUANTITY,
+//       payload : data
+//     })
     
-  } 
-}
+//   } 
+// }
