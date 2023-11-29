@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Saubhagya/static/css/main.49b2ca0b.css",
+    "main.js": "/Saubhagya/static/js/main.a7b7d38a.js",
+    "static/js/787.242c83a8.chunk.js": "/Saubhagya/static/js/787.242c83a8.chunk.js",
+    "static/media/img5.jpg": "/Saubhagya/static/media/img5.2432a99623a64980c953.jpg",
+    "static/media/img5.png": "/Saubhagya/static/media/img5.85c2f95316a169d240da.png",
+    "static/media/img3.jpg": "/Saubhagya/static/media/img3.f08f946a9ba18d6fe181.jpg",
+    "static/media/img4.jpg": "/Saubhagya/static/media/img4.334ab18732ba5180d66e.jpg",
+    "static/media/img7.jpg": "/Saubhagya/static/media/img7.fce521bd47796d8a42af.jpg",
+    "static/media/img9.png": "/Saubhagya/static/media/img9.7d5cea955ab7f9fb5de0.png",
+    "static/media/img3.png": "/Saubhagya/static/media/img3.e835f9805fbce7a8e903.png",
+    "static/media/img6.jpg": "/Saubhagya/static/media/img6.a85f19303ba66aaae140.jpg",
+    "static/media/img-12.png": "/Saubhagya/static/media/img-12.7f02573894e53cddf8cf.png",
+    "static/media/img10.jpg": "/Saubhagya/static/media/img10.caf083e9fda277ae6295.jpg",
+    "static/media/img1.png": "/Saubhagya/static/media/img1.eb9c78e681226b8cb932.png",
+    "static/media/img12.jpg": "/Saubhagya/static/media/img12.c603d79c4f564bfc8170.jpg",
+    "static/media/Poppins-Light.ttf": "/Saubhagya/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/Saubhagya/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/img8.jpg": "/Saubhagya/static/media/img8.979bb15ca6764d75234f.jpg",
+    "static/media/img9.jpg": "/Saubhagya/static/media/img9.5cbb6e2d0e171420040b.jpg",
+    "static/media/img2.jpg": "/Saubhagya/static/media/img2.76471fa028ee8ee72aac.jpg",
+    "static/media/img1.jpg": "/Saubhagya/static/media/img1.ac63c5a280c0fe7cedd9.jpg",
+    "static/media/Pisara Sarees logo_1 2.PNG": "/Saubhagya/static/media/Pisara Sarees logo_1 2.e878e3cd24506db2bd3b.PNG",
+    "static/media/pb.png": "/Saubhagya/static/media/pb.e663ba2b7ccd7d025c8f.png",
+    "index.html": "/Saubhagya/index.html",
+    "main.49b2ca0b.css.map": "/Saubhagya/static/css/main.49b2ca0b.css.map",
+    "main.a7b7d38a.js.map": "/Saubhagya/static/js/main.a7b7d38a.js.map",
+    "787.242c83a8.chunk.js.map": "/Saubhagya/static/js/787.242c83a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49b2ca0b.css",
+    "static/js/main.a7b7d38a.js"
+  ]
+}
