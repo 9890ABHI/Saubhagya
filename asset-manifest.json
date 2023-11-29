@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Saubhagya/static/css/main.49b2ca0b.css",
-    "main.js": "/Saubhagya/static/js/main.ea0eee38.js",
+    "main.js": "/Saubhagya/static/js/main.c828c1bb.js",
     "static/js/787.242c83a8.chunk.js": "/Saubhagya/static/js/787.242c83a8.chunk.js",
     "static/media/img5.jpg": "/Saubhagya/static/media/img5.2432a99623a64980c953.jpg",
     "static/media/img5.png": "/Saubhagya/static/media/img5.85c2f95316a169d240da.png",
@@ -25,11 +25,11 @@
     "static/media/pb.png": "/Saubhagya/static/media/pb.e663ba2b7ccd7d025c8f.png",
     "index.html": "/Saubhagya/index.html",
     "main.49b2ca0b.css.map": "/Saubhagya/static/css/main.49b2ca0b.css.map",
-    "main.ea0eee38.js.map": "/Saubhagya/static/js/main.ea0eee38.js.map",
+    "main.c828c1bb.js.map": "/Saubhagya/static/js/main.c828c1bb.js.map",
     "787.242c83a8.chunk.js.map": "/Saubhagya/static/js/787.242c83a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.49b2ca0b.css",
-    "static/js/main.ea0eee38.js"
+    "static/js/main.c828c1bb.js"
   ]
 }
